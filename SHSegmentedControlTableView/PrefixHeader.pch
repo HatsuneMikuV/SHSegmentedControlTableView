@@ -1,0 +1,24 @@
+//
+//  PrefixHeader.pch
+//  SHSegmentedControlTableView
+//
+//  Created by angle on 2017/10/20.
+//  Copyright © 2017年 angle. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+#import "SHSegmentedControlTableView.h"
+#import <Masonry.h>
+
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */

@@ -1,0 +1,515 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		158075AF8C0A53E2B6C82F2B /* libPods-SHSegmentedControlTableView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96170BF2C6ABA53F71110F34 /* libPods-SHSegmentedControlTableView.a */; };
+		7CBCA1D21F98B19F00349014 /* TestOneTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CBCA1D11F98B19F00349014 /* TestOneTableView.m */; };
+		7CBCA1D61F99D3B700349014 /* SHBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CBCA1D51F99D3B700349014 /* SHBaseViewController.m */; };
+		7CBCA1D91F99D78D00349014 /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CBCA1D81F99D78D00349014 /* TwoViewController.m */; };
+		7CD1D26A1F8CAD920097302C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD1D2691F8CAD920097302C /* AppDelegate.m */; };
+		7CD1D26D1F8CAD920097302C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD1D26C1F8CAD920097302C /* ViewController.m */; };
+		7CD1D2701F8CAD920097302C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CD1D26E1F8CAD920097302C /* Main.storyboard */; };
+		7CD1D2721F8CAD920097302C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CD1D2711F8CAD920097302C /* Assets.xcassets */; };
+		7CD1D2751F8CAD920097302C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CD1D2731F8CAD920097302C /* LaunchScreen.storyboard */; };
+		7CD1D2781F8CAD920097302C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD1D2771F8CAD920097302C /* main.m */; };
+		7CD1D2821F8CB1E20097302C /* OneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD1D2811F8CB1E20097302C /* OneViewController.m */; };
+		7CD1D2851F8CB26D0097302C /* SHSegmentControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD1D2841F8CB26D0097302C /* SHSegmentControl.m */; };
+		7CD1D2881F8CB8000097302C /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD1D2871F8CB8000097302C /* UIView+Extension.m */; };
+		7CD1D28B1F8CB91E0097302C /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD1D28A1F8CB91E0097302C /* UIColor+Hex.m */; };
+		7CD1D28E1F8CBC260097302C /* UIFont+PingFang.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD1D28D1F8CBC260097302C /* UIFont+PingFang.m */; };
+		7CD1D2911F8CC8F50097302C /* SHTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD1D2901F8CC8F50097302C /* SHTableView.m */; };
+		7CD1D2951F8CC9B60097302C /* SHSegmentedControlTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD1D2941F8CC9B60097302C /* SHSegmentedControlTableView.m */; };
+		7CD1D2981F8CCEFD0097302C /* SHCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD1D2971F8CCEFD0097302C /* SHCollectionView.m */; };
+		7CF3FFC41F99F0E800758917 /* ThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF3FFC31F99F0E800758917 /* ThreeViewController.m */; };
+		7CF3FFC71F99F16200758917 /* FourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF3FFC61F99F16200758917 /* FourViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4ED29334A156E897E29FAB22 /* Pods-SHSegmentedControlTableView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHSegmentedControlTableView.release.xcconfig"; path = "Pods/Target Support Files/Pods-SHSegmentedControlTableView/Pods-SHSegmentedControlTableView.release.xcconfig"; sourceTree = "<group>"; };
+		7CBCA1D01F98B19F00349014 /* TestOneTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestOneTableView.h; sourceTree = "<group>"; };
+		7CBCA1D11F98B19F00349014 /* TestOneTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestOneTableView.m; sourceTree = "<group>"; };
+		7CBCA1D31F999D9600349014 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		7CBCA1D41F99D3B700349014 /* SHBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHBaseViewController.h; sourceTree = "<group>"; };
+		7CBCA1D51F99D3B700349014 /* SHBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHBaseViewController.m; sourceTree = "<group>"; };
+		7CBCA1D71F99D78D00349014 /* TwoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwoViewController.h; sourceTree = "<group>"; };
+		7CBCA1D81F99D78D00349014 /* TwoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwoViewController.m; sourceTree = "<group>"; };
+		7CD1D2651F8CAD920097302C /* SHSegmentedControlTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SHSegmentedControlTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CD1D2681F8CAD920097302C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7CD1D2691F8CAD920097302C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7CD1D26B1F8CAD920097302C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		7CD1D26C1F8CAD920097302C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		7CD1D26F1F8CAD920097302C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7CD1D2711F8CAD920097302C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7CD1D2741F8CAD920097302C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7CD1D2761F8CAD920097302C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7CD1D2771F8CAD920097302C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7CD1D2801F8CB1E20097302C /* OneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneViewController.h; sourceTree = "<group>"; };
+		7CD1D2811F8CB1E20097302C /* OneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneViewController.m; sourceTree = "<group>"; };
+		7CD1D2831F8CB26D0097302C /* SHSegmentControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHSegmentControl.h; sourceTree = "<group>"; };
+		7CD1D2841F8CB26D0097302C /* SHSegmentControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHSegmentControl.m; sourceTree = "<group>"; };
+		7CD1D2861F8CB8000097302C /* UIView+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		7CD1D2871F8CB8000097302C /* UIView+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		7CD1D2891F8CB91E0097302C /* UIColor+Hex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		7CD1D28A1F8CB91E0097302C /* UIColor+Hex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		7CD1D28C1F8CBC260097302C /* UIFont+PingFang.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+PingFang.h"; sourceTree = "<group>"; };
+		7CD1D28D1F8CBC260097302C /* UIFont+PingFang.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+PingFang.m"; sourceTree = "<group>"; };
+		7CD1D28F1F8CC8F50097302C /* SHTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHTableView.h; sourceTree = "<group>"; };
+		7CD1D2901F8CC8F50097302C /* SHTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHTableView.m; sourceTree = "<group>"; };
+		7CD1D2931F8CC9B60097302C /* SHSegmentedControlTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHSegmentedControlTableView.h; sourceTree = "<group>"; };
+		7CD1D2941F8CC9B60097302C /* SHSegmentedControlTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHSegmentedControlTableView.m; sourceTree = "<group>"; };
+		7CD1D2961F8CCEFD0097302C /* SHCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHCollectionView.h; sourceTree = "<group>"; };
+		7CD1D2971F8CCEFD0097302C /* SHCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHCollectionView.m; sourceTree = "<group>"; };
+		7CF3FFC21F99F0E800758917 /* ThreeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreeViewController.h; sourceTree = "<group>"; };
+		7CF3FFC31F99F0E800758917 /* ThreeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreeViewController.m; sourceTree = "<group>"; };
+		7CF3FFC51F99F16200758917 /* FourViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FourViewController.h; sourceTree = "<group>"; };
+		7CF3FFC61F99F16200758917 /* FourViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FourViewController.m; sourceTree = "<group>"; };
+		96170BF2C6ABA53F71110F34 /* libPods-SHSegmentedControlTableView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SHSegmentedControlTableView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DE6F1068877755528F041C8 /* Pods-SHSegmentedControlTableView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHSegmentedControlTableView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SHSegmentedControlTableView/Pods-SHSegmentedControlTableView.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7CD1D2621F8CAD920097302C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				158075AF8C0A53E2B6C82F2B /* libPods-SHSegmentedControlTableView.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1745B506DAA41A28D8CFCCD9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9DE6F1068877755528F041C8 /* Pods-SHSegmentedControlTableView.debug.xcconfig */,
+				4ED29334A156E897E29FAB22 /* Pods-SHSegmentedControlTableView.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3D8527AFB45AEF3031019538 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				96170BF2C6ABA53F71110F34 /* libPods-SHSegmentedControlTableView.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7CD1D25C1F8CAD920097302C = {
+			isa = PBXGroup;
+			children = (
+				7CD1D2671F8CAD920097302C /* SHSegmentedControlTableView */,
+				7CD1D2661F8CAD920097302C /* Products */,
+				1745B506DAA41A28D8CFCCD9 /* Pods */,
+				3D8527AFB45AEF3031019538 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7CD1D2661F8CAD920097302C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7CD1D2651F8CAD920097302C /* SHSegmentedControlTableView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7CD1D2671F8CAD920097302C /* SHSegmentedControlTableView */ = {
+			isa = PBXGroup;
+			children = (
+				7CD1D27E1F8CADB50097302C /* SHSegmentedControlTableView */,
+				7CD1D27F1F8CB0620097302C /* Demo */,
+				7CD1D2681F8CAD920097302C /* AppDelegate.h */,
+				7CD1D2691F8CAD920097302C /* AppDelegate.m */,
+				7CBCA1D41F99D3B700349014 /* SHBaseViewController.h */,
+				7CBCA1D51F99D3B700349014 /* SHBaseViewController.m */,
+				7CBCA1D31F999D9600349014 /* PrefixHeader.pch */,
+				7CD1D26E1F8CAD920097302C /* Main.storyboard */,
+				7CD1D2711F8CAD920097302C /* Assets.xcassets */,
+				7CD1D2731F8CAD920097302C /* LaunchScreen.storyboard */,
+				7CD1D2761F8CAD920097302C /* Info.plist */,
+				7CD1D2771F8CAD920097302C /* main.m */,
+			);
+			path = SHSegmentedControlTableView;
+			sourceTree = "<group>";
+		};
+		7CD1D27E1F8CADB50097302C /* SHSegmentedControlTableView */ = {
+			isa = PBXGroup;
+			children = (
+				7CD1D2931F8CC9B60097302C /* SHSegmentedControlTableView.h */,
+				7CD1D2941F8CC9B60097302C /* SHSegmentedControlTableView.m */,
+				7CD1D2831F8CB26D0097302C /* SHSegmentControl.h */,
+				7CD1D2841F8CB26D0097302C /* SHSegmentControl.m */,
+				7CD1D28F1F8CC8F50097302C /* SHTableView.h */,
+				7CD1D2901F8CC8F50097302C /* SHTableView.m */,
+				7CD1D2961F8CCEFD0097302C /* SHCollectionView.h */,
+				7CD1D2971F8CCEFD0097302C /* SHCollectionView.m */,
+				7CD1D2921F8CC9780097302C /* Extension */,
+			);
+			path = SHSegmentedControlTableView;
+			sourceTree = "<group>";
+		};
+		7CD1D27F1F8CB0620097302C /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				7CD1D26B1F8CAD920097302C /* ViewController.h */,
+				7CD1D26C1F8CAD920097302C /* ViewController.m */,
+				7CD1D2801F8CB1E20097302C /* OneViewController.h */,
+				7CD1D2811F8CB1E20097302C /* OneViewController.m */,
+				7CBCA1D01F98B19F00349014 /* TestOneTableView.h */,
+				7CBCA1D11F98B19F00349014 /* TestOneTableView.m */,
+				7CBCA1D71F99D78D00349014 /* TwoViewController.h */,
+				7CBCA1D81F99D78D00349014 /* TwoViewController.m */,
+				7CF3FFC21F99F0E800758917 /* ThreeViewController.h */,
+				7CF3FFC31F99F0E800758917 /* ThreeViewController.m */,
+				7CF3FFC51F99F16200758917 /* FourViewController.h */,
+				7CF3FFC61F99F16200758917 /* FourViewController.m */,
+			);
+			name = Demo;
+			path = SHSegmentedControlTableView/Demo;
+			sourceTree = SOURCE_ROOT;
+		};
+		7CD1D2921F8CC9780097302C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7CD1D2861F8CB8000097302C /* UIView+Extension.h */,
+				7CD1D2871F8CB8000097302C /* UIView+Extension.m */,
+				7CD1D2891F8CB91E0097302C /* UIColor+Hex.h */,
+				7CD1D28A1F8CB91E0097302C /* UIColor+Hex.m */,
+				7CD1D28C1F8CBC260097302C /* UIFont+PingFang.h */,
+				7CD1D28D1F8CBC260097302C /* UIFont+PingFang.m */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7CD1D2641F8CAD920097302C /* SHSegmentedControlTableView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7CD1D27B1F8CAD920097302C /* Build configuration list for PBXNativeTarget "SHSegmentedControlTableView" */;
+			buildPhases = (
+				2E33FE6E1F04684E63F6A755 /* [CP] Check Pods Manifest.lock */,
+				7CD1D2611F8CAD920097302C /* Sources */,
+				7CD1D2621F8CAD920097302C /* Frameworks */,
+				7CD1D2631F8CAD920097302C /* Resources */,
+				4535D31DDAED0FABF05B7599 /* [CP] Embed Pods Frameworks */,
+				7ED00B6848BBE75C52BC4A67 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SHSegmentedControlTableView;
+			productName = SHSegmentedControlTableView;
+			productReference = 7CD1D2651F8CAD920097302C /* SHSegmentedControlTableView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7CD1D25D1F8CAD920097302C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = angle;
+				TargetAttributes = {
+					7CD1D2641F8CAD920097302C = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 7CD1D2601F8CAD920097302C /* Build configuration list for PBXProject "SHSegmentedControlTableView" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7CD1D25C1F8CAD920097302C;
+			productRefGroup = 7CD1D2661F8CAD920097302C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7CD1D2641F8CAD920097302C /* SHSegmentedControlTableView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7CD1D2631F8CAD920097302C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CD1D2751F8CAD920097302C /* LaunchScreen.storyboard in Resources */,
+				7CD1D2721F8CAD920097302C /* Assets.xcassets in Resources */,
+				7CD1D2701F8CAD920097302C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2E33FE6E1F04684E63F6A755 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4535D31DDAED0FABF05B7599 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SHSegmentedControlTableView/Pods-SHSegmentedControlTableView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7ED00B6848BBE75C52BC4A67 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SHSegmentedControlTableView/Pods-SHSegmentedControlTableView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7CD1D2611F8CAD920097302C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CD1D2881F8CB8000097302C /* UIView+Extension.m in Sources */,
+				7CD1D26D1F8CAD920097302C /* ViewController.m in Sources */,
+				7CD1D2781F8CAD920097302C /* main.m in Sources */,
+				7CD1D26A1F8CAD920097302C /* AppDelegate.m in Sources */,
+				7CD1D28B1F8CB91E0097302C /* UIColor+Hex.m in Sources */,
+				7CD1D2981F8CCEFD0097302C /* SHCollectionView.m in Sources */,
+				7CD1D2911F8CC8F50097302C /* SHTableView.m in Sources */,
+				7CBCA1D91F99D78D00349014 /* TwoViewController.m in Sources */,
+				7CD1D2851F8CB26D0097302C /* SHSegmentControl.m in Sources */,
+				7CF3FFC41F99F0E800758917 /* ThreeViewController.m in Sources */,
+				7CF3FFC71F99F16200758917 /* FourViewController.m in Sources */,
+				7CBCA1D61F99D3B700349014 /* SHBaseViewController.m in Sources */,
+				7CD1D2951F8CC9B60097302C /* SHSegmentedControlTableView.m in Sources */,
+				7CD1D28E1F8CBC260097302C /* UIFont+PingFang.m in Sources */,
+				7CBCA1D21F98B19F00349014 /* TestOneTableView.m in Sources */,
+				7CD1D2821F8CB1E20097302C /* OneViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7CD1D26E1F8CAD920097302C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7CD1D26F1F8CAD920097302C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7CD1D2731F8CAD920097302C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7CD1D2741F8CAD920097302C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7CD1D2791F8CAD920097302C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7CD1D27A1F8CAD920097302C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7CD1D27C1F8CAD920097302C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DE6F1068877755528F041C8 /* Pods-SHSegmentedControlTableView.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 48E9K7TPMY;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SHSegmentedControlTableView/PrefixHeader.pch";
+				INFOPLIST_FILE = SHSegmentedControlTableView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.angle.SHSegmentedControlTableView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7CD1D27D1F8CAD920097302C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4ED29334A156E897E29FAB22 /* Pods-SHSegmentedControlTableView.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 48E9K7TPMY;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SHSegmentedControlTableView/PrefixHeader.pch";
+				INFOPLIST_FILE = SHSegmentedControlTableView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.angle.SHSegmentedControlTableView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7CD1D2601F8CAD920097302C /* Build configuration list for PBXProject "SHSegmentedControlTableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7CD1D2791F8CAD920097302C /* Debug */,
+				7CD1D27A1F8CAD920097302C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7CD1D27B1F8CAD920097302C /* Build configuration list for PBXNativeTarget "SHSegmentedControlTableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7CD1D27C1F8CAD920097302C /* Debug */,
+				7CD1D27D1F8CAD920097302C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7CD1D25D1F8CAD920097302C /* Project object */;
+}
