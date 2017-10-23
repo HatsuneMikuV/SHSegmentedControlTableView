@@ -23,6 +23,8 @@
 @end
 
 @interface SHSegmentedControlTableView : UIView
+/** 主容器 */
+@property (nonatomic, strong) SHMAINTableView *tableView;
 /** 导航栏透明 (默认no) */
 @property (nonatomic, assign) BOOL isNavClear;
 /** 顶部视图 */
@@ -33,7 +35,7 @@
 @property (nonatomic, strong) UIView *footView;
 /** 当前位置 */
 @property (nonatomic, assign) CGFloat offsetY;
-/** tableView 数组 */
+/** tableView/collectionView 数组 */
 @property (nonatomic, strong) NSArray *tableViews;
 /** SHSegTableViewDelegate */
 @property (nonatomic, weak) id<SHSegTableViewDelegate> delegateCell;

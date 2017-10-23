@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		158075AF8C0A53E2B6C82F2B /* libPods-SHSegmentedControlTableView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96170BF2C6ABA53F71110F34 /* libPods-SHSegmentedControlTableView.a */; };
+		7C48E1E01F9DE35D002E23AA /* FiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C48E1DF1F9DE35D002E23AA /* FiveViewController.m */; };
+		7C48E1E31F9DE36A002E23AA /* SixViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C48E1E21F9DE36A002E23AA /* SixViewController.m */; };
+		7C48E1E61F9DE373002E23AA /* SevenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C48E1E51F9DE373002E23AA /* SevenViewController.m */; };
+		7C48E1E91F9DE37B002E23AA /* EightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C48E1E81F9DE37B002E23AA /* EightViewController.m */; };
+		7C48E1EC1F9DE386002E23AA /* NineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C48E1EB1F9DE386002E23AA /* NineViewController.m */; };
+		7C48E1EF1F9DE38F002E23AA /* TenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C48E1EE1F9DE38F002E23AA /* TenViewController.m */; };
+		7C48E1F21F9DE397002E23AA /* ZeroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C48E1F11F9DE397002E23AA /* ZeroViewController.m */; };
+		7C48E1F51F9DE9BB002E23AA /* TestCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C48E1F41F9DE9BB002E23AA /* TestCollectionView.m */; };
+		7C48E1F81F9DF497002E23AA /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C48E1F71F9DF497002E23AA /* UINavigationBar+Awesome.m */; };
 		7CBCA1D21F98B19F00349014 /* TestOneTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CBCA1D11F98B19F00349014 /* TestOneTableView.m */; };
 		7CBCA1D61F99D3B700349014 /* SHBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CBCA1D51F99D3B700349014 /* SHBaseViewController.m */; };
 		7CBCA1D91F99D78D00349014 /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CBCA1D81F99D78D00349014 /* TwoViewController.m */; };
@@ -31,6 +40,24 @@
 
 /* Begin PBXFileReference section */
 		4ED29334A156E897E29FAB22 /* Pods-SHSegmentedControlTableView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHSegmentedControlTableView.release.xcconfig"; path = "Pods/Target Support Files/Pods-SHSegmentedControlTableView/Pods-SHSegmentedControlTableView.release.xcconfig"; sourceTree = "<group>"; };
+		7C48E1DE1F9DE35D002E23AA /* FiveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FiveViewController.h; sourceTree = "<group>"; };
+		7C48E1DF1F9DE35D002E23AA /* FiveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FiveViewController.m; sourceTree = "<group>"; };
+		7C48E1E11F9DE36A002E23AA /* SixViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SixViewController.h; sourceTree = "<group>"; };
+		7C48E1E21F9DE36A002E23AA /* SixViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SixViewController.m; sourceTree = "<group>"; };
+		7C48E1E41F9DE373002E23AA /* SevenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SevenViewController.h; sourceTree = "<group>"; };
+		7C48E1E51F9DE373002E23AA /* SevenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SevenViewController.m; sourceTree = "<group>"; };
+		7C48E1E71F9DE37B002E23AA /* EightViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EightViewController.h; sourceTree = "<group>"; };
+		7C48E1E81F9DE37B002E23AA /* EightViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EightViewController.m; sourceTree = "<group>"; };
+		7C48E1EA1F9DE386002E23AA /* NineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NineViewController.h; sourceTree = "<group>"; };
+		7C48E1EB1F9DE386002E23AA /* NineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NineViewController.m; sourceTree = "<group>"; };
+		7C48E1ED1F9DE38F002E23AA /* TenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TenViewController.h; sourceTree = "<group>"; };
+		7C48E1EE1F9DE38F002E23AA /* TenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TenViewController.m; sourceTree = "<group>"; };
+		7C48E1F01F9DE397002E23AA /* ZeroViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZeroViewController.h; sourceTree = "<group>"; };
+		7C48E1F11F9DE397002E23AA /* ZeroViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZeroViewController.m; sourceTree = "<group>"; };
+		7C48E1F31F9DE9BB002E23AA /* TestCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCollectionView.h; sourceTree = "<group>"; };
+		7C48E1F41F9DE9BB002E23AA /* TestCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCollectionView.m; sourceTree = "<group>"; };
+		7C48E1F61F9DF497002E23AA /* UINavigationBar+Awesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Awesome.h"; sourceTree = "<group>"; };
+		7C48E1F71F9DF497002E23AA /* UINavigationBar+Awesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Awesome.m"; sourceTree = "<group>"; };
 		7CBCA1D01F98B19F00349014 /* TestOneTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestOneTableView.h; sourceTree = "<group>"; };
 		7CBCA1D11F98B19F00349014 /* TestOneTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestOneTableView.m; sourceTree = "<group>"; };
 		7CBCA1D31F999D9600349014 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -157,18 +184,34 @@
 		7CD1D27F1F8CB0620097302C /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				7CBCA1D01F98B19F00349014 /* TestOneTableView.h */,
+				7CBCA1D11F98B19F00349014 /* TestOneTableView.m */,
+				7C48E1F31F9DE9BB002E23AA /* TestCollectionView.h */,
+				7C48E1F41F9DE9BB002E23AA /* TestCollectionView.m */,
 				7CD1D26B1F8CAD920097302C /* ViewController.h */,
 				7CD1D26C1F8CAD920097302C /* ViewController.m */,
 				7CD1D2801F8CB1E20097302C /* OneViewController.h */,
 				7CD1D2811F8CB1E20097302C /* OneViewController.m */,
-				7CBCA1D01F98B19F00349014 /* TestOneTableView.h */,
-				7CBCA1D11F98B19F00349014 /* TestOneTableView.m */,
 				7CBCA1D71F99D78D00349014 /* TwoViewController.h */,
 				7CBCA1D81F99D78D00349014 /* TwoViewController.m */,
 				7CF3FFC21F99F0E800758917 /* ThreeViewController.h */,
 				7CF3FFC31F99F0E800758917 /* ThreeViewController.m */,
 				7CF3FFC51F99F16200758917 /* FourViewController.h */,
 				7CF3FFC61F99F16200758917 /* FourViewController.m */,
+				7C48E1DE1F9DE35D002E23AA /* FiveViewController.h */,
+				7C48E1DF1F9DE35D002E23AA /* FiveViewController.m */,
+				7C48E1E11F9DE36A002E23AA /* SixViewController.h */,
+				7C48E1E21F9DE36A002E23AA /* SixViewController.m */,
+				7C48E1E41F9DE373002E23AA /* SevenViewController.h */,
+				7C48E1E51F9DE373002E23AA /* SevenViewController.m */,
+				7C48E1E71F9DE37B002E23AA /* EightViewController.h */,
+				7C48E1E81F9DE37B002E23AA /* EightViewController.m */,
+				7C48E1EA1F9DE386002E23AA /* NineViewController.h */,
+				7C48E1EB1F9DE386002E23AA /* NineViewController.m */,
+				7C48E1ED1F9DE38F002E23AA /* TenViewController.h */,
+				7C48E1EE1F9DE38F002E23AA /* TenViewController.m */,
+				7C48E1F01F9DE397002E23AA /* ZeroViewController.h */,
+				7C48E1F11F9DE397002E23AA /* ZeroViewController.m */,
 			);
 			name = Demo;
 			path = SHSegmentedControlTableView/Demo;
@@ -177,6 +220,8 @@
 		7CD1D2921F8CC9780097302C /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				7C48E1F61F9DF497002E23AA /* UINavigationBar+Awesome.h */,
+				7C48E1F71F9DF497002E23AA /* UINavigationBar+Awesome.m */,
 				7CD1D2861F8CB8000097302C /* UIView+Extension.h */,
 				7CD1D2871F8CB8000097302C /* UIView+Extension.m */,
 				7CD1D2891F8CB91E0097302C /* UIColor+Hex.h */,
@@ -310,20 +355,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CD1D2881F8CB8000097302C /* UIView+Extension.m in Sources */,
+				7C48E1EC1F9DE386002E23AA /* NineViewController.m in Sources */,
+				7C48E1E31F9DE36A002E23AA /* SixViewController.m in Sources */,
 				7CD1D26D1F8CAD920097302C /* ViewController.m in Sources */,
 				7CD1D2781F8CAD920097302C /* main.m in Sources */,
 				7CD1D26A1F8CAD920097302C /* AppDelegate.m in Sources */,
+				7C48E1E61F9DE373002E23AA /* SevenViewController.m in Sources */,
 				7CD1D28B1F8CB91E0097302C /* UIColor+Hex.m in Sources */,
 				7CD1D2981F8CCEFD0097302C /* SHCollectionView.m in Sources */,
+				7C48E1E91F9DE37B002E23AA /* EightViewController.m in Sources */,
 				7CD1D2911F8CC8F50097302C /* SHTableView.m in Sources */,
 				7CBCA1D91F99D78D00349014 /* TwoViewController.m in Sources */,
 				7CD1D2851F8CB26D0097302C /* SHSegmentControl.m in Sources */,
 				7CF3FFC41F99F0E800758917 /* ThreeViewController.m in Sources */,
+				7C48E1F81F9DF497002E23AA /* UINavigationBar+Awesome.m in Sources */,
+				7C48E1F21F9DE397002E23AA /* ZeroViewController.m in Sources */,
 				7CF3FFC71F99F16200758917 /* FourViewController.m in Sources */,
 				7CBCA1D61F99D3B700349014 /* SHBaseViewController.m in Sources */,
 				7CD1D2951F8CC9B60097302C /* SHSegmentedControlTableView.m in Sources */,
+				7C48E1E01F9DE35D002E23AA /* FiveViewController.m in Sources */,
 				7CD1D28E1F8CBC260097302C /* UIFont+PingFang.m in Sources */,
 				7CBCA1D21F98B19F00349014 /* TestOneTableView.m in Sources */,
+				7C48E1EF1F9DE38F002E23AA /* TenViewController.m in Sources */,
+				7C48E1F51F9DE9BB002E23AA /* TestCollectionView.m in Sources */,
 				7CD1D2821F8CB1E20097302C /* OneViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

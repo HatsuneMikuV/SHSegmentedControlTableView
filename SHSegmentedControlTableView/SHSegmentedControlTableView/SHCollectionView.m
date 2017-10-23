@@ -15,6 +15,7 @@
         if (@available(iOS 11.0, *)) {
             self.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
         }
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pageTitleViewToTop) name:@"pageTitleViewToTop" object:nil];
     }
     return self;
 }
@@ -23,10 +24,32 @@
         if (@available(iOS 11.0, *)) {
             self.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
         }
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pageTitleViewToTop) name:@"pageTitleViewToTop" object:nil];
     }
     return self;
 }
+- (instancetype)initWithFrame:(CGRect)frame collectionViewLayout:(UICollectionViewLayout *)layout {
+    if (self = [super initWithFrame:frame collectionViewLayout:layout]) {
+        if (@available(iOS 11.0, *)) {
+            self.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        }
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pageTitleViewToTop) name:@"pageTitleViewToTop" object:nil];
+    }
+    return self;
+}
+#pragma mark -
+#pragma mark   ==============SHTableViewDelegate==============
+- (void)pageTitleViewToTop {
+    self.contentOffset = CGPointZero;
+}
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if (self.delegateSHTableView && [self.delegateSHTableView respondsToSelector:@selector(SHTableViewScrollViewDidScroll:)]) {
+        [self.delegateSHTableView SHTableViewScrollViewDidScroll:scrollView];
+    }
+}
+#pragma mark -
+#pragma mark   ==============处理和系统侧滑手势冲突的问题==============
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(nonnull UIGestureRecognizer *)otherGestureRecognizer{
     
     if ([self panBack:gestureRecognizer]) {

@@ -6,7 +6,7 @@
 //  Copyright © 2017年 angle. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "SHTableView.h"
 
 @interface TestOneTableView : SHTableView
 

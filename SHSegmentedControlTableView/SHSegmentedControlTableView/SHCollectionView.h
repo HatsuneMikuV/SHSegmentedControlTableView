@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-/** 处理和系统侧滑手势冲突的问题 */
+#import "SHTableView.h"
+
 @interface SHCollectionView : UICollectionView
+
+@property (nonatomic, weak) id<SHTableViewDelegate> delegateSHTableView;
 
 @end

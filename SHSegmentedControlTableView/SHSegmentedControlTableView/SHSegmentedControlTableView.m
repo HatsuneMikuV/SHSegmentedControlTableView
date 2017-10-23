@@ -12,8 +12,6 @@
 
 @interface SHSegmentedControlTableView()<UITableViewDelegate,UITableViewDataSource,SHTableViewDelegate,SHPageContentViewDelegate>
 
-@property (nonatomic, strong) SHMAINTableView *tableView;
-
 @property (nonatomic, strong) SHPageContentView *pageContentView;
 
 @property (nonatomic, strong) UIScrollView *childVCScrollView;
@@ -71,7 +69,11 @@ static NSString *cellIdentifier = @"SHSegTableViewCell";
         tabView.delegateSHTableView = self;
         [tabView reloadData];
     }
-    CGFloat contentViewHeight = self.height - self.tableView.sectionHeaderHeight;
+    CGFloat contentViewHeight = self.height - self.tableView.sectionHeaderHeight - self.tableView.sectionFooterHeight;
+    
+    if (!self.isNavClear) {
+        contentViewHeight -= 64;
+    }
     self.pageContentView = [[SHPageContentView alloc] initWithFrame:CGRectMake(0, 0, self.width, contentViewHeight) parentView:self childViews:tableViews];
     self.pageContentView.delegatePageContentView = self;
     

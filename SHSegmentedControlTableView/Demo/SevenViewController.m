@@ -1,26 +1,22 @@
 //
-//  TwoViewController.m
+//  SevenViewController.m
 //  SHSegmentedControlTableView
 //
-//  Created by angle on 2017/10/20.
+//  Created by angle on 2017/10/23.
 //  Copyright © 2017年 angle. All rights reserved.
 //
 
-#import "TwoViewController.h"
-
+#import "SevenViewController.h"
 #import "TestOneTableView.h"
 
-@interface TwoViewController ()<SHSegTableViewDelegate>
+@interface SevenViewController ()<SHSegTableViewDelegate>
 
 @property (nonatomic, strong) SHSegmentedControlTableView *segTableView;
-
-@property (nonatomic, strong) SHSegmentControl *segmentControl;
 
 @property (nonatomic, strong) UIView *headerView;
 
 @end
-
-@implementation TwoViewController
+@implementation SevenViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -54,7 +50,7 @@
 }
 - (void)segTableViewDidScrollProgress:(CGFloat)progress originalIndex:(NSInteger)originalIndex targetIndex:(NSInteger)targetIndex {
     if (progress == 1) {
-        self.segmentControl.index = targetIndex;
+
     }
 }
 #pragma mark -
@@ -66,25 +62,11 @@
     }
     return _headerView;
 }
-- (SHSegmentControl *)segmentControl {
-    if (!_segmentControl) {
-        _segmentControl = [[SHSegmentControl alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 45) items:@[@"分栏一",@"分栏二",@"分栏三"]];
-        _segmentControl.type = SHSegmentControlTypeWater;
-        [_segmentControl reloadViews];
-        _segmentControl.index = 0;
-        __weak __typeof(&*self)weakSelf = self;
-        _segmentControl.curClick = ^(NSInteger index) {
-            [weakSelf.segTableView setSegmentSelectIndex:index];
-        };
-    }
-    return _segmentControl;
-}
 - (SHSegmentedControlTableView *)segTableView {
     if (!_segTableView) {
         _segTableView = [[SHSegmentedControlTableView alloc] initWithFrame:self.view.bounds];
         _segTableView.delegateCell = self;
         [_segTableView setTopView:self.headerView];
-        [_segTableView setBarView:self.segmentControl];
     }
     return _segTableView;
 }

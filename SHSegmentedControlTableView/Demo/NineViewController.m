@@ -1,16 +1,16 @@
 //
-//  TwoViewController.m
+//  NineViewController.m
 //  SHSegmentedControlTableView
 //
-//  Created by angle on 2017/10/20.
+//  Created by angle on 2017/10/23.
 //  Copyright © 2017年 angle. All rights reserved.
 //
 
-#import "TwoViewController.h"
-
+#import "NineViewController.h"
+#import "TestCollectionView.h"
 #import "TestOneTableView.h"
 
-@interface TwoViewController ()<SHSegTableViewDelegate>
+@interface NineViewController ()<SHSegTableViewDelegate>
 
 @property (nonatomic, strong) SHSegmentedControlTableView *segTableView;
 
@@ -20,21 +20,25 @@
 
 @end
 
-@implementation TwoViewController
+@implementation NineViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    
     TestOneTableView *tab1 = [[TestOneTableView alloc] init];
     tab1.num = 15;
     tab1.label = @"一";
+    
     TestOneTableView *tab2 = [[TestOneTableView alloc] init];
     tab2.num = 5;
     tab2.label = @"二";
-    TestOneTableView *tab3 = [[TestOneTableView alloc] init];
+    
+    UICollectionViewFlowLayout *collectionViewLayout3 = [[UICollectionViewFlowLayout alloc] init];
+    collectionViewLayout3.itemSize = CGSizeMake(100, 150);
+    TestCollectionView *tab3 = [[TestCollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:collectionViewLayout3];
     tab3.num = 30;
-    tab3.label = @"三";
     
     [self.segTableView setTableViews:@[tab1,tab2,tab3]];
     
@@ -69,9 +73,7 @@
 - (SHSegmentControl *)segmentControl {
     if (!_segmentControl) {
         _segmentControl = [[SHSegmentControl alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 45) items:@[@"分栏一",@"分栏二",@"分栏三"]];
-        _segmentControl.type = SHSegmentControlTypeWater;
         [_segmentControl reloadViews];
-        _segmentControl.index = 0;
         __weak __typeof(&*self)weakSelf = self;
         _segmentControl.curClick = ^(NSInteger index) {
             [weakSelf.segTableView setSegmentSelectIndex:index];
@@ -88,6 +90,7 @@
     }
     return _segTableView;
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

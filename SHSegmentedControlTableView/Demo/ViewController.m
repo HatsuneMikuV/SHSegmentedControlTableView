@@ -26,8 +26,9 @@
     
     self.navigationItem.title = @"样式列表";
     
-    self.dataArray = @[@"默认样式",@"涌入放大效果",@"右上角小标题",@"涌入放大效果+右上角小标题",@"444",@"555",@"666",@"777",@"888",@"999"];
-    self.controllerArray = @[@"OneViewController",@"TwoViewController",@"ThreeViewController",@"FourViewController",@"444",@"555",@"666",@"777",@"888",@"999"];
+    self.dataArray = @[@"默认样式",@"涌入放大",@"右上角小标题",@"涌入放大+右上角小标题",@"导航栏滑动透明",@"无头部",@"无bar",@"CollectionView",@"tableView+collectionView",@"下拉刷新",@"上拉加载"];
+    self.controllerArray = @[@"OneViewController",@"TwoViewController",@"ThreeViewController",@"FourViewController",@"FiveViewController",@"SixViewController",@"SevenViewController",@"EightViewController",@"NineViewController",@"TenViewController",@"ZeroViewController"];
+
 
     [self.view addSubview:self.tableView];
 }
