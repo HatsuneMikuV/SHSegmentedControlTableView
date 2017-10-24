@@ -28,16 +28,19 @@
     
     UICollectionViewFlowLayout *collectionViewLayout1 = [[UICollectionViewFlowLayout alloc] init];
     collectionViewLayout1.itemSize = CGSizeMake(60, 45);
+    collectionViewLayout1.sectionInset = UIEdgeInsetsMake(10, 16, 10, 16);
     TestCollectionView *tab1 = [[TestCollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:collectionViewLayout1];
     tab1.num = 15;
     
     UICollectionViewFlowLayout *collectionViewLayout2 = [[UICollectionViewFlowLayout alloc] init];
     collectionViewLayout2.itemSize = CGSizeMake(100, 45);
+    collectionViewLayout2.sectionInset = UIEdgeInsetsMake(10, 16, 10, 16);
     TestCollectionView *tab2 = [[TestCollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:collectionViewLayout2];
     tab2.num = 5;
     
     UICollectionViewFlowLayout *collectionViewLayout3 = [[UICollectionViewFlowLayout alloc] init];
     collectionViewLayout3.itemSize = CGSizeMake(100, 150);
+    collectionViewLayout3.sectionInset = UIEdgeInsetsMake(10, 16, 10, 16);
     TestCollectionView *tab3 = [[TestCollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:collectionViewLayout3];
     tab3.num = 30;
     

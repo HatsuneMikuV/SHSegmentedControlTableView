@@ -16,7 +16,6 @@
 		7C48E1EF1F9DE38F002E23AA /* TenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C48E1EE1F9DE38F002E23AA /* TenViewController.m */; };
 		7C48E1F21F9DE397002E23AA /* ZeroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C48E1F11F9DE397002E23AA /* ZeroViewController.m */; };
 		7C48E1F51F9DE9BB002E23AA /* TestCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C48E1F41F9DE9BB002E23AA /* TestCollectionView.m */; };
-		7C48E1F81F9DF497002E23AA /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C48E1F71F9DF497002E23AA /* UINavigationBar+Awesome.m */; };
 		7CBCA1D21F98B19F00349014 /* TestOneTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CBCA1D11F98B19F00349014 /* TestOneTableView.m */; };
 		7CBCA1D61F99D3B700349014 /* SHBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CBCA1D51F99D3B700349014 /* SHBaseViewController.m */; };
 		7CBCA1D91F99D78D00349014 /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CBCA1D81F99D78D00349014 /* TwoViewController.m */; };
@@ -56,8 +55,6 @@
 		7C48E1F11F9DE397002E23AA /* ZeroViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZeroViewController.m; sourceTree = "<group>"; };
 		7C48E1F31F9DE9BB002E23AA /* TestCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCollectionView.h; sourceTree = "<group>"; };
 		7C48E1F41F9DE9BB002E23AA /* TestCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCollectionView.m; sourceTree = "<group>"; };
-		7C48E1F61F9DF497002E23AA /* UINavigationBar+Awesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Awesome.h"; sourceTree = "<group>"; };
-		7C48E1F71F9DF497002E23AA /* UINavigationBar+Awesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Awesome.m"; sourceTree = "<group>"; };
 		7CBCA1D01F98B19F00349014 /* TestOneTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestOneTableView.h; sourceTree = "<group>"; };
 		7CBCA1D11F98B19F00349014 /* TestOneTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestOneTableView.m; sourceTree = "<group>"; };
 		7CBCA1D31F999D9600349014 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -220,8 +217,6 @@
 		7CD1D2921F8CC9780097302C /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				7C48E1F61F9DF497002E23AA /* UINavigationBar+Awesome.h */,
-				7C48E1F71F9DF497002E23AA /* UINavigationBar+Awesome.m */,
 				7CD1D2861F8CB8000097302C /* UIView+Extension.h */,
 				7CD1D2871F8CB8000097302C /* UIView+Extension.m */,
 				7CD1D2891F8CB91E0097302C /* UIColor+Hex.h */,
@@ -368,7 +363,6 @@
 				7CBCA1D91F99D78D00349014 /* TwoViewController.m in Sources */,
 				7CD1D2851F8CB26D0097302C /* SHSegmentControl.m in Sources */,
 				7CF3FFC41F99F0E800758917 /* ThreeViewController.m in Sources */,
-				7C48E1F81F9DF497002E23AA /* UINavigationBar+Awesome.m in Sources */,
 				7C48E1F21F9DE397002E23AA /* ZeroViewController.m in Sources */,
 				7CF3FFC71F99F16200758917 /* FourViewController.m in Sources */,
 				7CBCA1D61F99D3B700349014 /* SHBaseViewController.m in Sources */,

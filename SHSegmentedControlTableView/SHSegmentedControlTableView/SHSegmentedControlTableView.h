@@ -25,24 +25,33 @@
 @interface SHSegmentedControlTableView : UIView
 /** 主容器 */
 @property (nonatomic, strong) SHMAINTableView *tableView;
+
 /** 导航栏透明 (默认no) */
 @property (nonatomic, assign) BOOL isNavClear;
+
 /** 顶部视图 */
 @property (nonatomic, strong) UIView *topView;
 /** 头部分栏视图 */
 @property (nonatomic, strong) UIView *barView;
 /** 底部分栏视图 */
 @property (nonatomic, strong) UIView *footView;
+
 /** 当前位置 */
 @property (nonatomic, assign) CGFloat offsetY;
+
 /** tableView/collectionView 数组 */
 @property (nonatomic, strong) NSArray *tableViews;
+
 /** SHSegTableViewDelegate */
 @property (nonatomic, weak) id<SHSegTableViewDelegate> delegateCell;
+
 /** 设置选中的tableView下标 */
 - (void)setSegmentSelectIndex:(NSInteger)selectedIndex;
-/** 刷新数据 */
+/** 刷新容器 */
 - (void)reloadData;
+
+/** 刷新全部数据 */
+@property (nonatomic, strong) MJRefreshHeader *refreshAllHeader;
 
 @end
 

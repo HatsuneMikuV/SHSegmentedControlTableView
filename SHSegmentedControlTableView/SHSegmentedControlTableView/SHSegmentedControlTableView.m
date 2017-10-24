@@ -80,6 +80,12 @@ static NSString *cellIdentifier = @"SHSegTableViewCell";
     [self.tableView reloadData];
 }
 #pragma mark -
+#pragma mark   ==============数据刷新==============
+- (void)setRefreshAllHeader:(MJRefreshHeader *)refreshAllHeader {
+    _refreshAllHeader = refreshAllHeader;
+    self.tableView.mj_header = _refreshAllHeader;
+}
+#pragma mark -
 #pragma mark   ==============get==============
 - (CGFloat)offsetY {
     if (self.childVCScrollView.contentOffset.y > 0) {
@@ -113,9 +119,9 @@ static NSString *cellIdentifier = @"SHSegTableViewCell";
     
     CGFloat offSetY = scrollView.contentOffset.y;
     if (self.isNavClear) {
-        if (offSetY <= self.topView.height - 64 && offSetY >= 0) {
+        if (offSetY <= self.topView.height && offSetY >= 0) {
             scrollView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
-        }else if(offSetY > self.topView.height - 64) {
+        }else if(offSetY > self.topView.height) {
             scrollView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
         }
     }
@@ -171,7 +177,7 @@ static NSString *cellIdentifier = @"SHSegTableViewCell";
 /// 存储子视图
 @property (nonatomic, strong) NSArray *childViews;
 /// collectionView
-@property (nonatomic, strong) SHCollectionView *collectionView;
+@property (nonatomic, strong) SHTapCollectionView *collectionView;
 /// 记录刚开始时的偏移量
 @property (nonatomic, assign) NSInteger startOffsetX;
 /// 标记按钮是否点击
@@ -215,7 +221,7 @@ static NSString *cellIdentifier = @"SHSegTableViewCell";
     [self addSubview:self.collectionView];
 }
 
-- (SHCollectionView *)collectionView {
+- (SHTapCollectionView *)collectionView {
     if (!_collectionView) {
         UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
         flowLayout.itemSize = self.bounds.size;
@@ -226,7 +232,7 @@ static NSString *cellIdentifier = @"SHSegTableViewCell";
         CGFloat collectionViewY = 0;
         CGFloat collectionViewW = self.width;
         CGFloat collectionViewH = self.height;
-        _collectionView = [[SHCollectionView alloc] initWithFrame:CGRectMake(collectionViewX, collectionViewY, collectionViewW, collectionViewH) collectionViewLayout:flowLayout];
+        _collectionView = [[SHTapCollectionView alloc] initWithFrame:CGRectMake(collectionViewX, collectionViewY, collectionViewW, collectionViewH) collectionViewLayout:flowLayout];
         _collectionView.showsHorizontalScrollIndicator = NO;
         _collectionView.pagingEnabled = YES;
         _collectionView.bounces = NO;
@@ -271,7 +277,7 @@ static NSString *cellIdentifier = @"SHSegTableViewCell";
     // 2、判断是左滑还是右滑
     CGFloat currentOffsetX = scrollView.contentOffset.x;
     CGFloat scrollViewW = scrollView.bounds.size.width;
-    if (currentOffsetX > self.startOffsetX) { // 左滑
+    if (currentOffsetX > self.startOffsetX + 25) { // 左滑
         // 1、计算 progress
         progress = currentOffsetX / scrollViewW - floor(currentOffsetX / scrollViewW);
         // 2、计算 originalIndex
@@ -287,7 +293,7 @@ static NSString *cellIdentifier = @"SHSegTableViewCell";
             progress = 1;
             targetIndex = originalIndex;
         }
-    } else { // 右滑
+    } else if (currentOffsetX < self.startOffsetX - 25) { // 右滑
         // 1、计算 progress
         progress = 1 - (currentOffsetX / scrollViewW - floor(currentOffsetX / scrollViewW));
         // 2、计算 targetIndex

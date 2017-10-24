@@ -21,41 +21,30 @@
 @end
 
 @implementation FiveViewController
+/**
+ *  是否正在手势返回中的标示状态
+ */
+static BOOL _isPoping;
 
-- (void)viewWillAppear:(BOOL)animated {
+-(BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer{
+    if (!_isPoping) {
+        _isPoping = YES;
+        return YES;
+    }
+    return NO;
+}
+-(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    [self.navigationController.navigationBar lt_reset];
-    CGFloat currentContentOffset = self.segTableView.offsetY;
-    if (currentContentOffset > self.headerView.height - 64) {
-        [self tableViewScrollSet:2 withOffset:0];
-    }else if(currentContentOffset <= 0){
-        [self tableViewScrollSet:3 withOffset:0];
-    }else{
-        [self tableViewScrollSet:1 withOffset:currentContentOffset];
+    self.navigationController.navigationBarHidden = YES;
+    //开启侧滑
+    if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+        self.navigationController.interactivePopGestureRecognizer.delegate = nil;
     }
 }
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    [self.navigationController.navigationBar lt_reset];
-}
-- (void)viewDidAppear:(BOOL)animated {
+- (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    [self.navigationController.navigationBar lt_reset];
-    CGFloat currentContentOffset = self.segTableView.offsetY;
-    if (currentContentOffset > self.headerView.height - 64) {
-        [self tableViewScrollSet:2 withOffset:0];
-    }else if(currentContentOffset <= 0){
-        [self tableViewScrollSet:3 withOffset:0];
-    }else{
-        [self tableViewScrollSet:1 withOffset:currentContentOffset];
-    }
+    _isPoping = NO;
 }
-
--(void)viewDidDisappear:(BOOL)animated{
-    [super viewDidDisappear:animated];
-    [self.navigationController.navigationBar lt_reset];
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -75,46 +64,14 @@
     [self.view addSubview:self.segTableView];
     
 }
-- (void)tableViewScrollSet:(NSInteger)type withOffset:(CGFloat)offset {
-    if (type == 1) {
-        
-        CGFloat scrollSet = self.headerView.height - 64;
-        
-        CGFloat alpha = offset / scrollSet;
-        //设置头部视图的模糊效果
-        [self.navigationController.navigationBar lt_setBackgroundColor:[[UIColor whiteColor] colorWithAlphaComponent:alpha]];
-        
-        if (alpha == 1.0) {
-            self.navigationItem.title = @"导航栏滑动透明";
-            [self.navigationController.navigationBar setShadowImage:nil];
-            [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
-        }else{
-            self.navigationItem.title = @"";
-            [self.navigationController.navigationBar setShadowImage:[UIImage new]];
-        }
-    }else if (type == 2) {
-        [self.navigationController.navigationBar lt_setBackgroundColor:[[UIColor whiteColor] colorWithAlphaComponent:1.0]];
-        [self.navigationController.navigationBar setShadowImage:nil];
-        [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
-        self.navigationItem.title = @"导航栏滑动透明";
-    }else if (type == 3) {
-        [self.navigationController.navigationBar lt_setBackgroundColor:[[UIColor whiteColor] colorWithAlphaComponent:0.0]];
-        [self.navigationController.navigationBar setShadowImage:[UIImage new]];
-        self.navigationItem.title = @"";
-    }
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    self.navigationController.navigationBarHidden = NO;
 }
 #pragma mark -
 #pragma mark   ==============SHSegTableViewDelegate==============
 - (void)segTableViewDidScrollY:(CGFloat)offsetY {
-    NSInteger type;
-    if (offsetY > self.headerView.height - 64) {
-        type = 2;
-    }else if (offsetY <= 0){
-        type = 3;
-    }else {
-        type = 1;
-    }
-    [self tableViewScrollSet:type withOffset:offsetY];
+
 }
 - (void)segTableViewDidScroll:(UIScrollView *)tableView {
     

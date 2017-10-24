@@ -37,6 +37,7 @@
     
     UICollectionViewFlowLayout *collectionViewLayout3 = [[UICollectionViewFlowLayout alloc] init];
     collectionViewLayout3.itemSize = CGSizeMake(100, 150);
+    collectionViewLayout3.sectionInset = UIEdgeInsetsMake(10, 16, 10, 16);
     TestCollectionView *tab3 = [[TestCollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:collectionViewLayout3];
     tab3.num = 30;
     

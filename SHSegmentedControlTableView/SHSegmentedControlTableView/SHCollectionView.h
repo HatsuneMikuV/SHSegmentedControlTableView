@@ -15,3 +15,7 @@
 @property (nonatomic, weak) id<SHTableViewDelegate> delegateSHTableView;
 
 @end
+
+@interface SHTapCollectionView : UICollectionView
+
+@end

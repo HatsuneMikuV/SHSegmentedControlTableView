@@ -10,6 +10,10 @@
 
 @implementation SHCollectionView
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         if (@available(iOS 11.0, *)) {
@@ -48,6 +52,10 @@
         [self.delegateSHTableView SHTableViewScrollViewDidScroll:scrollView];
     }
 }
+@end
+
+@implementation SHTapCollectionView
+
 #pragma mark -
 #pragma mark   ==============处理和系统侧滑手势冲突的问题==============
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(nonnull UIGestureRecognizer *)otherGestureRecognizer{
