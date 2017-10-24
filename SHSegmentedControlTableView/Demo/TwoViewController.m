@@ -69,6 +69,7 @@
 - (SHSegmentControl *)segmentControl {
     if (!_segmentControl) {
         _segmentControl = [[SHSegmentControl alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 45) items:@[@"分栏一",@"分栏二",@"分栏三"]];
+        _segmentControl.titleSelectColor = [UIColor redColor];
         _segmentControl.type = SHSegmentControlTypeWater;
         [_segmentControl reloadViews];
         _segmentControl.index = 0;

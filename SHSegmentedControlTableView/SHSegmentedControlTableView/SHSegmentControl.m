@@ -297,7 +297,7 @@ static NSInteger tag = 20171010;
 }
 - (void)setTitleSelectColor:(UIColor *)titleSelectColor {
     _titleSelectColor = titleSelectColor;
-    self.titleL.textColor = titleSelectColor;
+    self.titleL.highlightedTextColor = titleSelectColor;
 }
 - (void)setSubTitleNormalColor:(UIColor *)subTitleNormalColor {
     _subTitleNormalColor = subTitleNormalColor;
