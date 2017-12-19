@@ -16,6 +16,13 @@
 		7C48E1EF1F9DE38F002E23AA /* TenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C48E1EE1F9DE38F002E23AA /* TenViewController.m */; };
 		7C48E1F21F9DE397002E23AA /* ZeroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C48E1F11F9DE397002E23AA /* ZeroViewController.m */; };
 		7C48E1F51F9DE9BB002E23AA /* TestCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C48E1F41F9DE9BB002E23AA /* TestCollectionView.m */; };
+		7C86941D1FE8F552003D7AFA /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8694111FE8F552003D7AFA /* UIColor+Hex.m */; };
+		7C86941E1FE8F552003D7AFA /* UIFont+PingFang.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8694131FE8F552003D7AFA /* UIFont+PingFang.m */; };
+		7C86941F1FE8F552003D7AFA /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8694151FE8F552003D7AFA /* UIView+Extension.m */; };
+		7C8694201FE8F552003D7AFA /* SHSegmentedControlTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8694171FE8F552003D7AFA /* SHSegmentedControlTableView.m */; };
+		7C8694211FE8F552003D7AFA /* SHSegmentControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8694191FE8F552003D7AFA /* SHSegmentControl.m */; };
+		7C8694221FE8F552003D7AFA /* SHTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C86941B1FE8F552003D7AFA /* SHTableView.m */; };
+		7C8694231FE8F552003D7AFA /* SHCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C86941C1FE8F552003D7AFA /* SHCollectionView.m */; };
 		7CBCA1D21F98B19F00349014 /* TestOneTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CBCA1D11F98B19F00349014 /* TestOneTableView.m */; };
 		7CBCA1D61F99D3B700349014 /* SHBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CBCA1D51F99D3B700349014 /* SHBaseViewController.m */; };
 		7CBCA1D91F99D78D00349014 /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CBCA1D81F99D78D00349014 /* TwoViewController.m */; };
@@ -26,13 +33,6 @@
 		7CD1D2751F8CAD920097302C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CD1D2731F8CAD920097302C /* LaunchScreen.storyboard */; };
 		7CD1D2781F8CAD920097302C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD1D2771F8CAD920097302C /* main.m */; };
 		7CD1D2821F8CB1E20097302C /* OneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD1D2811F8CB1E20097302C /* OneViewController.m */; };
-		7CD1D2851F8CB26D0097302C /* SHSegmentControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD1D2841F8CB26D0097302C /* SHSegmentControl.m */; };
-		7CD1D2881F8CB8000097302C /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD1D2871F8CB8000097302C /* UIView+Extension.m */; };
-		7CD1D28B1F8CB91E0097302C /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD1D28A1F8CB91E0097302C /* UIColor+Hex.m */; };
-		7CD1D28E1F8CBC260097302C /* UIFont+PingFang.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD1D28D1F8CBC260097302C /* UIFont+PingFang.m */; };
-		7CD1D2911F8CC8F50097302C /* SHTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD1D2901F8CC8F50097302C /* SHTableView.m */; };
-		7CD1D2951F8CC9B60097302C /* SHSegmentedControlTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD1D2941F8CC9B60097302C /* SHSegmentedControlTableView.m */; };
-		7CD1D2981F8CCEFD0097302C /* SHCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD1D2971F8CCEFD0097302C /* SHCollectionView.m */; };
 		7CF3FFC41F99F0E800758917 /* ThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF3FFC31F99F0E800758917 /* ThreeViewController.m */; };
 		7CF3FFC71F99F16200758917 /* FourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF3FFC61F99F16200758917 /* FourViewController.m */; };
 /* End PBXBuildFile section */
@@ -55,6 +55,20 @@
 		7C48E1F11F9DE397002E23AA /* ZeroViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZeroViewController.m; sourceTree = "<group>"; };
 		7C48E1F31F9DE9BB002E23AA /* TestCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCollectionView.h; sourceTree = "<group>"; };
 		7C48E1F41F9DE9BB002E23AA /* TestCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCollectionView.m; sourceTree = "<group>"; };
+		7C86940E1FE8F552003D7AFA /* SHSegmentControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSegmentControl.h; sourceTree = "<group>"; };
+		7C8694101FE8F552003D7AFA /* UIFont+PingFang.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+PingFang.h"; sourceTree = "<group>"; };
+		7C8694111FE8F552003D7AFA /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		7C8694121FE8F552003D7AFA /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		7C8694131FE8F552003D7AFA /* UIFont+PingFang.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+PingFang.m"; sourceTree = "<group>"; };
+		7C8694141FE8F552003D7AFA /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		7C8694151FE8F552003D7AFA /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		7C8694161FE8F552003D7AFA /* SHTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHTableView.h; sourceTree = "<group>"; };
+		7C8694171FE8F552003D7AFA /* SHSegmentedControlTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSegmentedControlTableView.m; sourceTree = "<group>"; };
+		7C8694181FE8F552003D7AFA /* SHCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHCollectionView.h; sourceTree = "<group>"; };
+		7C8694191FE8F552003D7AFA /* SHSegmentControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSegmentControl.m; sourceTree = "<group>"; };
+		7C86941A1FE8F552003D7AFA /* SHSegmentedControlTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSegmentedControlTableView.h; sourceTree = "<group>"; };
+		7C86941B1FE8F552003D7AFA /* SHTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHTableView.m; sourceTree = "<group>"; };
+		7C86941C1FE8F552003D7AFA /* SHCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHCollectionView.m; sourceTree = "<group>"; };
 		7CBCA1D01F98B19F00349014 /* TestOneTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestOneTableView.h; sourceTree = "<group>"; };
 		7CBCA1D11F98B19F00349014 /* TestOneTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestOneTableView.m; sourceTree = "<group>"; };
 		7CBCA1D31F999D9600349014 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -74,20 +88,6 @@
 		7CD1D2771F8CAD920097302C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7CD1D2801F8CB1E20097302C /* OneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneViewController.h; sourceTree = "<group>"; };
 		7CD1D2811F8CB1E20097302C /* OneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneViewController.m; sourceTree = "<group>"; };
-		7CD1D2831F8CB26D0097302C /* SHSegmentControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHSegmentControl.h; sourceTree = "<group>"; };
-		7CD1D2841F8CB26D0097302C /* SHSegmentControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHSegmentControl.m; sourceTree = "<group>"; };
-		7CD1D2861F8CB8000097302C /* UIView+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
-		7CD1D2871F8CB8000097302C /* UIView+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
-		7CD1D2891F8CB91E0097302C /* UIColor+Hex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
-		7CD1D28A1F8CB91E0097302C /* UIColor+Hex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
-		7CD1D28C1F8CBC260097302C /* UIFont+PingFang.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+PingFang.h"; sourceTree = "<group>"; };
-		7CD1D28D1F8CBC260097302C /* UIFont+PingFang.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+PingFang.m"; sourceTree = "<group>"; };
-		7CD1D28F1F8CC8F50097302C /* SHTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHTableView.h; sourceTree = "<group>"; };
-		7CD1D2901F8CC8F50097302C /* SHTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHTableView.m; sourceTree = "<group>"; };
-		7CD1D2931F8CC9B60097302C /* SHSegmentedControlTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHSegmentedControlTableView.h; sourceTree = "<group>"; };
-		7CD1D2941F8CC9B60097302C /* SHSegmentedControlTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHSegmentedControlTableView.m; sourceTree = "<group>"; };
-		7CD1D2961F8CCEFD0097302C /* SHCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHCollectionView.h; sourceTree = "<group>"; };
-		7CD1D2971F8CCEFD0097302C /* SHCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHCollectionView.m; sourceTree = "<group>"; };
 		7CF3FFC21F99F0E800758917 /* ThreeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreeViewController.h; sourceTree = "<group>"; };
 		7CF3FFC31F99F0E800758917 /* ThreeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreeViewController.m; sourceTree = "<group>"; };
 		7CF3FFC51F99F16200758917 /* FourViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FourViewController.h; sourceTree = "<group>"; };
@@ -125,6 +125,35 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7C86940D1FE8F552003D7AFA /* SHSegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				7C86940E1FE8F552003D7AFA /* SHSegmentControl.h */,
+				7C86940F1FE8F552003D7AFA /* Extension */,
+				7C8694161FE8F552003D7AFA /* SHTableView.h */,
+				7C8694171FE8F552003D7AFA /* SHSegmentedControlTableView.m */,
+				7C8694181FE8F552003D7AFA /* SHCollectionView.h */,
+				7C8694191FE8F552003D7AFA /* SHSegmentControl.m */,
+				7C86941A1FE8F552003D7AFA /* SHSegmentedControlTableView.h */,
+				7C86941B1FE8F552003D7AFA /* SHTableView.m */,
+				7C86941C1FE8F552003D7AFA /* SHCollectionView.m */,
+			);
+			path = SHSegmentedControl;
+			sourceTree = SOURCE_ROOT;
+		};
+		7C86940F1FE8F552003D7AFA /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7C8694101FE8F552003D7AFA /* UIFont+PingFang.h */,
+				7C8694111FE8F552003D7AFA /* UIColor+Hex.m */,
+				7C8694121FE8F552003D7AFA /* UIView+Extension.h */,
+				7C8694131FE8F552003D7AFA /* UIFont+PingFang.m */,
+				7C8694141FE8F552003D7AFA /* UIColor+Hex.h */,
+				7C8694151FE8F552003D7AFA /* UIView+Extension.m */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		7CD1D25C1F8CAD920097302C = {
 			isa = PBXGroup;
 			children = (
@@ -146,7 +175,7 @@
 		7CD1D2671F8CAD920097302C /* SHSegmentedControlTableView */ = {
 			isa = PBXGroup;
 			children = (
-				7CD1D27E1F8CADB50097302C /* SHSegmentedControlTableView */,
+				7C86940D1FE8F552003D7AFA /* SHSegmentedControl */,
 				7CD1D27F1F8CB0620097302C /* Demo */,
 				7CD1D2681F8CAD920097302C /* AppDelegate.h */,
 				7CD1D2691F8CAD920097302C /* AppDelegate.m */,
@@ -158,22 +187,6 @@
 				7CD1D2731F8CAD920097302C /* LaunchScreen.storyboard */,
 				7CD1D2761F8CAD920097302C /* Info.plist */,
 				7CD1D2771F8CAD920097302C /* main.m */,
-			);
-			path = SHSegmentedControlTableView;
-			sourceTree = "<group>";
-		};
-		7CD1D27E1F8CADB50097302C /* SHSegmentedControlTableView */ = {
-			isa = PBXGroup;
-			children = (
-				7CD1D2931F8CC9B60097302C /* SHSegmentedControlTableView.h */,
-				7CD1D2941F8CC9B60097302C /* SHSegmentedControlTableView.m */,
-				7CD1D2831F8CB26D0097302C /* SHSegmentControl.h */,
-				7CD1D2841F8CB26D0097302C /* SHSegmentControl.m */,
-				7CD1D28F1F8CC8F50097302C /* SHTableView.h */,
-				7CD1D2901F8CC8F50097302C /* SHTableView.m */,
-				7CD1D2961F8CCEFD0097302C /* SHCollectionView.h */,
-				7CD1D2971F8CCEFD0097302C /* SHCollectionView.m */,
-				7CD1D2921F8CC9780097302C /* Extension */,
 			);
 			path = SHSegmentedControlTableView;
 			sourceTree = "<group>";
@@ -213,19 +226,6 @@
 			name = Demo;
 			path = SHSegmentedControlTableView/Demo;
 			sourceTree = SOURCE_ROOT;
-		};
-		7CD1D2921F8CC9780097302C /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				7CD1D2861F8CB8000097302C /* UIView+Extension.h */,
-				7CD1D2871F8CB8000097302C /* UIView+Extension.m */,
-				7CD1D2891F8CB91E0097302C /* UIColor+Hex.h */,
-				7CD1D28A1F8CB91E0097302C /* UIColor+Hex.m */,
-				7CD1D28C1F8CBC260097302C /* UIFont+PingFang.h */,
-				7CD1D28D1F8CBC260097302C /* UIFont+PingFang.m */,
-			);
-			path = Extension;
-			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -349,29 +349,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CD1D2881F8CB8000097302C /* UIView+Extension.m in Sources */,
 				7C48E1EC1F9DE386002E23AA /* NineViewController.m in Sources */,
+				7C86941E1FE8F552003D7AFA /* UIFont+PingFang.m in Sources */,
+				7C8694221FE8F552003D7AFA /* SHTableView.m in Sources */,
 				7C48E1E31F9DE36A002E23AA /* SixViewController.m in Sources */,
 				7CD1D26D1F8CAD920097302C /* ViewController.m in Sources */,
 				7CD1D2781F8CAD920097302C /* main.m in Sources */,
 				7CD1D26A1F8CAD920097302C /* AppDelegate.m in Sources */,
 				7C48E1E61F9DE373002E23AA /* SevenViewController.m in Sources */,
-				7CD1D28B1F8CB91E0097302C /* UIColor+Hex.m in Sources */,
-				7CD1D2981F8CCEFD0097302C /* SHCollectionView.m in Sources */,
 				7C48E1E91F9DE37B002E23AA /* EightViewController.m in Sources */,
-				7CD1D2911F8CC8F50097302C /* SHTableView.m in Sources */,
 				7CBCA1D91F99D78D00349014 /* TwoViewController.m in Sources */,
-				7CD1D2851F8CB26D0097302C /* SHSegmentControl.m in Sources */,
 				7CF3FFC41F99F0E800758917 /* ThreeViewController.m in Sources */,
+				7C86941F1FE8F552003D7AFA /* UIView+Extension.m in Sources */,
 				7C48E1F21F9DE397002E23AA /* ZeroViewController.m in Sources */,
+				7C8694201FE8F552003D7AFA /* SHSegmentedControlTableView.m in Sources */,
 				7CF3FFC71F99F16200758917 /* FourViewController.m in Sources */,
+				7C8694231FE8F552003D7AFA /* SHCollectionView.m in Sources */,
 				7CBCA1D61F99D3B700349014 /* SHBaseViewController.m in Sources */,
-				7CD1D2951F8CC9B60097302C /* SHSegmentedControlTableView.m in Sources */,
 				7C48E1E01F9DE35D002E23AA /* FiveViewController.m in Sources */,
-				7CD1D28E1F8CBC260097302C /* UIFont+PingFang.m in Sources */,
+				7C86941D1FE8F552003D7AFA /* UIColor+Hex.m in Sources */,
 				7CBCA1D21F98B19F00349014 /* TestOneTableView.m in Sources */,
 				7C48E1EF1F9DE38F002E23AA /* TenViewController.m in Sources */,
 				7C48E1F51F9DE9BB002E23AA /* TestCollectionView.m in Sources */,
+				7C8694211FE8F552003D7AFA /* SHSegmentControl.m in Sources */,
 				7CD1D2821F8CB1E20097302C /* OneViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
