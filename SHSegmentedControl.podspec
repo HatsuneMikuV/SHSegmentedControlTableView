@@ -7,6 +7,7 @@ Pod::Spec.new do |s|
   s.summary      = "A short description of SHSegmentedControl."
   s.description  = <<-DESC
                    Both scroll horizontal and vertical for segment scrollview which have a same header
+                    DESC
   s.homepage     = "https://github.com/HatsuneMikuV/SHSegmentedControlTableView"
   s.license      = { :type => 'MIT' }
   s.authors      = { "Icarus" => "15188588180@163.com" }
