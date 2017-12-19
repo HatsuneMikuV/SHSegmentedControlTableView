@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.license      = { :type => 'MIT' }
   s.authors      = { "Icarus" => "15188588180@163.com" }
   s.platform     = :ios, "8.0"
-  s.source       = { :git => "https://github.com/HatsuneMikuV/SHSegmentedControlTableView.git", :tag => "s.version" }
+  s.source       = { :git => "https://github.com/HatsuneMikuV/SHSegmentedControlTableView.git", :tag => "1.0.0" }
   s.source_files  = "SHSegmentedControlTableView/SHSegmentedControl/**/*.{h,m}"
   s.requires_arc = true
 
