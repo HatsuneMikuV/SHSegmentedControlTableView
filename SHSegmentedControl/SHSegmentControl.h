@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+#import <Masonry/Masonry.h>
+
+
 typedef enum : NSUInteger {
     /** 默认状态 */
     SHSegmentControlTypeNone,
