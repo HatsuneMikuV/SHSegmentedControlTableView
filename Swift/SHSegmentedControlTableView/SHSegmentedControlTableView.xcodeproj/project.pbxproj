@@ -12,11 +12,6 @@
 		7C28D61B1FD8F00E00BD8A00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C28D6191FD8F00E00BD8A00 /* Main.storyboard */; };
 		7C28D61D1FD8F00E00BD8A00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C28D61C1FD8F00E00BD8A00 /* Assets.xcassets */; };
 		7C28D6201FD8F00E00BD8A00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C28D61E1FD8F00E00BD8A00 /* LaunchScreen.storyboard */; };
-		7CF5B7D11FDF76C5006C5701 /* SHSegmentedControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF5B7D01FDF76C5006C5701 /* SHSegmentedControlView.swift */; };
-		7CF5B7D31FDF76F1006C5701 /* SHSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF5B7D21FDF76F1006C5701 /* SHSegmentControl.swift */; };
-		7CF5B7D51FDF7714006C5701 /* SHTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF5B7D41FDF7714006C5701 /* SHTableView.swift */; };
-		7CF5B7D71FDF7731006C5701 /* SHCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF5B7D61FDF7731006C5701 /* SHCollectionView.swift */; };
-		7CF5B7D91FDF779C006C5701 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF5B7D81FDF779C006C5701 /* UIViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,13 +22,6 @@
 		7C28D61C1FD8F00E00BD8A00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C28D61F1FD8F00E00BD8A00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C28D6211FD8F00E00BD8A00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7CF5B7CE1FDF74CD006C5701 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
-		7CF5B7CF1FDF74CD006C5701 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		7CF5B7D01FDF76C5006C5701 /* SHSegmentedControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHSegmentedControlView.swift; sourceTree = "<group>"; };
-		7CF5B7D21FDF76F1006C5701 /* SHSegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHSegmentControl.swift; sourceTree = "<group>"; };
-		7CF5B7D41FDF7714006C5701 /* SHTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHTableView.swift; sourceTree = "<group>"; };
-		7CF5B7D61FDF7731006C5701 /* SHCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHCollectionView.swift; sourceTree = "<group>"; };
-		7CF5B7D81FDF779C006C5701 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,11 +68,6 @@
 		7C28D6271FD8F2C600BD8A00 /* SHSegmentedControl */ = {
 			isa = PBXGroup;
 			children = (
-				7CF5B7D01FDF76C5006C5701 /* SHSegmentedControlView.swift */,
-				7CF5B7D21FDF76F1006C5701 /* SHSegmentControl.swift */,
-				7CF5B7D41FDF7714006C5701 /* SHTableView.swift */,
-				7CF5B7D61FDF7731006C5701 /* SHCollectionView.swift */,
-				7CF5B7D81FDF779C006C5701 /* UIViewExtension.swift */,
 			);
 			path = SHSegmentedControl;
 			sourceTree = "<group>";
@@ -130,6 +113,7 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				en,
 				Base,
 			);
 			mainGroup = 7C28D6091FD8F00D00BD8A00;
@@ -160,13 +144,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CF5B7D31FDF76F1006C5701 /* SHSegmentControl.swift in Sources */,
-				7CF5B7D91FDF779C006C5701 /* UIViewExtension.swift in Sources */,
-				7CF5B7D51FDF7714006C5701 /* SHTableView.swift in Sources */,
-				7CF5B7D11FDF76C5006C5701 /* SHSegmentedControlView.swift in Sources */,
 				7C28D6181FD8F00E00BD8A00 /* ViewController.swift in Sources */,
 				7C28D6161FD8F00E00BD8A00 /* AppDelegate.swift in Sources */,
-				7CF5B7D71FDF7731006C5701 /* SHCollectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,7 +156,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				7C28D61A1FD8F00E00BD8A00 /* Base */,
-				7CF5B7CE1FDF74CD006C5701 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -186,7 +164,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				7C28D61F1FD8F00E00BD8A00 /* Base */,
-				7CF5B7CF1FDF74CD006C5701 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -198,7 +175,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -256,7 +232,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
