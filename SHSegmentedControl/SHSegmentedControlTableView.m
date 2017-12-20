@@ -7,8 +7,7 @@
 //
 
 #import "SHSegmentedControlTableView.h"
-#import "UIView+Extension.h"
-#import "SHCollectionView.h"
+
 
 @interface SHSegmentedControlTableView()<UITableViewDelegate,UITableViewDataSource,SHTableViewDelegate,SHPageContentViewDelegate>
 

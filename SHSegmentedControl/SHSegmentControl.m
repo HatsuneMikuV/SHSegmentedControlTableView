@@ -7,9 +7,7 @@
 //
 
 #import "SHSegmentControl.h"
-#import "UIView+Extension.h"
-#import "UIColor+Hex.h"
-#import "UIFont+PingFang.h"
+
 
 @interface SHSegmentControl ()
 

@@ -10,10 +10,8 @@
 #define PrefixHeader_pch
 
 
-#import "SHSegmentedControlTableView.h"
-#import "UIView+Extension.h"
-#import "UIColor+Hex.h"
-#import "UIFont+PingFang.h"
+#import "SHSegmentedControlHeader.h"
+
 
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 

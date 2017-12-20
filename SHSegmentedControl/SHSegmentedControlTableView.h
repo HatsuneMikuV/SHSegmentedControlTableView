@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SHTableView.h"
-#import "SHSegmentControl.h"
-
 #import <MJRefresh/MJRefresh.h>
+
+#import "SHSegmentControl.h"
+#import "SHCollectionView.h"
+
 
 @class SHPageContentView, SHSegmentedControlTableView;
 
