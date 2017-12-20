@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "SHSegmentedControl"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "SHSegmentedControl controls multiple UITableviews."
 
   # This description is used to generate tags and improve search results.
@@ -118,7 +118,7 @@ Both scroll horizontal and vertical for segment scrollview which have a same hea
   #
 
   # s.framework  = "SomeFramework"
-  # s.frameworks = "SomeFramework", "AnotherFramework"
+  s.frameworks = "UIKit", "Foundation", "Masonry", "MJRefresh"
 
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
