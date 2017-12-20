@@ -118,7 +118,7 @@ Both scroll horizontal and vertical for segment scrollview which have a same hea
   #
 
   # s.framework  = "SomeFramework"
-  s.frameworks = "UIKit", "Foundation", "Masonry", "MJRefresh"
+  s.frameworks = "UIKit", "Foundation"
 
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
