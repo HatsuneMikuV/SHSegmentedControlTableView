@@ -128,15 +128,15 @@
 		7C86940D1FE8F552003D7AFA /* SHSegmentedControl */ = {
 			isa = PBXGroup;
 			children = (
-				7C86940E1FE8F552003D7AFA /* SHSegmentControl.h */,
 				7C86940F1FE8F552003D7AFA /* Extension */,
-				7C8694161FE8F552003D7AFA /* SHTableView.h */,
-				7C8694171FE8F552003D7AFA /* SHSegmentedControlTableView.m */,
-				7C8694181FE8F552003D7AFA /* SHCollectionView.h */,
+				7C86940E1FE8F552003D7AFA /* SHSegmentControl.h */,
 				7C8694191FE8F552003D7AFA /* SHSegmentControl.m */,
 				7C86941A1FE8F552003D7AFA /* SHSegmentedControlTableView.h */,
-				7C86941B1FE8F552003D7AFA /* SHTableView.m */,
+				7C8694171FE8F552003D7AFA /* SHSegmentedControlTableView.m */,
+				7C8694181FE8F552003D7AFA /* SHCollectionView.h */,
 				7C86941C1FE8F552003D7AFA /* SHCollectionView.m */,
+				7C8694161FE8F552003D7AFA /* SHTableView.h */,
+				7C86941B1FE8F552003D7AFA /* SHTableView.m */,
 			);
 			path = SHSegmentedControl;
 			sourceTree = SOURCE_ROOT;

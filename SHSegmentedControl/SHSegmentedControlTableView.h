@@ -10,6 +10,9 @@
 #import "SHTableView.h"
 #import "SHSegmentControl.h"
 
+#import <Masonry/Masonry.h>
+#import <MJRefresh/MJRefresh.h>
+
 @class SHPageContentView, SHSegmentedControlTableView;
 
 @protocol SHSegTableViewDelegate <NSObject>

@@ -9,8 +9,6 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
-#import <Masonry/Masonry.h>
-#import <MJRefresh/MJRefresh.h>
 
 #import "SHSegmentedControlTableView.h"
 #import "UIView+Extension.h"
