@@ -10,6 +10,9 @@
 
 @interface UIColor (Hex)
 
+//随机色
++ (UIColor *)colorArc4random;
+
 //从十六进制字符串获取颜色，
 + (UIColor *)colorWithHexString:(NSString *)color;
 

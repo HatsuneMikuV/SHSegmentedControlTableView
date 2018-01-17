@@ -26,8 +26,8 @@
     
     self.navigationItem.title = @"样式列表";
     
-    self.dataArray = @[@"默认样式",@"涌入放大",@"右上角小标题",@"涌入放大+右上角小标题",@"导航栏透明",@"无头部",@"无bar",@"CollectionView",@"tableView+collectionView",@"下拉刷新",@"上拉加载"];
-    self.controllerArray = @[@"OneViewController",@"TwoViewController",@"ThreeViewController",@"FourViewController",@"FiveViewController",@"SixViewController",@"SevenViewController",@"EightViewController",@"NineViewController",@"TenViewController",@"ZeroViewController"];
+    self.dataArray = @[@"默认样式",@"涌入放大",@"右上角小标题",@"涌入放大+右上角小标题",@"导航栏透明",@"无头部",@"无bar",@"CollectionView",@"tableView+collectionView",@"下拉刷新全部",@"下拉刷新当前选中",@"独立上拉加载"];
+    self.controllerArray = @[@"OneViewController",@"TwoViewController",@"ThreeViewController",@"FourViewController",@"FiveViewController",@"SixViewController",@"SevenViewController",@"EightViewController",@"NineViewController",@"TenViewController",@"TenViewController",@"ZeroViewController"];
 
 
     [self.view addSubview:self.tableView];
@@ -53,12 +53,17 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    UIViewController *controller = [[NSClassFromString(self.controllerArray[indexPath.row]) alloc] init];
+    NSString *classStr = self.controllerArray[indexPath.row];
+    UIViewController *controller = [[NSClassFromString(classStr) alloc] init];
+    if ([classStr isEqualToString:@"TenViewController"] && indexPath.row == 9) {
+        [controller setValue:@"1" forKey:@"all"];
+    }
     if (controller) {
         controller.title = self.dataArray[indexPath.row];
         [self.navigationController pushViewController:controller animated:YES];
     }
 }
+
 #pragma mark -
 #pragma mark   ==============UI-lazy==============
 - (UITableView *)tableView {

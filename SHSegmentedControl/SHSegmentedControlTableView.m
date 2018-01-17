@@ -80,9 +80,16 @@ static NSString *cellIdentifier = @"SHSegTableViewCell";
 }
 #pragma mark -
 #pragma mark   ==============数据刷新==============
-- (void)setRefreshAllHeader:(MJRefreshHeader *)refreshAllHeader {
-    _refreshAllHeader = refreshAllHeader;
-    self.tableView.mj_header = _refreshAllHeader;
+- (void)setRefreshHeader:(MJRefreshHeader *)refreshHeader {
+    _refreshHeader = refreshHeader;
+    if (refreshHeader) self.tableView.mj_header = refreshHeader;
+}
+- (void)setMoreIndexFooter:(MJRefreshFooter *)moreIndexFooter {
+    _moreIndexFooter = moreIndexFooter;
+    if (moreIndexFooter) self.tableView.mj_footer = moreIndexFooter;
+}
+- (NSInteger)selectedIndex {
+    return self.index;
 }
 #pragma mark -
 #pragma mark   ==============get==============

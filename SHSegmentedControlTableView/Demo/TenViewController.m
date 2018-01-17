@@ -24,28 +24,42 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+
     TestOneTableView *tab1 = [[TestOneTableView alloc] init];
-    tab1.num = 15;
+    tab1.num = 5;
     tab1.label = @"一";
     TestOneTableView *tab2 = [[TestOneTableView alloc] init];
     tab2.num = 5;
     tab2.label = @"二";
     TestOneTableView *tab3 = [[TestOneTableView alloc] init];
-    tab3.num = 30;
+    tab3.num = 5;
     tab3.label = @"三";
     
     [self.segTableView setTableViews:@[tab1,tab2,tab3]];
     
     __weak __typeof(&*self)weakSelf = self;
     MJRefreshNormalHeader *refreshAllHeader = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-        tab1.num = 30;
-        tab2.num = 20;
-        tab3.num = 5;
-        weakSelf.headerView.backgroundColor = [UIColor yellowColor];
-        [weakSelf.segTableView.refreshAllHeader endRefreshing];
+        if (weakSelf.all) {
+            tab1.num = 30;
+            tab2.num = 10;
+            tab3.num = 20;
+            weakSelf.headerView.backgroundColor = [UIColor colorArc4random];
+            [weakSelf.segTableView.refreshHeader endRefreshing];
+        }else {
+            if (weakSelf.segTableView.selectedIndex == 0) {
+                tab1.num = 30;
+                weakSelf.headerView.backgroundColor = [UIColor redColor];
+            }else if (weakSelf.segTableView.selectedIndex == 1) {
+                tab2.num = 10;
+                weakSelf.headerView.backgroundColor = [UIColor greenColor];
+            }else if (weakSelf.segTableView.selectedIndex == 2) {
+                tab3.num = 20;
+                weakSelf.headerView.backgroundColor = [UIColor blueColor];
+            }
+            [weakSelf.segTableView.refreshHeader endRefreshing];
+        }
     }];
-    [self.segTableView setRefreshAllHeader:refreshAllHeader];
+    [self.segTableView setRefreshHeader:refreshAllHeader];
     
     
     [self.view addSubview:self.segTableView];

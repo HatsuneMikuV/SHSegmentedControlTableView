@@ -10,4 +10,6 @@
 
 @interface TenViewController : SHBaseViewController
 
+@property (nonatomic, copy) NSString *all;
+
 @end

@@ -53,8 +53,12 @@
 /** 刷新容器 */
 - (void)reloadData;
 
-/** 刷新全部数据 */
-@property (nonatomic, strong) MJRefreshHeader *refreshAllHeader;
+@property (nonatomic, assign, readonly) NSInteger selectedIndex;
+/** 刷新数据 （和selectedIndex 配合使用可单一刷新index数据） */
+@property (nonatomic, strong) MJRefreshHeader *refreshHeader;
+
+/** 加载数据 （和selectedIndex 配合使用可单一加载index数据） */
+@property (nonatomic, strong) MJRefreshFooter *moreIndexFooter;
 
 @end
 

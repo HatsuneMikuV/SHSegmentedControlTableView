@@ -60,6 +60,14 @@
     return [self colorWithHexString:color alpha:1.0f];
 }
 
++ (UIColor *)colorArc4random {
+    
+    float red = arc4random()%256 / 255.0;
+    float bule = arc4random()%256 / 255.0;
+    float green = arc4random()%256 / 255.0;
+    
+    return [UIColor colorWithRed:red green:green blue:bule alpha:1.0];
+}
 
 #pragma mark - 两种颜色之间的渐变
 /**

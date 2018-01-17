@@ -74,6 +74,8 @@ static NSInteger tag = 20171010;
     _progressHeight = 3.f;
     _curIndex = 0;
     _type = SHSegmentControlTypeNone;
+    
+    self.backgroundColor = [UIColor whiteColor];
 }
 #pragma mark -
 #pragma mark   ==============addSubview==============
