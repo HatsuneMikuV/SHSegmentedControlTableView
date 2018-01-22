@@ -84,10 +84,6 @@ static NSString *cellIdentifier = @"SHSegTableViewCell";
     _refreshHeader = refreshHeader;
     if (refreshHeader) self.tableView.mj_header = refreshHeader;
 }
-- (void)setMoreIndexFooter:(MJRefreshFooter *)moreIndexFooter {
-    _moreIndexFooter = moreIndexFooter;
-    if (moreIndexFooter) self.tableView.mj_footer = moreIndexFooter;
-}
 - (NSInteger)selectedIndex {
     return self.index;
 }

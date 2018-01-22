@@ -54,7 +54,7 @@
 }
 - (void)segTableViewDidScrollProgress:(CGFloat)progress originalIndex:(NSInteger)originalIndex targetIndex:(NSInteger)targetIndex {
     if (progress == 1) {
-        self.segmentControl.index = targetIndex;
+        [self.segmentControl setSegmentSelectedIndex:targetIndex];
     }
 }
 #pragma mark -
@@ -72,7 +72,7 @@
         _segmentControl.titleSelectColor = [UIColor redColor];
         _segmentControl.type = SHSegmentControlTypeWater;
         [_segmentControl reloadViews];
-        _segmentControl.index = 0;
+        [_segmentControl setSegmentSelectedIndex:0];
         __weak __typeof(&*self)weakSelf = self;
         _segmentControl.curClick = ^(NSInteger index) {
             [weakSelf.segTableView setSegmentSelectIndex:index];

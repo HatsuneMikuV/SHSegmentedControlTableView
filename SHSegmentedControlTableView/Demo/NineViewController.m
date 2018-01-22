@@ -59,7 +59,7 @@
 }
 - (void)segTableViewDidScrollProgress:(CGFloat)progress originalIndex:(NSInteger)originalIndex targetIndex:(NSInteger)targetIndex {
     if (progress == 1) {
-        self.segmentControl.index = targetIndex;
+        [self.segmentControl setSegmentSelectedIndex:targetIndex];
     }
 }
 #pragma mark -

@@ -34,6 +34,7 @@
 		7CD1D2751F8CAD920097302C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CD1D2731F8CAD920097302C /* LaunchScreen.storyboard */; };
 		7CD1D2781F8CAD920097302C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD1D2771F8CAD920097302C /* main.m */; };
 		7CD1D2821F8CB1E20097302C /* OneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD1D2811F8CB1E20097302C /* OneViewController.m */; };
+		7CD8C7742015D9830044825F /* ElevenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD8C7732015D9830044825F /* ElevenViewController.m */; };
 		7CF3FFC41F99F0E800758917 /* ThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF3FFC31F99F0E800758917 /* ThreeViewController.m */; };
 		7CF3FFC71F99F16200758917 /* FourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF3FFC61F99F16200758917 /* FourViewController.m */; };
 /* End PBXBuildFile section */
@@ -92,6 +93,8 @@
 		7CD1D2771F8CAD920097302C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7CD1D2801F8CB1E20097302C /* OneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneViewController.h; sourceTree = "<group>"; };
 		7CD1D2811F8CB1E20097302C /* OneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneViewController.m; sourceTree = "<group>"; };
+		7CD8C7722015D9830044825F /* ElevenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ElevenViewController.h; sourceTree = "<group>"; };
+		7CD8C7732015D9830044825F /* ElevenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ElevenViewController.m; sourceTree = "<group>"; };
 		7CF3FFC21F99F0E800758917 /* ThreeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreeViewController.h; sourceTree = "<group>"; };
 		7CF3FFC31F99F0E800758917 /* ThreeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreeViewController.m; sourceTree = "<group>"; };
 		7CF3FFC51F99F16200758917 /* FourViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FourViewController.h; sourceTree = "<group>"; };
@@ -229,6 +232,8 @@
 				7C48E1EE1F9DE38F002E23AA /* TenViewController.m */,
 				7C48E1F01F9DE397002E23AA /* ZeroViewController.h */,
 				7C48E1F11F9DE397002E23AA /* ZeroViewController.m */,
+				7CD8C7722015D9830044825F /* ElevenViewController.h */,
+				7CD8C7732015D9830044825F /* ElevenViewController.m */,
 			);
 			name = Demo;
 			path = SHSegmentedControlTableView/Demo;
@@ -361,6 +366,7 @@
 				7C8694221FE8F552003D7AFA /* SHTableView.m in Sources */,
 				7C48E1E31F9DE36A002E23AA /* SixViewController.m in Sources */,
 				7CD1D26D1F8CAD920097302C /* ViewController.m in Sources */,
+				7CD8C7742015D9830044825F /* ElevenViewController.m in Sources */,
 				7CD1D2781F8CAD920097302C /* main.m in Sources */,
 				7CD1D26A1F8CAD920097302C /* AppDelegate.m in Sources */,
 				7C48E1E61F9DE373002E23AA /* SevenViewController.m in Sources */,

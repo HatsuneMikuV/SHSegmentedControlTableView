@@ -55,7 +55,7 @@
 }
 - (void)segTableViewDidScrollProgress:(CGFloat)progress originalIndex:(NSInteger)originalIndex targetIndex:(NSInteger)targetIndex {
     if (progress == 1) {
-        self.segmentControl.index = targetIndex;
+        [self.segmentControl setSegmentSelectedIndex:targetIndex];
     }
 }
 #pragma mark -
@@ -73,7 +73,7 @@
         _segmentControl.type = SHSegmentControlTypeWaterSubTitle;
         [_segmentControl reloadViews];
         [_segmentControl setItmesSubTitle:@[@"15.5万",@"5000",@"30万"]];
-        _segmentControl.index = 0;
+        [_segmentControl setSegmentSelectedIndex:0];
         __weak __typeof(&*self)weakSelf = self;
         _segmentControl.curClick = ^(NSInteger index) {
             [weakSelf.segTableView setSegmentSelectIndex:index];

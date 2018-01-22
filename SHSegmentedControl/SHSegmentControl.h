@@ -55,9 +55,7 @@ typedef enum : NSUInteger {
 
 
 /** 获取当前下标 */
-@property (nonatomic, assign) NSInteger curIndex;
-/** 设置下标 */
-@property (nonatomic, assign) NSInteger index;
+@property (nonatomic, assign, readonly) NSInteger selectIndex;
 /** 分栏总数 */
 @property (nonatomic, assign) NSInteger totalCount;
 
@@ -65,6 +63,8 @@ typedef enum : NSUInteger {
 /** 分栏点击事件回调block */
 @property (nonatomic, copy) void(^curClick)(NSInteger index);
 
+/** 设置下标 */
+- (void)setSegmentSelectedIndex:(NSInteger)index;
 
 /** 带分栏信息---初始化 */
 - (instancetype)initWithFrame:(CGRect)frame items:(NSArray<NSString *> *)items;

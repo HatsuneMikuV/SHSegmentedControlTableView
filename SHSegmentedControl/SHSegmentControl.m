@@ -19,6 +19,8 @@
 
 @property (nonatomic, strong) UIImageView *lineV;
 
+@property (nonatomic, assign) NSInteger curIndex;
+
 @end
 
 static NSInteger tag = 20171010;
@@ -101,15 +103,16 @@ static NSInteger tag = 20171010;
     [self addSubview];
     [self reloadViews];
 }
-- (void)setIndex:(NSInteger)index {
-    _index = index;
-    
+- (void)setSegmentSelectedIndex:(NSInteger)index {
     if (index < self.btnArray.count) {
         [self btnClick:self.btnArray[index] isBlock:NO];
     }
 }
 - (NSInteger)totalCount {
     return self.titleArray.count;
+}
+- (NSInteger)selectIndex {
+    return self.curIndex;
 }
 #pragma mark -
 #pragma mark   ==============setItmesSubTitle==============
