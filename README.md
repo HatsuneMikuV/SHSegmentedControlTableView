@@ -14,7 +14,7 @@ Both scroll horizontal and vertical for segment scrollview which have a same hea
 SwipeTableView is available on [CocoaPods](http://cocoapods.org).  Add the following to your Podfile:
 
 ```ruby
-pod 'SHSegmentedControl', '~> 0.0.5'
+pod 'SHSegmentedControl', '~> 0.0.6'
 ```
 
 
