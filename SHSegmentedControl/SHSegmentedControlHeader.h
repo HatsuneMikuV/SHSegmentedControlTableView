@@ -11,5 +11,6 @@
 
 #import <Foundation/Foundation.h>
 #import "SHSegmentedControlTableView.h"
+#import "SHSegmentedScrollView.h"
 
 #endif /* SHSegmentedControlHeader_h */

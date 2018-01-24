@@ -11,7 +11,6 @@
 #import <MJRefresh/MJRefresh.h>
 
 #import "SHSegmentControl.h"
-#import "SHCollectionView.h"
 
 @class SHSegmentedScrollView;
 
@@ -19,7 +18,7 @@
 
 @optional
 /** SHSegmentedScrollViewDelegate 的代理方法 */
-- (void)scrollViewDidScrollIndex:(NSInteger)Index;
+- (void)scrollViewDidScrollIndex:(NSInteger)index;
 
 @end
 
