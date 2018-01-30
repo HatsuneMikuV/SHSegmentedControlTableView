@@ -1,5 +1,5 @@
 //
-//  OneViewController.swift
+//  SHBaseViewController.swift
 //  SHSegmentedControlTableView
 //
 //  Created by angle on 2018/1/30.
@@ -8,12 +8,14 @@
 
 import UIKit
 
-class OneViewController: SHBaseViewController {
+class SHBaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        self.view.backgroundColor = UIColor.white;
     }
 
     override func didReceiveMemoryWarning() {

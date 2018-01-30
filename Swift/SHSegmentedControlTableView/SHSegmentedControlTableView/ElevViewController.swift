@@ -1,5 +1,5 @@
 //
-//  OneViewController.swift
+//  ElevViewController.swift
 //  SHSegmentedControlTableView
 //
 //  Created by angle on 2018/1/30.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OneViewController: SHBaseViewController {
+class ElevViewController: SHBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

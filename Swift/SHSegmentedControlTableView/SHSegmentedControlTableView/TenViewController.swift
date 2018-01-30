@@ -1,5 +1,5 @@
 //
-//  OneViewController.swift
+//  TenViewController.swift
 //  SHSegmentedControlTableView
 //
 //  Created by angle on 2018/1/30.
@@ -8,8 +8,11 @@
 
 import UIKit
 
-class OneViewController: SHBaseViewController {
+class TenViewController: SHBaseViewController {
 
+    open var all:Bool!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

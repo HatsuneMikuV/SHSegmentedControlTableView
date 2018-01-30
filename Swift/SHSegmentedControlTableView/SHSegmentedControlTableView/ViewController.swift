@@ -24,8 +24,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         self.dataArray = ["默认样式", "涌入放大", "右上角小标题", "涌入放大+右上角小标题", "导航栏透明", "无头部", "无bar", "collectionView", "tableView+collectionView", "下拉刷新全部", "下拉刷新当前选中", "独立上拉加载", "头部固定-scrollView容器"]
         
-        self.controllerArray = NSArray.init(objects: OneViewController())
-
+        self.controllerArray = NSArray.init(objects: OneViewController(), TwoViewController(), ThreeViewController(), FourViewController(), FiveViewController(), SixViewController(), SevViewController(), EigViewController(), NineViewController(), TenViewController(),TenViewController(), ZeroViewController(), ElevViewController())
         self.tableView = self.getTableView()
         
         
@@ -44,6 +43,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let vc:SHBaseViewController = self.controllerArray.object(at: indexPath.row) as! SHBaseViewController
+        if indexPath.row == 9 && vc.isKind(of: TenViewController.classForCoder()) {
+            let tenVC:TenViewController = vc as! TenViewController
+            tenVC.all = true
+        }
+        self.navigationController?.pushViewController(self.controllerArray.object(at: indexPath.row) as! UIViewController, animated: true)
     }
     
     func getTableView() -> UITableView {
