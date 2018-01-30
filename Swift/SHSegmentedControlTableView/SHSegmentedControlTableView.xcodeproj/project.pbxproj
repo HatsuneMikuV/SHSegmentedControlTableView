@@ -25,6 +25,8 @@
 		7C755E3120204E0C007C28B5 /* ZeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C755E3020204E0C007C28B5 /* ZeroViewController.swift */; };
 		7C755E3320204E18007C28B5 /* ElevViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C755E3220204E18007C28B5 /* ElevViewController.swift */; };
 		7C755E352020509D007C28B5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C755E342020509D007C28B5 /* Info.plist */; };
+		7C755E372020525A007C28B5 /* TestOneTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C755E362020525A007C28B5 /* TestOneTableView.swift */; };
+		7C755E3B202052A8007C28B5 /* TestCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C755E3A202052A8007C28B5 /* TestCollectionView.swift */; };
 		7C9CB54E202030D800998BEB /* OneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9CB54D202030D800998BEB /* OneViewController.swift */; };
 		7C9CB5502020462400998BEB /* SHBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9CB54F2020462400998BEB /* SHBaseViewController.swift */; };
 /* End PBXBuildFile section */
@@ -49,6 +51,8 @@
 		7C755E3020204E0C007C28B5 /* ZeroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeroViewController.swift; sourceTree = "<group>"; };
 		7C755E3220204E18007C28B5 /* ElevViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElevViewController.swift; sourceTree = "<group>"; };
 		7C755E342020509D007C28B5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = SHSegmentedControlTableView/Info.plist; sourceTree = SOURCE_ROOT; };
+		7C755E362020525A007C28B5 /* TestOneTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestOneTableView.swift; sourceTree = "<group>"; };
+		7C755E3A202052A8007C28B5 /* TestCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionView.swift; sourceTree = "<group>"; };
 		7C9CB54D202030D800998BEB /* OneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneViewController.swift; sourceTree = "<group>"; };
 		7C9CB54F2020462400998BEB /* SHBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHBaseViewController.swift; sourceTree = "<group>"; };
 		AC2E0DBB795F8B59AC721706 /* Pods-SHSegmentedControlTableView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHSegmentedControlTableView.release.xcconfig"; path = "Pods/Target Support Files/Pods-SHSegmentedControlTableView/Pods-SHSegmentedControlTableView.release.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +122,8 @@
 				7C755E2E20204E02007C28B5 /* TenViewController.swift */,
 				7C755E3020204E0C007C28B5 /* ZeroViewController.swift */,
 				7C755E3220204E18007C28B5 /* ElevViewController.swift */,
+				7C755E362020525A007C28B5 /* TestOneTableView.swift */,
+				7C755E3A202052A8007C28B5 /* TestCollectionView.swift */,
 				7C9CB551202046E200998BEB /* main */,
 			);
 			path = SHSegmentedControlTableView;
@@ -276,10 +282,12 @@
 				7C755E2320204DC7007C28B5 /* FourViewController.swift in Sources */,
 				7C28D6181FD8F00E00BD8A00 /* ViewController.swift in Sources */,
 				7C755E2520204DCF007C28B5 /* FiveViewController.swift in Sources */,
+				7C755E372020525A007C28B5 /* TestOneTableView.swift in Sources */,
 				7C755E3120204E0C007C28B5 /* ZeroViewController.swift in Sources */,
 				7C755E2120204BF9007C28B5 /* ThreeViewController.swift in Sources */,
 				7C755E2F20204E02007C28B5 /* TenViewController.swift in Sources */,
 				7C9CB5502020462400998BEB /* SHBaseViewController.swift in Sources */,
+				7C755E3B202052A8007C28B5 /* TestCollectionView.swift in Sources */,
 				7C755E2D20204DFB007C28B5 /* NineViewController.swift in Sources */,
 				7C28D6161FD8F00E00BD8A00 /* AppDelegate.swift in Sources */,
 				7C755E2920204DE8007C28B5 /* SevViewController.swift in Sources */,

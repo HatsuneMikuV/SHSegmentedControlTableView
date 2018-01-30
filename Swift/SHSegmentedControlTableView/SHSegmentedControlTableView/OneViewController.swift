@@ -8,7 +8,9 @@
 
 import UIKit
 
-class OneViewController: SHBaseViewController {
+import SHSegmentedControl
+
+class OneViewController: SHBaseViewController, SHSegTableViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
