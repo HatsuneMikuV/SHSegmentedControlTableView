@@ -1,0 +1,18 @@
+PODS:
+  - Masonry (1.1.0)
+  - MJRefresh (3.1.15.2)
+  - SHSegmentedControl (0.0.6):
+    - Masonry (~> 1.1.0)
+    - MJRefresh (~> 3.1.15.1)
+
+DEPENDENCIES:
+  - SHSegmentedControl (~> 0.0.6)
+
+SPEC CHECKSUMS:
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJRefresh: f845c1a10f0309233fb352425475897a5c50e9f0
+  SHSegmentedControl: ef051a201215ac2aa572498f4d3e4d36ec7d0c67
+
+PODFILE CHECKSUM: 481284c11eb365bf956bd6b97a21464c860ff605
+
+COCOAPODS: 1.4.0.rc.1

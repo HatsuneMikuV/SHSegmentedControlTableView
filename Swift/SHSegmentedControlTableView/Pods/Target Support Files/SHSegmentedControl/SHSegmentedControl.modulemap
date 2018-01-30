@@ -1,0 +1,6 @@
+framework module SHSegmentedControl {
+  umbrella header "SHSegmentedControl-umbrella.h"
+
+  export *
+  module * { export * }
+}

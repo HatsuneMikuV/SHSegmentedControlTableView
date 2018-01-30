@@ -1,0 +1,6 @@
+framework module Pods_SHSegmentedControlTableView {
+  umbrella header "Pods-SHSegmentedControlTableView-umbrella.h"
+
+  export *
+  module * { export * }
+}

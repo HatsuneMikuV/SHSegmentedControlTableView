@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E1C4B1ADCF8A8B460F41108 /* Pods_SHSegmentedControlTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B34C79B3B6252B2D4149267E /* Pods_SHSegmentedControlTableView.framework */; };
 		7C28D6161FD8F00E00BD8A00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C28D6151FD8F00E00BD8A00 /* AppDelegate.swift */; };
 		7C28D6181FD8F00E00BD8A00 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C28D6171FD8F00E00BD8A00 /* ViewController.swift */; };
 		7C28D61B1FD8F00E00BD8A00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C28D6191FD8F00E00BD8A00 /* Main.storyboard */; };
 		7C28D61D1FD8F00E00BD8A00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C28D61C1FD8F00E00BD8A00 /* Assets.xcassets */; };
 		7C28D6201FD8F00E00BD8A00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C28D61E1FD8F00E00BD8A00 /* LaunchScreen.storyboard */; };
+		7C9CB54E202030D800998BEB /* OneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9CB54D202030D800998BEB /* OneViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A3A626BC7E98B30A35218C7 /* Pods-SHSegmentedControlTableView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHSegmentedControlTableView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SHSegmentedControlTableView/Pods-SHSegmentedControlTableView.debug.xcconfig"; sourceTree = "<group>"; };
 		7C28D6121FD8F00E00BD8A00 /* SHSegmentedControlTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SHSegmentedControlTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C28D6151FD8F00E00BD8A00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C28D6171FD8F00E00BD8A00 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,9 @@
 		7C28D61C1FD8F00E00BD8A00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C28D61F1FD8F00E00BD8A00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C28D6211FD8F00E00BD8A00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C9CB54D202030D800998BEB /* OneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneViewController.swift; sourceTree = "<group>"; };
+		AC2E0DBB795F8B59AC721706 /* Pods-SHSegmentedControlTableView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHSegmentedControlTableView.release.xcconfig"; path = "Pods/Target Support Files/Pods-SHSegmentedControlTableView/Pods-SHSegmentedControlTableView.release.xcconfig"; sourceTree = "<group>"; };
+		B34C79B3B6252B2D4149267E /* Pods_SHSegmentedControlTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SHSegmentedControlTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E1C4B1ADCF8A8B460F41108 /* Pods_SHSegmentedControlTableView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		56660CB8B20BFA1511A73450 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5A3A626BC7E98B30A35218C7 /* Pods-SHSegmentedControlTableView.debug.xcconfig */,
+				AC2E0DBB795F8B59AC721706 /* Pods-SHSegmentedControlTableView.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6FA92847DC37A93CED4CB4DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B34C79B3B6252B2D4149267E /* Pods_SHSegmentedControlTableView.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7C28D6091FD8F00D00BD8A00 = {
 			isa = PBXGroup;
 			children = (
 				7C28D6141FD8F00E00BD8A00 /* SHSegmentedControlTableView */,
 				7C28D6131FD8F00E00BD8A00 /* Products */,
+				56660CB8B20BFA1511A73450 /* Pods */,
+				6FA92847DC37A93CED4CB4DD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,22 +80,15 @@
 		7C28D6141FD8F00E00BD8A00 /* SHSegmentedControlTableView */ = {
 			isa = PBXGroup;
 			children = (
-				7C28D6271FD8F2C600BD8A00 /* SHSegmentedControl */,
 				7C28D6151FD8F00E00BD8A00 /* AppDelegate.swift */,
 				7C28D6171FD8F00E00BD8A00 /* ViewController.swift */,
+				7C9CB54D202030D800998BEB /* OneViewController.swift */,
 				7C28D6191FD8F00E00BD8A00 /* Main.storyboard */,
 				7C28D61C1FD8F00E00BD8A00 /* Assets.xcassets */,
 				7C28D61E1FD8F00E00BD8A00 /* LaunchScreen.storyboard */,
 				7C28D6211FD8F00E00BD8A00 /* Info.plist */,
 			);
 			path = SHSegmentedControlTableView;
-			sourceTree = "<group>";
-		};
-		7C28D6271FD8F2C600BD8A00 /* SHSegmentedControl */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SHSegmentedControl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -79,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7C28D6241FD8F00E00BD8A00 /* Build configuration list for PBXNativeTarget "SHSegmentedControlTableView" */;
 			buildPhases = (
+				B7B26C95B6F0C86200764EBD /* [CP] Check Pods Manifest.lock */,
 				7C28D60E1FD8F00E00BD8A00 /* Sources */,
 				7C28D60F1FD8F00E00BD8A00 /* Frameworks */,
 				7C28D6101FD8F00E00BD8A00 /* Resources */,
+				B7E0B9423FE759327D51A913 /* [CP] Embed Pods Frameworks */,
+				0565DAAF06FEE053E93CD086 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -139,11 +161,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0565DAAF06FEE053E93CD086 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SHSegmentedControlTableView/Pods-SHSegmentedControlTableView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7B26C95B6F0C86200764EBD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SHSegmentedControlTableView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7E0B9423FE759327D51A913 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SHSegmentedControlTableView/Pods-SHSegmentedControlTableView-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/SHSegmentedControl/SHSegmentedControl.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SHSegmentedControl.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SHSegmentedControlTableView/Pods-SHSegmentedControlTableView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7C28D60E1FD8F00E00BD8A00 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C9CB54E202030D800998BEB /* OneViewController.swift in Sources */,
 				7C28D6181FD8F00E00BD8A00 /* ViewController.swift in Sources */,
 				7C28D6161FD8F00E00BD8A00 /* AppDelegate.swift in Sources */,
 			);
@@ -280,6 +361,7 @@
 		};
 		7C28D6251FD8F00E00BD8A00 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A3A626BC7E98B30A35218C7 /* Pods-SHSegmentedControlTableView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -295,6 +377,7 @@
 		};
 		7C28D6261FD8F00E00BD8A00 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC2E0DBB795F8B59AC721706 /* Pods-SHSegmentedControlTableView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
