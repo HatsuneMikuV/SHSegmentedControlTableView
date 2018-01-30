@@ -6,6 +6,13 @@
 //  Copyright © 2018年 angle. All rights reserved.
 //
 
+
+let SCREEN_WIDTH = UIScreen.main.bounds.size.width
+let SCREEN_HEIGHT = UIScreen.main.bounds.size.height
+
+
+
+
 import UIKit
 
 class SHBaseViewController: UIViewController {
