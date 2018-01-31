@@ -14,11 +14,11 @@ class TestOneTableView: SHTableView, UITableViewDataSource, UITableViewDelegate 
     
     open var label:String!
     
-    open var num:NSInteger!
+    open var num:NSInteger = 0
     
     override init(frame: CGRect, style: UITableViewStyle) {
         super.init(frame: frame, style: style)
-        self.num = 0
+
         self.dataSource = self
         self.delegate = self
         self.rowHeight = 45
@@ -31,6 +31,15 @@ class TestOneTableView: SHTableView, UITableViewDataSource, UITableViewDelegate 
         fatalError("init(coder:) has not been implemented")
     }
     
+    open func setNum(num: NSInteger) {
+        self.num = num;
+        self.reloadData()
+    }
+    
+    open func setLabel(label: String) {
+        self.label = label;
+        self.reloadData()
+    }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.num

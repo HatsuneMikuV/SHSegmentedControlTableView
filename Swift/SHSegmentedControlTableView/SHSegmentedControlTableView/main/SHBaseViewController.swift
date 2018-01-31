@@ -23,6 +23,7 @@ class SHBaseViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         self.view.backgroundColor = UIColor.white;
+        self.edgesForExtendedLayout = UIRectEdge.init(rawValue: 0)
     }
 
     override func didReceiveMemoryWarning() {

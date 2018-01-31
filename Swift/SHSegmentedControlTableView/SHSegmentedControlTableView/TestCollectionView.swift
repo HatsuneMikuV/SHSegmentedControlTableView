@@ -12,11 +12,12 @@ import SHSegmentedControl
 
 class TestCollectionView: SHCollectionView, UICollectionViewDataSource, UICollectionViewDelegate {
     
-    open var num:NSInteger!
+    open var num:NSInteger = 0
     
     
     class open func collectionView(frame: CGRect) -> Any {
         let layout:UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
+        layout.sectionInset = UIEdgeInsetsMake(10, 16, 10, 16)
         let collectionView = TestCollectionView.init(frame: frame, collectionViewLayout: layout)
         return collectionView
     }
@@ -24,13 +25,15 @@ class TestCollectionView: SHCollectionView, UICollectionViewDataSource, UICollec
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
         self.backgroundColor = UIColor.white
-        self.num = 0
         self.dataSource = self
         self.delegate = self
         self.register(UICollectionViewCell.classForCoder(), forCellWithReuseIdentifier: "cell")
         self.allowsSelection = false
     }
-    
+    open func setNum(num: NSInteger) {
+        self.num = num;
+        self.reloadData()
+    }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
