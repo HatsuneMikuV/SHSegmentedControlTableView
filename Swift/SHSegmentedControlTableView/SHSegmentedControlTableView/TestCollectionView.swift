@@ -15,7 +15,7 @@ class TestCollectionView: SHCollectionView, UICollectionViewDataSource, UICollec
     open var num:NSInteger!
     
     
-    func collectionView(frame: CGRect) -> UICollectionView {
+    class open func collectionView(frame: CGRect) -> Any {
         let layout:UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
         let collectionView = TestCollectionView.init(frame: frame, collectionViewLayout: layout)
         return collectionView
@@ -27,7 +27,7 @@ class TestCollectionView: SHCollectionView, UICollectionViewDataSource, UICollec
         self.num = 0
         self.dataSource = self
         self.delegate = self
-        self.register(UITableViewCell.classForCoder(), forCellWithReuseIdentifier: "cell")
+        self.register(UICollectionViewCell.classForCoder(), forCellWithReuseIdentifier: "cell")
         self.allowsSelection = false
     }
     

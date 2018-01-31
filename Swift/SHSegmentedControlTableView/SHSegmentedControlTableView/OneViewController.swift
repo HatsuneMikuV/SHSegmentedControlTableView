@@ -24,17 +24,17 @@ class OneViewController: SHBaseViewController, SHSegTableViewDelegate {
 
         // Do any additional setup after loading the view.
         
-        let tab1 = TestOneTableView.init(frame: CGRect.init(), style: UITableViewStyle.plain);
-        tab1.num = 15;
-        tab1.label = "一";
+        let tab1 = TestOneTableView.init(frame: CGRect.init(), style: UITableViewStyle.plain)
+        tab1.num = 15
+        tab1.label = "一"
         
-        let tab2 = TestOneTableView.init(frame: CGRect.init(), style: UITableViewStyle.plain);
-        tab2.num = 5;
-        tab2.label = "二";
+        let tab2 = TestOneTableView.init(frame: CGRect.init(), style: UITableViewStyle.plain)
+        tab2.num = 5
+        tab2.label = "二"
         
-        let tab3 = TestOneTableView.init(frame: CGRect.init(), style: UITableViewStyle.plain);
-        tab3.num = 30;
-        tab3.label = "三";
+        let tab3 = TestOneTableView.init(frame: CGRect.init(), style: UITableViewStyle.plain)
+        tab3.num = 30
+        tab3.label = "三"
         
         
         self.headerView = self.getHeaderView()

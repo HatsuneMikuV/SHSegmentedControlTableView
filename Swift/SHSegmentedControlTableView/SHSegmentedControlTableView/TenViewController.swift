@@ -8,6 +8,9 @@
 
 import UIKit
 
+import SHSegmentedControl
+
+
 class TenViewController: SHBaseViewController {
 
     open var all:Bool!

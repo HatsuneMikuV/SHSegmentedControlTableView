@@ -8,6 +8,9 @@
 
 import UIKit
 
+import SHSegmentedControl
+
+
 class ZeroViewController: SHBaseViewController {
 
     override func viewDidLoad() {
