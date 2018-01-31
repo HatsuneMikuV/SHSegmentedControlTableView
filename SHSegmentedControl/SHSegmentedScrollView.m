@@ -125,6 +125,7 @@
 - (void)setSegmentSelectIndex:(NSInteger)selectedIndex {
     if (selectedIndex != self.index && selectedIndex >= 0 && selectedIndex < self.tableViews.count) {
         CGPoint point = CGPointMake(selectedIndex * self.width, 0);
+        self.index = selectedIndex;
         [self.scrollView setContentOffset:point animated:YES];
     }
 }
