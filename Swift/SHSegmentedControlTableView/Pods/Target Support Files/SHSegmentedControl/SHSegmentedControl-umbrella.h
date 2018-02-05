@@ -10,15 +10,15 @@
 #endif
 #endif
 
-#import "SHCollectionView.h"
-#import "SHSegmentControl.h"
 #import "SHSegmentedControlHeader.h"
-#import "SHSegmentedControlTableView.h"
-#import "SHSegmentedScrollView.h"
-#import "SHTableView.h"
 #import "UIColor+Hex.h"
 #import "UIFont+PingFang.h"
 #import "UIView+Extension.h"
+#import "SHCollectionView.h"
+#import "SHSegmentControl.h"
+#import "SHSegmentedControlTableView.h"
+#import "SHSegmentedScrollView.h"
+#import "SHTableView.h"
 
 FOUNDATION_EXPORT double SHSegmentedControlVersionNumber;
 FOUNDATION_EXPORT const unsigned char SHSegmentedControlVersionString[];

@@ -5,7 +5,7 @@ target 'SHSegmentedControlTableView' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
 #  use_frameworks!
 
-  pod 'SHSegmentedControl' , :path=>'/Users/angle/Documents/githubcode/SHSegmentedControlTableView'
+  pod 'SHSegmentedControl'
   # Pods for SHSegmentedControlTableView
 
 end

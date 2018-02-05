@@ -1,6 +1,6 @@
 {
   "name": "SHSegmentedControl",
-  "version": "1.1.2",
+  "version": "1.1.4",
   "summary": "SHSegmentedControl controls multiple UITableviews.",
   "description": "Both scroll horizontal and vertical for segment scrollview which have a same header.",
   "homepage": "https://github.com/HatsuneMikuV/SHSegmentedControlTableView",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/HatsuneMikuV/SHSegmentedControlTableView.git",
-    "tag": "1.1.2"
+    "tag": "1.1.4"
   },
   "source_files": "SHSegmentedControl/SHSegmentedControlHeader.h",
   "public_header_files": "SHSegmentedControl/SHSegmentedControlHeader.h",
@@ -23,6 +23,10 @@
   ],
   "requires_arc": true,
   "subspecs": [
+    {
+      "name": "SHExtension",
+      "source_files": "SHSegmentedControl/SHExtension/*.{h,m}"
+    },
     {
       "name": "SHSegmentContent",
       "source_files": "SHSegmentedControl/SHSegmentContent/*.{h,m}",
@@ -37,10 +41,6 @@
 
         ]
       }
-    },
-    {
-      "name": "SHExtension",
-      "source_files": "SHSegmentedControl/SHExtension/*.{h,m}"
     }
   ]
 }
