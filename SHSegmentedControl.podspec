@@ -95,16 +95,17 @@ Both scroll horizontal and vertical for segment scrollview which have a same hea
   s.public_header_files = "SHSegmentedControl/SHSegmentedControlHeader.h"
   # s.exclude_files = "Classes/Exclude"
 
-  s.subspec 'SHSegmentContent' do |ss|
-    ss.source_files = 'SHSegmentedControl/SHSegmentContent/*.{h,m}'
-    ss.dependency 'SHSegmentedControl/SHExtension'
-    ss.dependency 'Masonry'
-    ss.dependency 'MJRefresh'
+  s.subspec 'SHExtension' do |sse|
+    sse.source_files = 'SHSegmentedControl/SHExtension/*.{h,m}'
   end
 
-  s.subspec 'SHExtension' do |ss|
-    ss.source_files = "SHSegmentedControl/SHExtension/*.{h,m}"
+  s.subspec 'SHSegmentContent' do |ssg|
+    ssg.source_files = 'SHSegmentedControl/SHSegmentContent/*.{h,m}'
+    ssg.dependency 'SHSegmentedControl/SHExtension'
+    ssg.dependency 'Masonry'
+    ssg.dependency 'MJRefresh'
   end
+
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
