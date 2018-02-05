@@ -96,14 +96,14 @@ Both scroll horizontal and vertical for segment scrollview which have a same hea
   # s.exclude_files = "Classes/Exclude"
 
   s.subspec 'SHSegmentContent' do |ss|
-    ss.source_files = "SHSegmentedControl/SHSegmentContent/*.{h,m}"
-    ss.dependency "SHSegmentedControl/Extension"
-    ss.dependency "Masonry"
-    ss.dependency "MJRefresh"
+    ss.source_files = 'SHSegmentedControl/SHSegmentContent/*.{h,m}'
+    ss.dependency 'SHSegmentedControl/SHExtension'
+    ss.dependency 'Masonry'
+    ss.dependency 'MJRefresh'
   end
 
-  s.subspec 'Extension' do |ss|
-    ss.source_files = "SHSegmentedControl/Extension/*.{h,m}"
+  s.subspec 'SHExtension' do |ss|
+    ss.source_files = "SHSegmentedControl/SHExtension/*.{h,m}"
   end
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

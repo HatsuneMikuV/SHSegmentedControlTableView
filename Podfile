@@ -3,10 +3,9 @@
 
 target 'SHSegmentedControlTableView' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
-  # use_frameworks!
+#  use_frameworks!
 
-  pod 'Masonry'               #布局约束
-  pod 'MJRefresh'             #下拉刷新
+  pod 'SHSegmentedControl' , :path=>'/Users/angle/Documents/githubcode/SHSegmentedControlTableView'
   # Pods for SHSegmentedControlTableView
 
 end
