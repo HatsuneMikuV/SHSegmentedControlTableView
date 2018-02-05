@@ -97,6 +97,9 @@ Both scroll horizontal and vertical for segment scrollview which have a same hea
 
   s.subspec 'SHSegmentContent' do |ss|
     ss.source_files = "SHSegmentedControl/SHSegmentContent/*.{h,m}"
+    ss.dependency "SHSegmentedControl/Extension"
+    ss.dependency "Masonry"
+    ss.dependency "MJRefresh"
   end
 
   s.subspec 'Extension' do |ss|
@@ -139,7 +142,5 @@ Both scroll horizontal and vertical for segment scrollview which have a same hea
   s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  s.dependency "Masonry"
-  s.dependency "MJRefresh"
 
 end
