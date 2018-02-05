@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "SHSegmentedControl"
-  s.version      = "1.1.0"
+  s.version      = "1.1.2"
   s.summary      = "SHSegmentedControl controls multiple UITableviews."
 
   # This description is used to generate tags and improve search results.
