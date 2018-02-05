@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "SHSegmentedControl"
-  s.version      = "1.0.2"
+  s.version      = "1.1.0"
   s.summary      = "SHSegmentedControl controls multiple UITableviews."
 
   # This description is used to generate tags and improve search results.
@@ -91,11 +91,17 @@ Both scroll horizontal and vertical for segment scrollview which have a same hea
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "SHSegmentedControl", "SHSegmentedControl/**/*.{h,m}"
+  s.source_files  = "SHSegmentedControl/SHSegmentedControlHeader.h"
+  s.public_header_files = "SHSegmentedControl/SHSegmentedControlHeader.h"
   # s.exclude_files = "Classes/Exclude"
 
-  # s.public_header_files = "Classes/**/*.h"
+  s.subspec 'SHSegmentContent' do |ss|
+    ss.source_files = "SHSegmentedControl/SHSegmentContent/*.{h,m}"
+  end
 
+  s.subspec 'Extension' do |ss|
+    ss.source_files = "SHSegmentedControl/Extension/*.{h,m}"
+  end
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -133,7 +139,7 @@ Both scroll horizontal and vertical for segment scrollview which have a same hea
   s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  s.dependency "Masonry", "~> 1.1.0"
-  s.dependency "MJRefresh", "~> 3.1.15.1"
+  s.dependency "Masonry"
+  s.dependency "MJRefresh"
 
 end
