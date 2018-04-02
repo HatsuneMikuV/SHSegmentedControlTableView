@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "SHSegmentedControl"
-  s.version      = "1.1.4"
+  s.version      = "1.1.5"
   s.summary      = "SHSegmentedControl controls multiple UITableviews."
 
   # This description is used to generate tags and improve search results.
@@ -29,7 +29,7 @@ Both scroll horizontal and vertical for segment scrollview which have a same hea
                    DESC
 
   s.homepage     = "https://github.com/HatsuneMikuV/SHSegmentedControlTableView"
-  # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
+  s.screenshots  = "https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/snow.gif"
 
 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
