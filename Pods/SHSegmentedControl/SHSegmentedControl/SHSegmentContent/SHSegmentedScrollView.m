@@ -37,7 +37,6 @@
         }
         [self addSubview:self.scrollView];
         self.index = 0;
-        self.scroll = YES;
     }
     return self;
 }

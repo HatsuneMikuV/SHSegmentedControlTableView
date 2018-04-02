@@ -1,11 +1,11 @@
 PODS:
   - Masonry (1.1.0)
   - MJRefresh (3.1.15.3)
-  - SHSegmentedControl (1.1.4):
-    - SHSegmentedControl/SHExtension (= 1.1.4)
-    - SHSegmentedControl/SHSegmentContent (= 1.1.4)
-  - SHSegmentedControl/SHExtension (1.1.4)
-  - SHSegmentedControl/SHSegmentContent (1.1.4):
+  - SHSegmentedControl (1.1.6):
+    - SHSegmentedControl/SHExtension (= 1.1.6)
+    - SHSegmentedControl/SHSegmentContent (= 1.1.6)
+  - SHSegmentedControl/SHExtension (1.1.6)
+  - SHSegmentedControl/SHSegmentContent (1.1.6):
     - Masonry
     - MJRefresh
     - SHSegmentedControl/SHExtension
@@ -16,7 +16,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
-  SHSegmentedControl: 869bfd851dc7bed0f7025f0f0fad88f0cee3b383
+  SHSegmentedControl: 7f23cefe2fd59375a8b1a7a2392fdf0391fe9002
 
 PODFILE CHECKSUM: 9dd76f11289f40fcf624676189ac92a0b6022d64
 
