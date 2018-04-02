@@ -15,6 +15,8 @@
 
 @property (nonatomic, assign) NSInteger index;
 
+@property (nonatomic, assign) BOOL scroll;
+
 @end
 
 
@@ -126,6 +128,7 @@
     if (selectedIndex != self.index && selectedIndex >= 0 && selectedIndex < self.tableViews.count) {
         CGPoint point = CGPointMake(selectedIndex * self.width, 0);
         self.index = selectedIndex;
+        self.scroll = NO;
         [self.scrollView setContentOffset:point animated:YES];
     }
 }
@@ -141,6 +144,8 @@
 #pragma mark -
 #pragma mark   ==============UIScrollViewDelegate==============
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if (!self.scroll) return;
+    
     if (self.delegateCell && [self.delegateCell respondsToSelector:@selector(scrollViewDidScrollIndex:)]) {
         NSInteger index = (NSInteger)((scrollView.contentOffset.x + self.width * 0.5) / self.width);
         if (index != self.index) {
@@ -148,5 +153,8 @@
             [self.delegateCell scrollViewDidScrollIndex:index];
         }
     }
+}
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
+    self.scroll = YES;
 }
 @end
