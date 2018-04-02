@@ -27,8 +27,9 @@
     
     self.navigationItem.title = @"样式列表";
     
-    self.dataArray = @[@"默认样式",@"涌入放大",@"右上角小标题",@"涌入放大+右上角小标题",@"导航栏透明",@"无头部",@"无bar",@"CollectionView",@"tableView+collectionView",@"下拉刷新全部",@"下拉刷新当前选中",@"独立上拉加载",@"头部固定-scrollView容器"];
-    self.controllerArray = @[@"OneViewController",@"TwoViewController",@"ThreeViewController",@"FourViewController",@"FiveViewController",@"SixViewController",@"SevenViewController",@"EightViewController",@"NineViewController",@"TenViewController",@"TenViewController",@"ZeroViewController",@"ElevenViewController"];
+    self.dataArray = @[@"默认样式",@"涌入放大",@"右上角小标题",@"涌入放大+右上角小标题",@"导航栏透明",@"无头部",@"无bar",@"CollectionView",@"tableView+collectionView",@"下拉刷新全部",@"下拉刷新当前选中",@"独立上拉加载",@"头部固定-scrollView容器",@"bar放在头部上，滑动悬停"];
+    self.controllerArray = @[@"OneViewController",@"TwoViewController",@"ThreeViewController",@"FourViewController",@"FiveViewController",@"SixViewController",@"SevenViewController",@"EightViewController",@"NineViewController",@"TenViewController",@"TenViewController",@"ZeroViewController",@"ElevenViewController",@"TwelveViewController"];
+
 
 
     [self.view addSubview:self.tableView];
