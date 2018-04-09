@@ -9,10 +9,10 @@ Both scroll horizontal and vertical for segment scrollview which have a same hea
 ![](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/snow.gif)
 
 ### 2018.04.09新增demo，头部下拉放大
-![](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/snow.gif)
+![](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/headerScale.gif)
 
 ### 2018.04.02新增demo，bar放在头部上，滑动悬停
-![](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/snow.gif)
+![](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/header_bar_stop.gif)
 
 
 # 使用 Cocoapods 导入
