@@ -10,12 +10,18 @@
 
 #import "SHTableView.h"
 
+/**
+ 容器内容视图，处理手势
+ */
 @interface SHCollectionView : UICollectionView
 
 @property (nonatomic, weak) id<SHTableViewDelegate> delegateSHTableView;
 
 @end
 
+/**
+ 主容器，处理手势
+ */
 @interface SHTapCollectionView : UICollectionView
 
 @end

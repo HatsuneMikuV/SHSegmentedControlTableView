@@ -1,11 +1,11 @@
 PODS:
   - Masonry (1.1.0)
   - MJRefresh (3.1.15.3)
-  - SHSegmentedControl (1.1.4):
-    - SHSegmentedControl/SHExtension (= 1.1.4)
-    - SHSegmentedControl/SHSegmentContent (= 1.1.4)
-  - SHSegmentedControl/SHExtension (1.1.4)
-  - SHSegmentedControl/SHSegmentContent (1.1.4):
+  - SHSegmentedControl (1.1.8):
+    - SHSegmentedControl/SHExtension (= 1.1.8)
+    - SHSegmentedControl/SHSegmentContent (= 1.1.8)
+  - SHSegmentedControl/SHExtension (1.1.8)
+  - SHSegmentedControl/SHSegmentContent (1.1.8):
     - Masonry
     - MJRefresh
     - SHSegmentedControl/SHExtension
@@ -13,11 +13,17 @@ PODS:
 DEPENDENCIES:
   - SHSegmentedControl
 
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Masonry
+    - MJRefresh
+    - SHSegmentedControl
+
 SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
-  SHSegmentedControl: 869bfd851dc7bed0f7025f0f0fad88f0cee3b383
+  SHSegmentedControl: 535d53d472cc5aa0d6c32ecc4dc8df945e28b4a5
 
 PODFILE CHECKSUM: 63eac4f65694ed83d4de0cb1313d6653469b2e8e
 
-COCOAPODS: 1.4.0.rc.1
+COCOAPODS: 1.5.0

@@ -22,9 +22,39 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         self.navigationItem.title = "样式列表"
         
-        self.dataArray = ["默认样式", "涌入放大", "右上角小标题", "涌入放大+右上角小标题", "导航栏透明", "无头部", "无bar", "collectionView", "tableView+collectionView", "下拉刷新全部", "下拉刷新当前选中", "独立上拉加载", "头部固定-scrollView容器"]
+        self.dataArray = ["默认样式",
+                          "涌入放大",
+                          "右上角小标题",
+                          "涌入放大+右上角小标题",
+                          "导航栏透明",
+                          "无头部",
+                          "无bar",
+                          "collectionView",
+                          "tableView+collectionView",
+                          "下拉刷新全部",
+                          "下拉刷新当前选中",
+                          "独立上拉加载",
+                          "头部固定-scrollView容器",
+                          "bar放在头部上，滑动悬停",
+                          "下拉头部放大",
+                          "使用ChildVC的处理方式"]
         
-        self.controllerArray = NSArray.init(objects: OneViewController(), TwoViewController(), ThreeViewController(), FourViewController(), FiveViewController(), SixViewController(), SevViewController(), EigViewController(), NineViewController(), TenViewController(),TenViewController(), ZeroViewController(), ElevViewController())
+        self.controllerArray = NSArray.init(objects: OneViewController(),
+                                            TwoViewController(),
+                                            ThreeViewController(),
+                                            FourViewController(),
+                                            FiveViewController(),
+                                            SixViewController(),
+                                            SevViewController(),
+                                            EigViewController(),
+                                            NineViewController(),
+                                            TenViewController(),
+                                            TenViewController(),
+                                            ZeroViewController(),
+                                            ElevViewController(),
+                                            TwelveViewController(),
+                                            ThirteenViewController(),
+                                            FourteenViewController())
         self.tableView = self.getTableView()
         
         

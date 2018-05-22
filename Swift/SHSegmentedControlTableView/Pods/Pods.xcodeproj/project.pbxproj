@@ -32,18 +32,18 @@
 		3829CBCC3598DB13C2AD3B7383D1F24A /* MJRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD2268A0FD8B3691849E18E87B33C97 /* MJRefreshFooter.m */; };
 		38E0CD63021889EE46E1A6B9FA0415F5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 589DA455B0D76B12A4AC63671E681D56 /* UIKit.framework */; };
 		432FA22864D148EBD4CB22F55AB68004 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60E936BAE43338974D5AAAD5D4B96DED /* Foundation.framework */; };
-		457ACF9150DCF9AF445B129CC9678FB6 /* Masonry-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BBAB6049DA8E087054B38ECA66D896C /* Masonry-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4594551181A5F545090D688465710605 /* SHSegmentedControl-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5746A8C8168CC4374E9444166D2B5B79 /* SHSegmentedControl-dummy.m */; };
+		457ACF9150DCF9AF445B129CC9678FB6 /* Masonry-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E36A0FAB9C3C34AE5C8EE3CD1259B1E /* Masonry-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4594551181A5F545090D688465710605 /* SHSegmentedControl-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E8387D37B2435C99884CF212FAF509 /* SHSegmentedControl-dummy.m */; };
 		4D4F2050654580FE1F1D5F4F82CEDDB8 /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 09CE204AA51E8D2B7C423D3B5BD0289D /* MASConstraint+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		53BDF81D0A52EA526D597A5C5B139D7F /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = AB5CAAD70A04BDEC8B72489618F8A6EC /* MASCompositeConstraint.m */; };
 		577E75C90D5BAAE6D649AAE1B953A017 /* SHSegmentControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 687F536C2A6D865AF3670ED665127588 /* SHSegmentControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		58E6E68D10EF3D64522BD267CC1761A6 /* NSBundle+MJRefresh.h in Headers */ = {isa = PBXBuildFile; fileRef = B18EA95408BE441EC1F8CCC6FD4BC3D0 /* NSBundle+MJRefresh.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		59F81DE0305CC2AC448D2A3C6B3280A2 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 898E7B5567874AD7CF720994490C2342 /* MASConstraint.m */; };
 		5C679F2065E7B28C156350999951D7FB /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5D692702AF3E0F9C8C6C167BF947AE /* UIColor+Hex.m */; };
-		621B413DAEFE75991251ED378822527C /* MJRefresh-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 59221C73B6FFD8F6CE0FA52BD9F55DBF /* MJRefresh-dummy.m */; };
+		621B413DAEFE75991251ED378822527C /* MJRefresh-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D07C61C7C1853DA363E0C873FBB208DF /* MJRefresh-dummy.m */; };
 		6298B1C2234864DA5ED3B5E6398B95AC /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D5C5B478986BA7F3662C0B7286115000 /* MJRefresh.bundle */; };
 		636BBA734C1A17A734761D674FAE8800 /* MASViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 88455E888A3494570C91AA04FE5AC7C5 /* MASViewAttribute.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		65293016CCCDD2D93C66A36B6A840603 /* Pods-SHSegmentedControlTableView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2020038F86A9807CE44DFB7C475E5F9F /* Pods-SHSegmentedControlTableView-dummy.m */; };
+		65293016CCCDD2D93C66A36B6A840603 /* Pods-SHSegmentedControlTableView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF5E2861B6383E3DEB76D024FCEDA07 /* Pods-SHSegmentedControlTableView-dummy.m */; };
 		6A0B1A0FA7A75C861B9D401D0E8CC95E /* MJRefreshGifHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = CF321DBDCE6958BF00195AFD0513891D /* MJRefreshGifHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6B09E0A96F91857457D0ED3419E56CB4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60E936BAE43338974D5AAAD5D4B96DED /* Foundation.framework */; };
 		6C23BBF56ED4DCC10CA1765A6736D1F8 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 095E7F5B7111957249FACE229CE7DF32 /* MASLayoutConstraint.m */; };
@@ -67,8 +67,8 @@
 		98602032754A4B86E9FBA0DC6061230C /* UIColor+Hex.h in Headers */ = {isa = PBXBuildFile; fileRef = 576BA6052CE88126DB281D75A2B50FC6 /* UIColor+Hex.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9956FB3CE3A36D1A77106810FC387083 /* SHSegmentedScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7B22A384BA6B109A618583499423983 /* SHSegmentedScrollView.m */; };
 		9B67A1645E8086020A3598608C967A5F /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = A63CDF068AAF65C9F0BAEC24D1308481 /* UIView+Extension.m */; };
-		A066FFE36A94D25BA6FFE0A91C2A17DC /* SHSegmentedControl-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4831EB5A1697D49E000766F7DB4870D8 /* SHSegmentedControl-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A08A8AB356264E248D01F1BC0EF08166 /* Masonry-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 152FD551BC2851C408A6BF09F31B4DE9 /* Masonry-dummy.m */; };
+		A066FFE36A94D25BA6FFE0A91C2A17DC /* SHSegmentedControl-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBE1EA5BE09BD99FA260C731E3DB0D7 /* SHSegmentedControl-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A08A8AB356264E248D01F1BC0EF08166 /* Masonry-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F35A0C3C126E3CA997B28E902D531D8 /* Masonry-dummy.m */; };
 		A2086C63679E29637A62AADEB95D28C3 /* SHSegmentControl.m in Sources */ = {isa = PBXBuildFile; fileRef = CDCD123B21AA24375A2325BB2AB75806 /* SHSegmentControl.m */; };
 		A2D9F9EFFDFE9C19DA842E826B06BCEB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60E936BAE43338974D5AAAD5D4B96DED /* Foundation.framework */; };
 		A5382D3EA98D2EB1AD9EDA5F2138F00D /* MJRefreshAutoNormalFooter.h in Headers */ = {isa = PBXBuildFile; fileRef = 66FE497BDD9278D18BE42C8F2257A5D1 /* MJRefreshAutoNormalFooter.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -88,10 +88,10 @@
 		D0E7D5B865722A25EC7D91B0FAD8A6CD /* MJRefreshAutoGifFooter.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D744FDE2E98C9B52120EFF6D7A3291B /* MJRefreshAutoGifFooter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D46545D206874E3A223372C84F1EA73E /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = BD10D8F21040C6BBA6616C601EAC88E6 /* MJRefreshAutoFooter.m */; };
 		D66E78D63935A98894E702D922AA8B91 /* MJRefreshBackGifFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = E4AC01190E4CBF6CE3CE05330F9D971B /* MJRefreshBackGifFooter.m */; };
-		D820DE54D6E9E5C85E0F9BF8A399E5EF /* MJRefresh-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A3F98A7E63B51FFFDD0FCFAD385CEEA3 /* MJRefresh-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D820DE54D6E9E5C85E0F9BF8A399E5EF /* MJRefresh-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E0C5D6AD507B13BD9BA41B5500DF9F59 /* MJRefresh-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D8B1525CB3DFCBD8E5032680530413D9 /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E80EFF1474EF48C0437DAEDCBCAEE21D /* NSArray+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D9F2BA4D713DAC2A85CB4A453240EA3E /* MJRefreshAutoFooter.h in Headers */ = {isa = PBXBuildFile; fileRef = 52D5E1BB5906AD27A64FE0AE048F5E26 /* MJRefreshAutoFooter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DDA7934DA3472C333F34C23871E9A4A0 /* Pods-SHSegmentedControlTableView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A8913DB62CC903491AB7EC8D075366F /* Pods-SHSegmentedControlTableView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DDA7934DA3472C333F34C23871E9A4A0 /* Pods-SHSegmentedControlTableView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C564887F0C24EB9A68D54B6E707C4345 /* Pods-SHSegmentedControlTableView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DE17E4C2C6EADE5D2D531268B1695405 /* UIView+MJExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = ABD48F4EA550B0813DA86A658D691BC2 /* UIView+MJExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E57312010AFB591EE37870F65E651EA6 /* MJRefreshNormalHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 17D7E2B348D87ED547C528B51CF64F5D /* MJRefreshNormalHeader.m */; };
 		E72EDE323AC9F92EC8A00A93AC186093 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B47CB49865CFBA5E86440059AA6C1D3 /* NSArray+MASAdditions.m */; };
@@ -148,48 +148,44 @@
 /* Begin PBXFileReference section */
 		0208A5B17BA1178746926DCB3C3E8806 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASShorthandAdditions.h"; path = "Masonry/View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		02CA6AB700645F613D4D0B2EA6275AD8 /* MJRefreshBackFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshBackFooter.m; path = MJRefresh/Base/MJRefreshBackFooter.m; sourceTree = "<group>"; };
+		03EB46CE5D812B8EED79718080F9D3D5 /* SHSegmentedControl-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SHSegmentedControl-prefix.pch"; sourceTree = "<group>"; };
 		06162504BA73963BE01F1190A90AE460 /* MJRefreshBackNormalFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshBackNormalFooter.m; path = MJRefresh/Custom/Footer/Back/MJRefreshBackNormalFooter.m; sourceTree = "<group>"; };
+		0721F1D797BB4A62602CB1027FF18028 /* MJRefresh.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MJRefresh.modulemap; sourceTree = "<group>"; };
 		095E7F5B7111957249FACE229CE7DF32 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASLayoutConstraint.m; path = Masonry/MASLayoutConstraint.m; sourceTree = "<group>"; };
 		09CE204AA51E8D2B7C423D3B5BD0289D /* MASConstraint+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MASConstraint+Private.h"; path = "Masonry/MASConstraint+Private.h"; sourceTree = "<group>"; };
 		0B47CB49865CFBA5E86440059AA6C1D3 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MASAdditions.m"; path = "Masonry/NSArray+MASAdditions.m"; sourceTree = "<group>"; };
-		1250CA3E4DCEA9D2D41356F5E5DA4F4F /* SHSegmentedControl.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SHSegmentedControl.xcconfig; sourceTree = "<group>"; };
-		152FD551BC2851C408A6BF09F31B4DE9 /* Masonry-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Masonry-dummy.m"; sourceTree = "<group>"; };
 		165151B6CC297482CA72741D4AC23B44 /* MJRefreshBackStateFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshBackStateFooter.h; path = MJRefresh/Custom/Footer/Back/MJRefreshBackStateFooter.h; sourceTree = "<group>"; };
 		17D7E2B348D87ED547C528B51CF64F5D /* MJRefreshNormalHeader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshNormalHeader.m; path = MJRefresh/Custom/Header/MJRefreshNormalHeader.m; sourceTree = "<group>"; };
 		17D81444AB79E7F0A0FEEABFA453C545 /* SHTableView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SHTableView.m; path = SHSegmentedControl/SHSegmentContent/SHTableView.m; sourceTree = "<group>"; };
+		195F3204C81E48FA919C693BA9AD9125 /* Pods-SHSegmentedControlTableView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SHSegmentedControlTableView.release.xcconfig"; sourceTree = "<group>"; };
 		1999DAF60566B5BB40D366F1E5EEA653 /* SHSegmentedControlTableView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SHSegmentedControlTableView.m; path = SHSegmentedControl/SHSegmentContent/SHSegmentedControlTableView.m; sourceTree = "<group>"; };
-		1A69CA90983276D4687EBCD62D4FD880 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2020038F86A9807CE44DFB7C475E5F9F /* Pods-SHSegmentedControlTableView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SHSegmentedControlTableView-dummy.m"; sourceTree = "<group>"; };
-		293A7188C2BF623E79F013B4766F05F7 /* Masonry.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Masonry.modulemap; sourceTree = "<group>"; };
+		1F9AA54C33C2F80A50FA6C5A09F2A80C /* Pods-SHSegmentedControlTableView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SHSegmentedControlTableView.debug.xcconfig"; sourceTree = "<group>"; };
+		28C5ACDE0771D2A17D447A7DB48B766F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E36A0FAB9C3C34AE5C8EE3CD1259B1E /* Masonry-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-umbrella.h"; sourceTree = "<group>"; };
 		2FEBACFC92A4151E881DCC3B7958BB0A /* MJRefreshConst.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshConst.m; path = MJRefresh/MJRefreshConst.m; sourceTree = "<group>"; };
 		32017266E42AC0977FFFA21F2CB4C015 /* UIView+Extension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+Extension.h"; path = "SHSegmentedControl/SHExtension/UIView+Extension.h"; sourceTree = "<group>"; };
-		35E425D6BB1662AC355E4CF3F56FA695 /* Pods-SHSegmentedControlTableView-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SHSegmentedControlTableView-resources.sh"; sourceTree = "<group>"; };
-		38FE64E87F5A7D9A9612D51AEE860D2C /* Pods-SHSegmentedControlTableView-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SHSegmentedControlTableView-acknowledgements.plist"; sourceTree = "<group>"; };
+		36851056E32D80DF4C58FFE350398189 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39083CC7BF4F9871D2FF9E9EC4DE4FA4 /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Masonry.framework; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3993512DBAEB637829C27AFFAD1A9D42 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASLayoutConstraint.h; path = Masonry/MASLayoutConstraint.h; sourceTree = "<group>"; };
 		3E9CB0BB9088C69E2BA06567725B08F8 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+MASDebugAdditions.m"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
-		41707E42106EC07D933134E1B66B7373 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F35A0C3C126E3CA997B28E902D531D8 /* Masonry-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Masonry-dummy.m"; sourceTree = "<group>"; };
+		40F2C18975ABEC6DEF420FA29C7841CF /* Pods-SHSegmentedControlTableView-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SHSegmentedControlTableView-acknowledgements.plist"; sourceTree = "<group>"; };
 		41F5E5961D73AE5FE6EEA2C4C71562B5 /* MJRefresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MJRefresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		439EC0A964B61D0A53715555B5494E4D /* MASUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASUtilities.h; path = Masonry/MASUtilities.h; sourceTree = "<group>"; };
+		44E8387D37B2435C99884CF212FAF509 /* SHSegmentedControl-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SHSegmentedControl-dummy.m"; sourceTree = "<group>"; };
 		45F5A07739A55F2D8CC8A47ADA4DA90A /* MJRefreshAutoNormalFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshAutoNormalFooter.m; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoNormalFooter.m; sourceTree = "<group>"; };
 		4786A2AD312F96A0E1FE7F6F2A8A92CF /* View+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "View+MASAdditions.m"; path = "Masonry/View+MASAdditions.m"; sourceTree = "<group>"; };
-		4831EB5A1697D49E000766F7DB4870D8 /* SHSegmentedControl-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SHSegmentedControl-umbrella.h"; sourceTree = "<group>"; };
 		4A66A4F5291683D21DC582FB7421E43B /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ViewController+MASAdditions.m"; path = "Masonry/ViewController+MASAdditions.m"; sourceTree = "<group>"; };
-		4ABF13A810DE05FDE5A948D871817370 /* MJRefresh.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MJRefresh.xcconfig; sourceTree = "<group>"; };
 		4B7C4BF1F406074F3F5C8590B45F8CE2 /* UIScrollView+MJExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+MJExtension.m"; path = "MJRefresh/UIScrollView+MJExtension.m"; sourceTree = "<group>"; };
-		4BBAB6049DA8E087054B38ECA66D896C /* Masonry-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-umbrella.h"; sourceTree = "<group>"; };
+		4BABAB554488B4D8B87837968E3F5D70 /* MJRefresh.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MJRefresh.xcconfig; sourceTree = "<group>"; };
 		4C8E0C86228ADC05881B7FE97B3E9756 /* SHSegmentedControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SHSegmentedControl.framework; path = SHSegmentedControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50C77ECBD485F0CD8A718F3D916ED8D3 /* MJRefreshStateHeader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshStateHeader.m; path = MJRefresh/Custom/Header/MJRefreshStateHeader.m; sourceTree = "<group>"; };
 		52D5E1BB5906AD27A64FE0AE048F5E26 /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshAutoFooter.h; path = MJRefresh/Base/MJRefreshAutoFooter.h; sourceTree = "<group>"; };
-		54D639E2895FA0FA78ED3892214DA5FB /* Masonry-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-prefix.pch"; sourceTree = "<group>"; };
 		56DABF62376BEE9F62C46C7E091F3838 /* MASConstraintMaker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraintMaker.h; path = Masonry/MASConstraintMaker.h; sourceTree = "<group>"; };
-		5746A8C8168CC4374E9444166D2B5B79 /* SHSegmentedControl-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SHSegmentedControl-dummy.m"; sourceTree = "<group>"; };
 		576BA6052CE88126DB281D75A2B50FC6 /* UIColor+Hex.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+Hex.h"; path = "SHSegmentedControl/SHExtension/UIColor+Hex.h"; sourceTree = "<group>"; };
 		589DA455B0D76B12A4AC63671E681D56 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		58B4D1AB2AC2FE6A68786BA365A09262 /* SHSegmentedControl.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SHSegmentedControl.modulemap; sourceTree = "<group>"; };
-		59221C73B6FFD8F6CE0FA52BD9F55DBF /* MJRefresh-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MJRefresh-dummy.m"; sourceTree = "<group>"; };
 		59A1172F6422A4E513690DB878834A23 /* MASConstraintMaker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraintMaker.m; path = Masonry/MASConstraintMaker.m; sourceTree = "<group>"; };
-		5A8913DB62CC903491AB7EC8D075366F /* Pods-SHSegmentedControlTableView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SHSegmentedControlTableView-umbrella.h"; sourceTree = "<group>"; };
+		5AEDF80428DA6D617DEF8264809C160E /* Pods-SHSegmentedControlTableView-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SHSegmentedControlTableView-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5BF7B0BBA8A69E7191AD31F724112218 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ViewController+MASAdditions.h"; path = "Masonry/ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		5C64ADF90CD884DC93A5C0A4BD154C68 /* UIView+MJExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+MJExtension.m"; path = "MJRefresh/UIView+MJExtension.m"; sourceTree = "<group>"; };
 		5EF6A1BD4C44DE09E04F6C3D05C815F2 /* MJRefreshFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshFooter.h; path = MJRefresh/Base/MJRefreshFooter.h; sourceTree = "<group>"; };
@@ -205,24 +201,21 @@
 		772ED24FA616A3A7F95D88D3CE0654F5 /* MJRefreshGifHeader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshGifHeader.m; path = MJRefresh/Custom/Header/MJRefreshGifHeader.m; sourceTree = "<group>"; };
 		79DC87DBE6C27328600EF4CDDC11E1CD /* UIScrollView+MJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+MJExtension.h"; path = "MJRefresh/UIScrollView+MJExtension.h"; sourceTree = "<group>"; };
 		7BA69973461F5F356CDD44C49A08328C /* UIFont+PingFang.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIFont+PingFang.m"; path = "SHSegmentedControl/SHExtension/UIFont+PingFang.m"; sourceTree = "<group>"; };
-		7F23A223667C369A080C7BEFC6D88808 /* Pods-SHSegmentedControlTableView-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SHSegmentedControlTableView-frameworks.sh"; sourceTree = "<group>"; };
 		7F5D692702AF3E0F9C8C6C167BF947AE /* UIColor+Hex.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Hex.m"; path = "SHSegmentedControl/SHExtension/UIColor+Hex.m"; sourceTree = "<group>"; };
 		88455E888A3494570C91AA04FE5AC7C5 /* MASViewAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewAttribute.h; path = Masonry/MASViewAttribute.h; sourceTree = "<group>"; };
 		889830F68F07A250DA04CE45528CFD31 /* MJRefreshHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshHeader.h; path = MJRefresh/Base/MJRefreshHeader.h; sourceTree = "<group>"; };
 		898E7B5567874AD7CF720994490C2342 /* MASConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraint.m; path = Masonry/MASConstraint.m; sourceTree = "<group>"; };
+		8AF5E2861B6383E3DEB76D024FCEDA07 /* Pods-SHSegmentedControlTableView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SHSegmentedControlTableView-dummy.m"; sourceTree = "<group>"; };
+		8CBE1EA5BE09BD99FA260C731E3DB0D7 /* SHSegmentedControl-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SHSegmentedControl-umbrella.h"; sourceTree = "<group>"; };
 		8D744FDE2E98C9B52120EFF6D7A3291B /* MJRefreshAutoGifFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshAutoGifFooter.h; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoGifFooter.h; sourceTree = "<group>"; };
 		8FEE1D23FB37EC754934F4D0DD56191D /* MJRefresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MJRefresh.framework; path = MJRefresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		939409CDC140BFC78EF71360DD1BBC9D /* Pods-SHSegmentedControlTableView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SHSegmentedControlTableView.release.xcconfig"; sourceTree = "<group>"; };
+		910A44BF2D9DC764CC8957A5CEA140BA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94A5711C064B56F19E0C9D63DB1007C8 /* Pods-SHSegmentedControlTableView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SHSegmentedControlTableView.modulemap"; sourceTree = "<group>"; };
 		9761C1517D6B344ECA31AF870664D79F /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASAdditions.h"; path = "Masonry/NSArray+MASAdditions.h"; sourceTree = "<group>"; };
-		99DF8CF3304195DC599998EB068A38DA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A56DF5EBD1EDE5AC181AC60060DD11A /* MJRefreshNormalHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshNormalHeader.h; path = MJRefresh/Custom/Header/MJRefreshNormalHeader.h; sourceTree = "<group>"; };
 		9B7D188B58014BF6C2392860F87B9B15 /* MJRefreshAutoStateFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshAutoStateFooter.m; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoStateFooter.m; sourceTree = "<group>"; };
-		9F7302C40C1EFE4E758FBC0624C58507 /* Pods-SHSegmentedControlTableView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SHSegmentedControlTableView.modulemap"; sourceTree = "<group>"; };
-		A2158234E17239F8A80A3E29F1B77831 /* MJRefresh-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MJRefresh-prefix.pch"; sourceTree = "<group>"; };
-		A3F68BE29E0155728E4DE569E5F5DC73 /* Pods-SHSegmentedControlTableView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SHSegmentedControlTableView.debug.xcconfig"; sourceTree = "<group>"; };
-		A3F98A7E63B51FFFDD0FCFAD385CEEA3 /* MJRefresh-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MJRefresh-umbrella.h"; sourceTree = "<group>"; };
-		A52307EAEE25164E25C3B1F9EEDDD480 /* MJRefresh.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = MJRefresh.modulemap; sourceTree = "<group>"; };
+		A54F3807760D2CB1948CF59E87129A3E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A63CDF068AAF65C9F0BAEC24D1308481 /* UIView+Extension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+Extension.m"; path = "SHSegmentedControl/SHExtension/UIView+Extension.m"; sourceTree = "<group>"; };
 		A65F9F2B412BA19AE2A75EBA5AE7945E /* MASViewConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewConstraint.h; path = Masonry/MASViewConstraint.h; sourceTree = "<group>"; };
 		A79AA52809F5ED32353A4C7C9CE98A6C /* MJRefreshAutoGifFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshAutoGifFooter.m; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoGifFooter.m; sourceTree = "<group>"; };
@@ -234,28 +227,33 @@
 		B2ACE9878B5113E847D9E67078F49118 /* Pods_SHSegmentedControlTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SHSegmentedControlTableView.framework; path = "Pods-SHSegmentedControlTableView.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B643A05AF11C9460D66C948E876FCB33 /* MJRefreshHeader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshHeader.m; path = MJRefresh/Base/MJRefreshHeader.m; sourceTree = "<group>"; };
 		B6C4EF2E4134C000FB047BCE36211332 /* SHSegmentedControlHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SHSegmentedControlHeader.h; path = SHSegmentedControl/SHSegmentedControlHeader.h; sourceTree = "<group>"; };
-		B79B713C9A87ED7FF25169B894E1C46A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD10D8F21040C6BBA6616C601EAC88E6 /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshAutoFooter.m; path = MJRefresh/Base/MJRefreshAutoFooter.m; sourceTree = "<group>"; };
+		C564887F0C24EB9A68D54B6E707C4345 /* Pods-SHSegmentedControlTableView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SHSegmentedControlTableView-umbrella.h"; sourceTree = "<group>"; };
 		C64EA90F94DBC1E82454C3274644FBBA /* MASViewAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewAttribute.m; path = Masonry/MASViewAttribute.m; sourceTree = "<group>"; };
 		C9B8E0624DED8742B0A8A01797E2B6D4 /* MJRefreshBackFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshBackFooter.h; path = MJRefresh/Base/MJRefreshBackFooter.h; sourceTree = "<group>"; };
 		CA30BE2E14524CF37AF71253FF8BF971 /* SHCollectionView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SHCollectionView.m; path = SHSegmentedControl/SHSegmentContent/SHCollectionView.m; sourceTree = "<group>"; };
+		CC505A31C1BEE2F4172AC185ADD4F617 /* SHSegmentedControl.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SHSegmentedControl.modulemap; sourceTree = "<group>"; };
+		CCF4CDF0A68D2FCACBA458920E79C919 /* Masonry-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-prefix.pch"; sourceTree = "<group>"; };
 		CDCD123B21AA24375A2325BB2AB75806 /* SHSegmentControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SHSegmentControl.m; path = SHSegmentedControl/SHSegmentContent/SHSegmentControl.m; sourceTree = "<group>"; };
-		CE590C029BBE4AE5147D397E0C804063 /* Pods-SHSegmentedControlTableView-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SHSegmentedControlTableView-acknowledgements.markdown"; sourceTree = "<group>"; };
 		CF321DBDCE6958BF00195AFD0513891D /* MJRefreshGifHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshGifHeader.h; path = MJRefresh/Custom/Header/MJRefreshGifHeader.h; sourceTree = "<group>"; };
+		D03F2C3D0DC562519142B6AEF19D037F /* Masonry.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Masonry.modulemap; sourceTree = "<group>"; };
+		D07C61C7C1853DA363E0C873FBB208DF /* MJRefresh-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MJRefresh-dummy.m"; sourceTree = "<group>"; };
 		D517647EB75575D1CE9AE52CBF8EF74E /* MASCompositeConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASCompositeConstraint.h; path = Masonry/MASCompositeConstraint.h; sourceTree = "<group>"; };
 		D5C5B478986BA7F3662C0B7286115000 /* MJRefresh.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = MJRefresh.bundle; path = MJRefresh/MJRefresh.bundle; sourceTree = "<group>"; };
-		D5EA0E9C3505A91EC3BD1B93C5F745F3 /* SHSegmentedControl-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SHSegmentedControl-prefix.pch"; sourceTree = "<group>"; };
 		DA0FC673C90D701FDFA532012323F0D7 /* SHSegmentedScrollView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SHSegmentedScrollView.h; path = SHSegmentedControl/SHSegmentContent/SHSegmentedScrollView.h; sourceTree = "<group>"; };
 		DBEA816FC97B7F7F9043BF2243F0FBAA /* SHCollectionView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SHCollectionView.h; path = SHSegmentedControl/SHSegmentContent/SHCollectionView.h; sourceTree = "<group>"; };
+		DD78C672FE4F25B2EA77B9DE692221E9 /* MJRefresh-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MJRefresh-prefix.pch"; sourceTree = "<group>"; };
 		DD793177ED6524141F443D65D4DF4B49 /* MASConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraint.h; path = Masonry/MASConstraint.h; sourceTree = "<group>"; };
 		DE45CA8968D66D78317255CEEFE8F968 /* SHSegmentedControlTableView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SHSegmentedControlTableView.h; path = SHSegmentedControl/SHSegmentContent/SHSegmentedControlTableView.h; sourceTree = "<group>"; };
 		DFC4AC29D818C7B70BBC0A81A4410EEA /* MJRefreshBackNormalFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshBackNormalFooter.h; path = MJRefresh/Custom/Footer/Back/MJRefreshBackNormalFooter.h; sourceTree = "<group>"; };
-		E2F740F16E4B863A2A45BF325A14C5EB /* Masonry.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masonry.xcconfig; sourceTree = "<group>"; };
+		E0C5D6AD507B13BD9BA41B5500DF9F59 /* MJRefresh-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MJRefresh-umbrella.h"; sourceTree = "<group>"; };
 		E4AC01190E4CBF6CE3CE05330F9D971B /* MJRefreshBackGifFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshBackGifFooter.m; path = MJRefresh/Custom/Footer/Back/MJRefreshBackGifFooter.m; sourceTree = "<group>"; };
 		E7B22A384BA6B109A618583499423983 /* SHSegmentedScrollView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SHSegmentedScrollView.m; path = SHSegmentedControl/SHSegmentContent/SHSegmentedScrollView.m; sourceTree = "<group>"; };
 		E80EFF1474EF48C0437DAEDCBCAEE21D /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASShorthandAdditions.h"; path = "Masonry/NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		EA3D56916A95ECB35CFC98A6F1EBE4EE /* MJRefreshComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshComponent.m; path = MJRefresh/Base/MJRefreshComponent.m; sourceTree = "<group>"; };
 		F2FB277FE82E459895F32D1F4E05A826 /* MJRefreshBackStateFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshBackStateFooter.m; path = MJRefresh/Custom/Footer/Back/MJRefreshBackStateFooter.m; sourceTree = "<group>"; };
+		F3474E9095BF1277472FF3943E6C5AD3 /* Pods-SHSegmentedControlTableView-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SHSegmentedControlTableView-resources.sh"; sourceTree = "<group>"; };
+		F435FC3557FA59941B22638CB66FC76D /* Masonry.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masonry.xcconfig; sourceTree = "<group>"; };
 		F4EC33F7222DE2D11F6BC59420C49849 /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5D244835F88AACCAAB6768E50DC9287 /* SHTableView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SHTableView.h; path = SHSegmentedControl/SHSegmentContent/SHTableView.h; sourceTree = "<group>"; };
 		F651DE5CF14BA76814828870599E0737 /* UIScrollView+MJRefresh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+MJRefresh.h"; path = "MJRefresh/UIScrollView+MJRefresh.h"; sourceTree = "<group>"; };
@@ -264,7 +262,9 @@
 		FAA2EE119C2ABDA5726DD05C93D42CB4 /* MJRefreshComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshComponent.h; path = MJRefresh/Base/MJRefreshComponent.h; sourceTree = "<group>"; };
 		FBD2268A0FD8B3691849E18E87B33C97 /* MJRefreshFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshFooter.m; path = MJRefresh/Base/MJRefreshFooter.m; sourceTree = "<group>"; };
 		FC5AFE6FD902E452EBFC67C31CF86636 /* MJRefreshStateHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshStateHeader.h; path = MJRefresh/Custom/Header/MJRefreshStateHeader.h; sourceTree = "<group>"; };
+		FD6A4A4E31E7075E9779FAB871D32EBC /* SHSegmentedControl.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SHSegmentedControl.xcconfig; sourceTree = "<group>"; };
 		FDE0BB7CDDC292593DE9740753AFA3D0 /* MJRefreshBackGifFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshBackGifFooter.h; path = MJRefresh/Custom/Footer/Back/MJRefreshBackGifFooter.h; sourceTree = "<group>"; };
+		FE4B9F17F309A367AAB287F2B44441AC /* Pods-SHSegmentedControlTableView-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SHSegmentedControlTableView-frameworks.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -307,6 +307,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		011CB36767F243811EA97EA69B98B5CA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				36851056E32D80DF4C58FFE350398189 /* Info.plist */,
+				0721F1D797BB4A62602CB1027FF18028 /* MJRefresh.modulemap */,
+				4BABAB554488B4D8B87837968E3F5D70 /* MJRefresh.xcconfig */,
+				D07C61C7C1853DA363E0C873FBB208DF /* MJRefresh-dummy.m */,
+				DD78C672FE4F25B2EA77B9DE692221E9 /* MJRefresh-prefix.pch */,
+				E0C5D6AD507B13BD9BA41B5500DF9F59 /* MJRefresh-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MJRefresh";
+			sourceTree = "<group>";
+		};
 		06B072A33E0D5C2790470890851AC40B /* SHSegmentContent */ = {
 			isa = PBXGroup;
 			children = (
@@ -324,27 +338,13 @@
 			name = SHSegmentContent;
 			sourceTree = "<group>";
 		};
-		08B3007098E26E9E490F6A701AEA3323 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				99DF8CF3304195DC599998EB068A38DA /* Info.plist */,
-				58B4D1AB2AC2FE6A68786BA365A09262 /* SHSegmentedControl.modulemap */,
-				1250CA3E4DCEA9D2D41356F5E5DA4F4F /* SHSegmentedControl.xcconfig */,
-				5746A8C8168CC4374E9444166D2B5B79 /* SHSegmentedControl-dummy.m */,
-				D5EA0E9C3505A91EC3BD1B93C5F745F3 /* SHSegmentedControl-prefix.pch */,
-				4831EB5A1697D49E000766F7DB4870D8 /* SHSegmentedControl-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SHSegmentedControl";
-			sourceTree = "<group>";
-		};
 		09D2FD62DB2EDF4121B5BFB7F88C832D /* SHSegmentedControl */ = {
 			isa = PBXGroup;
 			children = (
 				B6C4EF2E4134C000FB047BCE36211332 /* SHSegmentedControlHeader.h */,
 				29E84D0497AD7C2FCF804D3663C1E81F /* SHExtension */,
 				06B072A33E0D5C2790470890851AC40B /* SHSegmentContent */,
-				08B3007098E26E9E490F6A701AEA3323 /* Support Files */,
+				19088F4CCFECA50E31D71BFE643B4FA1 /* Support Files */,
 			);
 			name = SHSegmentedControl;
 			path = SHSegmentedControl;
@@ -359,6 +359,20 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		19088F4CCFECA50E31D71BFE643B4FA1 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				910A44BF2D9DC764CC8957A5CEA140BA /* Info.plist */,
+				CC505A31C1BEE2F4172AC185ADD4F617 /* SHSegmentedControl.modulemap */,
+				FD6A4A4E31E7075E9779FAB871D32EBC /* SHSegmentedControl.xcconfig */,
+				44E8387D37B2435C99884CF212FAF509 /* SHSegmentedControl-dummy.m */,
+				03EB46CE5D812B8EED79718080F9D3D5 /* SHSegmentedControl-prefix.pch */,
+				8CBE1EA5BE09BD99FA260C731E3DB0D7 /* SHSegmentedControl-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SHSegmentedControl";
+			sourceTree = "<group>";
+		};
 		29E84D0497AD7C2FCF804D3663C1E81F /* SHExtension */ = {
 			isa = PBXGroup;
 			children = (
@@ -370,6 +384,24 @@
 				A63CDF068AAF65C9F0BAEC24D1308481 /* UIView+Extension.m */,
 			);
 			name = SHExtension;
+			sourceTree = "<group>";
+		};
+		2D685DE6304C4902EFBE06CE48D83A28 /* Pods-SHSegmentedControlTableView */ = {
+			isa = PBXGroup;
+			children = (
+				A54F3807760D2CB1948CF59E87129A3E /* Info.plist */,
+				94A5711C064B56F19E0C9D63DB1007C8 /* Pods-SHSegmentedControlTableView.modulemap */,
+				5AEDF80428DA6D617DEF8264809C160E /* Pods-SHSegmentedControlTableView-acknowledgements.markdown */,
+				40F2C18975ABEC6DEF420FA29C7841CF /* Pods-SHSegmentedControlTableView-acknowledgements.plist */,
+				8AF5E2861B6383E3DEB76D024FCEDA07 /* Pods-SHSegmentedControlTableView-dummy.m */,
+				FE4B9F17F309A367AAB287F2B44441AC /* Pods-SHSegmentedControlTableView-frameworks.sh */,
+				F3474E9095BF1277472FF3943E6C5AD3 /* Pods-SHSegmentedControlTableView-resources.sh */,
+				C564887F0C24EB9A68D54B6E707C4345 /* Pods-SHSegmentedControlTableView-umbrella.h */,
+				1F9AA54C33C2F80A50FA6C5A09F2A80C /* Pods-SHSegmentedControlTableView.debug.xcconfig */,
+				195F3204C81E48FA919C693BA9AD9125 /* Pods-SHSegmentedControlTableView.release.xcconfig */,
+			);
+			name = "Pods-SHSegmentedControlTableView";
+			path = "Target Support Files/Pods-SHSegmentedControlTableView";
 			sourceTree = "<group>";
 		};
 		440EAAC0B9DBC2B31447BD8B4F5A1125 /* Pods */ = {
@@ -420,7 +452,7 @@
 				0208A5B17BA1178746926DCB3C3E8806 /* View+MASShorthandAdditions.h */,
 				5BF7B0BBA8A69E7191AD31F724112218 /* ViewController+MASAdditions.h */,
 				4A66A4F5291683D21DC582FB7421E43B /* ViewController+MASAdditions.m */,
-				DA0CC72843762A566C3811BC122A7E24 /* Support Files */,
+				95B28EC1C4486E358E6182028526948A /* Support Files */,
 			);
 			name = Masonry;
 			path = Masonry;
@@ -488,36 +520,32 @@
 				ABD48F4EA550B0813DA86A658D691BC2 /* UIView+MJExtension.h */,
 				5C64ADF90CD884DC93A5C0A4BD154C68 /* UIView+MJExtension.m */,
 				65134FCB9EA470B47E57D5AEA3784B1B /* Resources */,
-				FA31C4E89FB62A198E8BC1AFCC00856A /* Support Files */,
+				011CB36767F243811EA97EA69B98B5CA /* Support Files */,
 			);
 			name = MJRefresh;
 			path = MJRefresh;
 			sourceTree = "<group>";
 		};
+		95B28EC1C4486E358E6182028526948A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				28C5ACDE0771D2A17D447A7DB48B766F /* Info.plist */,
+				D03F2C3D0DC562519142B6AEF19D037F /* Masonry.modulemap */,
+				F435FC3557FA59941B22638CB66FC76D /* Masonry.xcconfig */,
+				3F35A0C3C126E3CA997B28E902D531D8 /* Masonry-dummy.m */,
+				CCF4CDF0A68D2FCACBA458920E79C919 /* Masonry-prefix.pch */,
+				2E36A0FAB9C3C34AE5C8EE3CD1259B1E /* Masonry-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Masonry";
+			sourceTree = "<group>";
+		};
 		9E50C5E9A38AA9956E5AAF8CB8E83E22 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				BD5BC96AA710BBAEA93812B97A367B48 /* Pods-SHSegmentedControlTableView */,
+				2D685DE6304C4902EFBE06CE48D83A28 /* Pods-SHSegmentedControlTableView */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		BD5BC96AA710BBAEA93812B97A367B48 /* Pods-SHSegmentedControlTableView */ = {
-			isa = PBXGroup;
-			children = (
-				1A69CA90983276D4687EBCD62D4FD880 /* Info.plist */,
-				9F7302C40C1EFE4E758FBC0624C58507 /* Pods-SHSegmentedControlTableView.modulemap */,
-				CE590C029BBE4AE5147D397E0C804063 /* Pods-SHSegmentedControlTableView-acknowledgements.markdown */,
-				38FE64E87F5A7D9A9612D51AEE860D2C /* Pods-SHSegmentedControlTableView-acknowledgements.plist */,
-				2020038F86A9807CE44DFB7C475E5F9F /* Pods-SHSegmentedControlTableView-dummy.m */,
-				7F23A223667C369A080C7BEFC6D88808 /* Pods-SHSegmentedControlTableView-frameworks.sh */,
-				35E425D6BB1662AC355E4CF3F56FA695 /* Pods-SHSegmentedControlTableView-resources.sh */,
-				5A8913DB62CC903491AB7EC8D075366F /* Pods-SHSegmentedControlTableView-umbrella.h */,
-				A3F68BE29E0155728E4DE569E5F5DC73 /* Pods-SHSegmentedControlTableView.debug.xcconfig */,
-				939409CDC140BFC78EF71360DD1BBC9D /* Pods-SHSegmentedControlTableView.release.xcconfig */,
-			);
-			name = "Pods-SHSegmentedControlTableView";
-			path = "Target Support Files/Pods-SHSegmentedControlTableView";
 			sourceTree = "<group>";
 		};
 		BF8ACD1372B73F8DB6711D208C55C885 /* Products */ = {
@@ -529,34 +557,6 @@
 				4C8E0C86228ADC05881B7FE97B3E9756 /* SHSegmentedControl.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		DA0CC72843762A566C3811BC122A7E24 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				41707E42106EC07D933134E1B66B7373 /* Info.plist */,
-				293A7188C2BF623E79F013B4766F05F7 /* Masonry.modulemap */,
-				E2F740F16E4B863A2A45BF325A14C5EB /* Masonry.xcconfig */,
-				152FD551BC2851C408A6BF09F31B4DE9 /* Masonry-dummy.m */,
-				54D639E2895FA0FA78ED3892214DA5FB /* Masonry-prefix.pch */,
-				4BBAB6049DA8E087054B38ECA66D896C /* Masonry-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Masonry";
-			sourceTree = "<group>";
-		};
-		FA31C4E89FB62A198E8BC1AFCC00856A /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				B79B713C9A87ED7FF25169B894E1C46A /* Info.plist */,
-				A52307EAEE25164E25C3B1F9EEDDD480 /* MJRefresh.modulemap */,
-				4ABF13A810DE05FDE5A948D871817370 /* MJRefresh.xcconfig */,
-				59221C73B6FFD8F6CE0FA52BD9F55DBF /* MJRefresh-dummy.m */,
-				A2158234E17239F8A80A3E29F1B77831 /* MJRefresh-prefix.pch */,
-				A3F98A7E63B51FFFDD0FCFAD385CEEA3 /* MJRefresh-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/MJRefresh";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -721,8 +721,8 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0700;
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -861,9 +861,9 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0913251664D9A93A32B5AE56D1A03986 /* Debug */ = {
+		1192DAA3A99A3226638E94BB2C13E2CD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4ABF13A810DE05FDE5A948D871817370 /* MJRefresh.xcconfig */;
+			baseConfigurationReference = 4BABAB554488B4D8B87837968E3F5D70 /* MJRefresh.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -880,6 +880,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MJRefresh/MJRefresh.modulemap";
+				PRODUCT_MODULE_NAME = MJRefresh;
 				PRODUCT_NAME = MJRefresh;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -891,99 +892,7 @@
 			};
 			name = Debug;
 		};
-		1F66E91AC5C1C4BE36F619A9B2CF67E1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1250CA3E4DCEA9D2D41356F5E5DA4F4F /* SHSegmentedControl.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SHSegmentedControl/SHSegmentedControl-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SHSegmentedControl/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SHSegmentedControl/SHSegmentedControl.modulemap";
-				PRODUCT_NAME = SHSegmentedControl;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		261CF2959C40A3D127C4A326C77F4021 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1250CA3E4DCEA9D2D41356F5E5DA4F4F /* SHSegmentedControl.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SHSegmentedControl/SHSegmentedControl-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SHSegmentedControl/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SHSegmentedControl/SHSegmentedControl.modulemap";
-				PRODUCT_NAME = SHSegmentedControl;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		3AAFD6F687D67AC38FE9DBF99FA653EB /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E2F740F16E4B863A2A45BF325A14C5EB /* Masonry.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Masonry/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Masonry/Masonry.modulemap";
-				PRODUCT_NAME = Masonry;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		6F9224530522DD3C735EC96CF142642E /* Release */ = {
+		199D972A13F2B4C56847F7A89CCA83BC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -993,10 +902,12 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -1004,6 +915,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -1012,187 +924,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		7C8B51F4171724A1007F7B2009A00FBC /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4ABF13A810DE05FDE5A948D871817370 /* MJRefresh.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/MJRefresh/MJRefresh-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MJRefresh/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/MJRefresh/MJRefresh.modulemap";
-				PRODUCT_NAME = MJRefresh;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		7D019C739D811E787F1B7173AA012668 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 939409CDC140BFC78EF71360DD1BBC9D /* Pods-SHSegmentedControlTableView.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-SHSegmentedControlTableView/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SHSegmentedControlTableView/Pods-SHSegmentedControlTableView.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_SHSegmentedControlTableView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		7EC5D10DBB5F9A3B9E89A6C04F71FBEB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E2F740F16E4B863A2A45BF325A14C5EB /* Masonry.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Masonry/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Masonry/Masonry.modulemap";
-				PRODUCT_NAME = Masonry;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		A36047158F25701818C337EE680289B0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A3F68BE29E0155728E4DE569E5F5DC73 /* Pods-SHSegmentedControlTableView.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-SHSegmentedControlTableView/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SHSegmentedControlTableView/Pods-SHSegmentedControlTableView.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_SHSegmentedControlTableView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		B57951D085A1B98A97F8A1062A5E5C5B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -1217,12 +949,294 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
+		};
+		1AEB81A097E3608A87249E4BCF30F380 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BABAB554488B4D8B87837968E3F5D70 /* MJRefresh.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MJRefresh/MJRefresh-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MJRefresh/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MJRefresh/MJRefresh.modulemap";
+				PRODUCT_MODULE_NAME = MJRefresh;
+				PRODUCT_NAME = MJRefresh;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		595E6B78A85D68A4473EB50F237A6601 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F435FC3557FA59941B22638CB66FC76D /* Masonry.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Masonry/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Masonry/Masonry.modulemap";
+				PRODUCT_MODULE_NAME = Masonry;
+				PRODUCT_NAME = Masonry;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		95407E35EB65ECB3D809238705C3DBFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 195F3204C81E48FA919C693BA9AD9125 /* Pods-SHSegmentedControlTableView.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SHSegmentedControlTableView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SHSegmentedControlTableView/Pods-SHSegmentedControlTableView.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D7524F6712C7E8B527A993167E02E67C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD6A4A4E31E7075E9779FAB871D32EBC /* SHSegmentedControl.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SHSegmentedControl/SHSegmentedControl-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SHSegmentedControl/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SHSegmentedControl/SHSegmentedControl.modulemap";
+				PRODUCT_MODULE_NAME = SHSegmentedControl;
+				PRODUCT_NAME = SHSegmentedControl;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E8124982EDD34FDAC52F9AD5E131CB60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F9AA54C33C2F80A50FA6C5A09F2A80C /* Pods-SHSegmentedControlTableView.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SHSegmentedControlTableView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SHSegmentedControlTableView/Pods-SHSegmentedControlTableView.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		ECDC61474BB22E9D0B3DC91BB7A77059 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F435FC3557FA59941B22638CB66FC76D /* Masonry.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Masonry/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Masonry/Masonry.modulemap";
+				PRODUCT_MODULE_NAME = Masonry;
+				PRODUCT_NAME = Masonry;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FA1DBC6404E7F38B8AB50EBFB2F09AA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD6A4A4E31E7075E9779FAB871D32EBC /* SHSegmentedControl.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SHSegmentedControl/SHSegmentedControl-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SHSegmentedControl/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SHSegmentedControl/SHSegmentedControl.modulemap";
+				PRODUCT_MODULE_NAME = SHSegmentedControl;
+				PRODUCT_NAME = SHSegmentedControl;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FDB2FC4A1E5891381CD9D922145497F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -1230,8 +1244,8 @@
 		02D024184BD368B565F3B6257DF3C605 /* Build configuration list for PBXNativeTarget "Masonry" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7EC5D10DBB5F9A3B9E89A6C04F71FBEB /* Debug */,
-				3AAFD6F687D67AC38FE9DBF99FA653EB /* Release */,
+				ECDC61474BB22E9D0B3DC91BB7A77059 /* Debug */,
+				595E6B78A85D68A4473EB50F237A6601 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1239,8 +1253,8 @@
 		1EFADDC2BB6831ED43B76E0241CCDB75 /* Build configuration list for PBXNativeTarget "MJRefresh" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0913251664D9A93A32B5AE56D1A03986 /* Debug */,
-				7C8B51F4171724A1007F7B2009A00FBC /* Release */,
+				1192DAA3A99A3226638E94BB2C13E2CD /* Debug */,
+				1AEB81A097E3608A87249E4BCF30F380 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1248,8 +1262,8 @@
 		29E6FF6AF5AACA4D2F84B1390AAD5AD9 /* Build configuration list for PBXNativeTarget "SHSegmentedControl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1F66E91AC5C1C4BE36F619A9B2CF67E1 /* Debug */,
-				261CF2959C40A3D127C4A326C77F4021 /* Release */,
+				D7524F6712C7E8B527A993167E02E67C /* Debug */,
+				FA1DBC6404E7F38B8AB50EBFB2F09AA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1257,8 +1271,8 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B57951D085A1B98A97F8A1062A5E5C5B /* Debug */,
-				6F9224530522DD3C735EC96CF142642E /* Release */,
+				199D972A13F2B4C56847F7A89CCA83BC /* Debug */,
+				FDB2FC4A1E5891381CD9D922145497F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1266,8 +1280,8 @@
 		2E83FFB7389950689A0326E946D070E8 /* Build configuration list for PBXNativeTarget "Pods-SHSegmentedControlTableView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A36047158F25701818C337EE680289B0 /* Debug */,
-				7D019C739D811E787F1B7173AA012668 /* Release */,
+				E8124982EDD34FDAC52F9AD5E131CB60 /* Debug */,
+				95407E35EB65ECB3D809238705C3DBFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
