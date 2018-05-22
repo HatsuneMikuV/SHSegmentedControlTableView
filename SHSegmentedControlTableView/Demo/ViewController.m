@@ -27,10 +27,39 @@
     
     self.navigationItem.title = @"样式列表";
     
-    self.dataArray = @[@"默认样式",@"涌入放大",@"右上角小标题",@"涌入放大+右上角小标题",@"导航栏透明",@"无头部",@"无bar",@"CollectionView",@"tableView+collectionView",@"下拉刷新全部",@"下拉刷新当前选中",@"独立上拉加载",@"头部固定-scrollView容器",@"bar放在头部上，滑动悬停",@"下拉头部放大"];
-    self.controllerArray = @[@"OneViewController",@"TwoViewController",@"ThreeViewController",@"FourViewController",@"FiveViewController",@"SixViewController",@"SevenViewController",@"EightViewController",@"NineViewController",@"TenViewController",@"TenViewController",@"ZeroViewController",@"ElevenViewController",@"TwelveViewController",@"ThirteenViewController"];
-
-
+    self.dataArray = @[@"默认样式",
+                       @"涌入放大",
+                       @"右上角小标题",
+                       @"涌入放大+右上角小标题",
+                       @"导航栏透明",
+                       @"无头部",
+                       @"无bar",
+                       @"CollectionView",
+                       @"tableView+collectionView",
+                       @"下拉刷新全部",
+                       @"下拉刷新当前选中",
+                       @"独立上拉加载",
+                       @"头部固定-scrollView容器",
+                       @"bar放在头部上，滑动悬停",
+                       @"下拉头部放大",
+                       @"使用ChildVC的处理方式"];
+    
+    self.controllerArray = @[@"OneViewController",
+                             @"TwoViewController",
+                             @"ThreeViewController",
+                             @"FourViewController",
+                             @"FiveViewController",
+                             @"SixViewController",
+                             @"SevenViewController",
+                             @"EightViewController",
+                             @"NineViewController",
+                             @"TenViewController",
+                             @"TenViewController",
+                             @"ZeroViewController",
+                             @"ElevenViewController",
+                             @"TwelveViewController",
+                             @"ThirteenViewController",
+                             @"FourteenViewController"];
 
     [self.view addSubview:self.tableView];
 }

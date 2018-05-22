@@ -18,6 +18,8 @@
 		7C48E1EF1F9DE38F002E23AA /* TenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C48E1EE1F9DE38F002E23AA /* TenViewController.m */; };
 		7C48E1F21F9DE397002E23AA /* ZeroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C48E1F11F9DE397002E23AA /* ZeroViewController.m */; };
 		7C48E1F51F9DE9BB002E23AA /* TestCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C48E1F41F9DE9BB002E23AA /* TestCollectionView.m */; };
+		7C84705520B40BAD00D5EAD9 /* FourteenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C84705420B40BAD00D5EAD9 /* FourteenViewController.m */; };
+		7C84705820B40BC900D5EAD9 /* FourteenSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C84705720B40BC900D5EAD9 /* FourteenSubViewController.m */; };
 		7CBCA1D21F98B19F00349014 /* TestOneTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CBCA1D11F98B19F00349014 /* TestOneTableView.m */; };
 		7CBCA1D61F99D3B700349014 /* SHBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CBCA1D51F99D3B700349014 /* SHBaseViewController.m */; };
 		7CBCA1D91F99D78D00349014 /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CBCA1D81F99D78D00349014 /* TwoViewController.m */; };
@@ -56,6 +58,10 @@
 		7C48E1F11F9DE397002E23AA /* ZeroViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZeroViewController.m; sourceTree = "<group>"; };
 		7C48E1F31F9DE9BB002E23AA /* TestCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCollectionView.h; sourceTree = "<group>"; };
 		7C48E1F41F9DE9BB002E23AA /* TestCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCollectionView.m; sourceTree = "<group>"; };
+		7C84705320B40BAD00D5EAD9 /* FourteenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FourteenViewController.h; sourceTree = "<group>"; };
+		7C84705420B40BAD00D5EAD9 /* FourteenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FourteenViewController.m; sourceTree = "<group>"; };
+		7C84705620B40BC900D5EAD9 /* FourteenSubViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FourteenSubViewController.h; sourceTree = "<group>"; };
+		7C84705720B40BC900D5EAD9 /* FourteenSubViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FourteenSubViewController.m; sourceTree = "<group>"; };
 		7CBCA1D01F98B19F00349014 /* TestOneTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestOneTableView.h; sourceTree = "<group>"; };
 		7CBCA1D11F98B19F00349014 /* TestOneTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestOneTableView.m; sourceTree = "<group>"; };
 		7CBCA1D31F999D9600349014 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -191,6 +197,10 @@
 				7CD6B7CE20720D5B00ECEAE0 /* TwelveViewController.m */,
 				7C415A4C207B597C00DD356C /* ThirteenViewController.h */,
 				7C415A4D207B597C00DD356C /* ThirteenViewController.m */,
+				7C84705320B40BAD00D5EAD9 /* FourteenViewController.h */,
+				7C84705420B40BAD00D5EAD9 /* FourteenViewController.m */,
+				7C84705620B40BC900D5EAD9 /* FourteenSubViewController.h */,
+				7C84705720B40BC900D5EAD9 /* FourteenSubViewController.m */,
 			);
 			name = Demo;
 			path = SHSegmentedControlTableView/Demo;
@@ -345,10 +355,12 @@
 				7CF3FFC41F99F0E800758917 /* ThreeViewController.m in Sources */,
 				7C48E1F21F9DE397002E23AA /* ZeroViewController.m in Sources */,
 				7CF3FFC71F99F16200758917 /* FourViewController.m in Sources */,
+				7C84705520B40BAD00D5EAD9 /* FourteenViewController.m in Sources */,
 				7CBCA1D61F99D3B700349014 /* SHBaseViewController.m in Sources */,
 				7CD6B7CF20720D5B00ECEAE0 /* TwelveViewController.m in Sources */,
 				7C48E1E01F9DE35D002E23AA /* FiveViewController.m in Sources */,
 				7CBCA1D21F98B19F00349014 /* TestOneTableView.m in Sources */,
+				7C84705820B40BC900D5EAD9 /* FourteenSubViewController.m in Sources */,
 				7C48E1EF1F9DE38F002E23AA /* TenViewController.m in Sources */,
 				7C48E1F51F9DE9BB002E23AA /* TestCollectionView.m in Sources */,
 				7CD1D2821F8CB1E20097302C /* OneViewController.m in Sources */,
