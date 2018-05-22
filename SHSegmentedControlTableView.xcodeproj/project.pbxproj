@@ -217,7 +217,6 @@
 				7CD1D2611F8CAD920097302C /* Sources */,
 				7CD1D2621F8CAD920097302C /* Frameworks */,
 				7CD1D2631F8CAD920097302C /* Resources */,
-				4535D31DDAED0FABF05B7599 /* [CP] Embed Pods Frameworks */,
 				7ED00B6848BBE75C52BC4A67 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -292,28 +291,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4535D31DDAED0FABF05B7599 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SHSegmentedControlTableView/Pods-SHSegmentedControlTableView-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
-				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
-				"${BUILT_PRODUCTS_DIR}/SHSegmentedControl/SHSegmentedControl.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SHSegmentedControl.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SHSegmentedControlTableView/Pods-SHSegmentedControlTableView-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7ED00B6848BBE75C52BC4A67 /* [CP] Copy Pods Resources */ = {
