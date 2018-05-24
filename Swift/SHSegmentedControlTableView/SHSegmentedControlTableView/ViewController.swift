@@ -37,7 +37,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                           "头部固定-scrollView容器",
                           "bar放在头部上，滑动悬停",
                           "下拉头部放大",
-                          "使用ChildVC的处理方式"]
+                          "使用ChildVC的处理方式",
+                          "分栏内容超屏显示"]
         
         self.controllerArray = NSArray.init(objects: OneViewController(),
                                             TwoViewController(),
@@ -54,7 +55,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                                             ElevViewController(),
                                             TwelveViewController(),
                                             ThirteenViewController(),
-                                            FourteenViewController())
+                                            FourteenViewController(),
+                                            FifteenViewController())
         self.tableView = self.getTableView()
         
         

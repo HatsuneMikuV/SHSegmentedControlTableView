@@ -129,6 +129,8 @@ static NSInteger tag = 20171010;
 #pragma mark -
 #pragma mark   ==============btnClick==============
 - (void)btnClick:(SHTapButtonView *)btn isBlock:(BOOL)isRun{
+    
+    //恢复按钮初始状态
     for (SHTapButtonView *btns in self.btnArray) {
         btns.selected = NO;
         btns.titleFont = self.titleNormalFont;
@@ -137,6 +139,7 @@ static NSInteger tag = 20171010;
         }
     }
     
+    //按钮放大效果
     if (self.type == SHSegmentControlTypeWater || self.type == SHSegmentControlTypeWaterSubTitle) {
         if (isRun) {
             [UIView beginAnimations:nil context:UIGraphicsGetCurrentContext()];
@@ -149,6 +152,7 @@ static NSInteger tag = 20171010;
         }
     }
     
+    //移动下划线
     CGRect frame = self.progressView.frame;
     CGFloat titleWidth = ceilf([btn.title boundingRectWithSize:CGSizeMake(MAXFLOAT, 0) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:self.titleSelectFont} context:nil].size.width) + 30;
     frame.size.width = self.progressWidth > 0 ? self.progressWidth : titleWidth;
@@ -160,6 +164,22 @@ static NSInteger tag = 20171010;
         btn.selected = YES;
         btn.titleFont = self.titleSelectFont;
     }];
+    
+    //横向内容超屏后，判断按钮中心位置，改变contentOffset
+    if (self.contentSize.width > self.width) {
+        //居左
+        CGFloat offsetX = btn.centerX- self.width * 0.5;
+        if (offsetX < 0) {
+            offsetX = 0;
+        }
+
+        //居右
+        CGFloat maxOffsetX = self.contentSize.width - self.width;
+        if (offsetX > maxOffsetX) {
+            offsetX = maxOffsetX;
+        }
+        [self setContentOffset:CGPointMake(offsetX, 0) animated:YES];
+    }
     
     self.curIndex = btn.tag - tag;
     if (isRun) {

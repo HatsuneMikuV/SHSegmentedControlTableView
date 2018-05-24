@@ -66,6 +66,14 @@ typedef enum : NSUInteger {
 /** 设置下标 */
 - (void)setSegmentSelectedIndex:(NSInteger)index;
 
+/**
+    1.初始化的width，在没有被set为barView/topView前，会作为contentSize的width，可省略titleMargin的设置
+    2.被set为barView/topView后，自身的width都会被重置为容器视图SHSegmentedControlTableView的width，而contentSize不再改变
+    3.也可自行设置titleMargin，reloadViews一下即可更新contentSize的width，contentSize的width未超容器width时，平均布局
+ */
+
+/** 默认初始化方式 */
+- (instancetype)initWithFrame:(CGRect)frame;
 /** 带分栏信息---初始化 */
 - (instancetype)initWithFrame:(CGRect)frame items:(NSArray<NSString *> *)items;
 

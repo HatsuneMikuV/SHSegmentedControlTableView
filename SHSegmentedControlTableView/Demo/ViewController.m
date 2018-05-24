@@ -42,7 +42,8 @@
                        @"头部固定-scrollView容器",
                        @"bar放在头部上，滑动悬停",
                        @"下拉头部放大",
-                       @"使用ChildVC的处理方式"];
+                       @"使用ChildVC的处理方式",
+                       @"分栏内容超屏显示"];
     
     self.controllerArray = @[@"OneViewController",
                              @"TwoViewController",
@@ -59,7 +60,8 @@
                              @"ElevenViewController",
                              @"TwelveViewController",
                              @"ThirteenViewController",
-                             @"FourteenViewController"];
+                             @"FourteenViewController",
+                             @"FifteenViewController"];
 
     [self.view addSubview:self.tableView];
 }
@@ -79,7 +81,7 @@
 #pragma mark -
 #pragma mark   ==============UITableViewDelegate==============
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 45.f;
+    return 40.f;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
