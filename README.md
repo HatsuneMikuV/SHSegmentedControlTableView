@@ -12,8 +12,8 @@ Both scroll horizontal and vertical for segment scrollview which have a same hea
 
 ![](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/snow.gif)
 
-#### 2018.05.22新增demo(pod v1.1.9)，修复SHSegmentedControl内容超屏，不能自动滑动问题↓↓↓
-#### 在这里感谢[windkisshao](https://github.com/windkisshao)的指正
+#### 2018.05.24新增demo(pod v1.1.9)，修复SHSegmentedControl内容超屏，不能自动滑动问题↓↓↓
+#### 在这里感谢[@windkisshao](https://github.com/windkisshao)的指正
 ![](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/SHSegmentedControl_fixbug.gif)
 
 #### 2018.05.22新增demo(pod v1.1.8)，使用控制器的tableview作为内容视图↓↓↓
