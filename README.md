@@ -1,6 +1,6 @@
 # SHSegmentedControlTableView
 
-[![CocoaPods](https://img.shields.io/badge/pod-v1.1.8-28B9FE.svg)](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/tree/1.1.8)
+[![CocoaPods](https://img.shields.io/badge/pod-v1.1.9-28B9FE.svg)](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/tree/1.1.9)
 ![Platforms](https://img.shields.io/badge/platforms-iOS-orange.svg)
 [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/LICENSE)
 [![QQ](https://img.shields.io/badge/QQ-@HatsuneMiku-blue.svg?style=flat)](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/README.md#qq-479069761)
