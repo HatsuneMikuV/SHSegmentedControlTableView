@@ -35,8 +35,8 @@ pod 'SHSegmentedControl'
 
 # 目录
 1. [实现原理](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/README.md#实现的原理)
-2. [基本用法](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/README.md#使用方法)
-3. [下拉刷新](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/README.md#下拉刷新)
+2. [基本用法](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/README.md#基本用法)
+3. [下拉刷新](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/README.md#刷新)
 4. [混合模式](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/README.md#混合模式)
 5. [示例代码](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/README.md#示例代码)
 6. [Demo介绍](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/README.md#使用的详细用法示例)
@@ -60,7 +60,7 @@ pod 'SHSegmentedControl'
 
 
 
-## 使用用法
+## 基本用法
 
 
 **如普通的UIView那样初始化即可**
@@ -259,7 +259,7 @@ _segmentControl.curClick = ^(NSInteger index) {
 - 导航栏透明
 - 无头部
 - 无bar
-- CollectionView
+- CollectionView
 - tableView+collectionView
 - 下拉刷新全部
 - 下拉刷新当前选中
@@ -269,6 +269,7 @@ _segmentControl.curClick = ^(NSInteger index) {
 - 下拉头部放大
 - 使用ChildVC的处理方式
 - 分栏内容超屏显示
+
 
 
 **示例代码新增和样式可点击图片查看，Demo中提支持刷新控件`MJRefresh `，支持约束库`Masonry `，以及部分扩展`SHExtension `，供参考**
