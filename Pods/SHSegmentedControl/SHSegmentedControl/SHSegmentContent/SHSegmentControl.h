@@ -44,12 +44,16 @@ typedef enum : NSUInteger {
 @property (nonatomic, strong) UIColor *subTitleSelectColor;
 /** 指示器圆角 */
 @property (nonatomic, assign) CGFloat progressCornerRadius;
-/** 指示器高度 */
+/** 指示器高度（粗细） */
 @property (nonatomic, assign) CGFloat progressHeight;
 /** 指示器宽度（默认 title宽） */
 @property (nonatomic, assign) CGFloat progressWidth;
 /** 指示器颜色 */
 @property (nonatomic, strong) UIColor *progressColor;
+/** 下底线颜色 */
+@property (nonatomic, strong) UIColor *bottomLineColor;
+/** 下底线高度（粗细） 默认1.f) */
+@property (nonatomic, assign) CGFloat bottomLineHeight;
 /** 分栏类型 */
 @property (nonatomic, assign) SHSegmentControlType type;
 
@@ -67,9 +71,9 @@ typedef enum : NSUInteger {
 - (void)setSegmentSelectedIndex:(NSInteger)index;
 
 /**
-    1.初始化的width，在没有被set为barView/topView前，会作为contentSize的width，可省略titleMargin的设置
-    2.被set为barView/topView后，自身的width都会被重置为容器视图SHSegmentedControlTableView的width，而contentSize不再改变
-    3.也可自行设置titleMargin，reloadViews一下即可更新contentSize的width，contentSize的width未超容器width时，平均布局
+ 1.初始化的width，在没有被set为barView/topView前，会作为contentSize的width，可省略titleMargin的设置
+ 2.被set为barView/topView后，自身的width都会被重置为容器视图SHSegmentedControlTableView的width，而contentSize不再改变
+ 3.也可自行设置titleMargin，reloadViews一下即可更新contentSize的width，contentSize的width未超容器width时，平均布局
  */
 
 /** 默认初始化方式 */

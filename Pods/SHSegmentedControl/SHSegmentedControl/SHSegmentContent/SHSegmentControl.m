@@ -37,7 +37,7 @@ static NSInteger tag = 20171010;
         
         [self init_setup];
         [self addSubview:self.progressView];
-        self.lineV.frame = CGRectMake(0, frame.size.height - 1, frame.size.width, 1);
+        self.lineV.frame = CGRectMake(0, frame.size.height - self.bottomLineHeight, frame.size.width, self.bottomLineHeight);
         [self addSubview:self.lineV];
     }
     return self;
@@ -56,7 +56,7 @@ static NSInteger tag = 20171010;
         [self addSubview:self.progressView];
         
         [self addSubview];
-        self.lineV.frame = CGRectMake(0, frame.size.height - 1, frame.size.width, 1);
+        self.lineV.frame = CGRectMake(0, frame.size.height - self.bottomLineHeight, frame.size.width, self.bottomLineHeight);
         [self addSubview:self.lineV];
     }
     return self;
@@ -74,8 +74,11 @@ static NSInteger tag = 20171010;
     _progressCornerRadius = 1.5f;
     _progressWidth = 65.f;
     _progressHeight = 3.f;
+    _bottomLineColor = [UIColor colorWithHexString:@"#DEDEDE"];
+    _bottomLineHeight = 1.f;
     _curIndex = 0;
     _type = SHSegmentControlTypeNone;
+    
     
     self.backgroundColor = [UIColor whiteColor];
 }
@@ -172,7 +175,7 @@ static NSInteger tag = 20171010;
         if (offsetX < 0) {
             offsetX = 0;
         }
-
+        
         //居右
         CGFloat maxOffsetX = self.contentSize.width - self.width;
         if (offsetX > maxOffsetX) {
@@ -235,11 +238,13 @@ static NSInteger tag = 20171010;
         self.progressView.backgroundColor = self.progressColor;
         
         CGFloat titleWidth = ceilf([[self.titleArray firstObject] boundingRectWithSize:CGSizeMake(MAXFLOAT, 0) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:self.titleSelectFont} context:nil].size.width) + 30;
-
+        
         self.progressWidth = self.progressWidth > 0 ? self.progressWidth : titleWidth;
         CGFloat progressX = [self.btnArray firstObject].centerX - self.progressWidth * 0.5;
-        self.progressView.frame = CGRectMake(progressX, self.height - self.progressHeight - 1, self.progressWidth, self.progressHeight);
+        self.progressView.frame = CGRectMake(progressX, self.height - self.progressHeight - self.bottomLineHeight, self.progressWidth, self.progressHeight);
     }
+    self.lineV.frame = CGRectMake(0, self.height - self.bottomLineHeight, self.width, self.bottomLineHeight);
+    self.lineV.backgroundColor = self.bottomLineColor;
 }
 #pragma mark -
 #pragma mark   ==============lazy==============
@@ -253,7 +258,7 @@ static NSInteger tag = 20171010;
 - (UIImageView *)lineV {
     if (!_lineV) {
         _lineV = [[UIImageView alloc] init];
-        _lineV.backgroundColor = [UIColor colorWithHexString:@"#DEDEDE"];
+        _lineV.backgroundColor = self.bottomLineColor;
     }
     return _lineV;
 }
