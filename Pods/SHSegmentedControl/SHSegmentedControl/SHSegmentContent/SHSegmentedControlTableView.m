@@ -9,6 +9,9 @@
 #import "SHSegmentedControlTableView.h"
 
 
+#define kDevice_Is_iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+
+
 @interface SHSegmentedControlTableView()<UITableViewDelegate,UITableViewDataSource,SHTableViewDelegate,SHPageContentViewDelegate>
 
 @property (nonatomic, strong) SHPageContentView *pageContentView;
@@ -71,7 +74,7 @@ static NSString *cellIdentifier = @"SHSegTableViewCell";
     CGFloat contentViewHeight = self.height - self.tableView.sectionHeaderHeight - self.tableView.sectionFooterHeight;
     
     if (!self.isNavClear) {
-        contentViewHeight -= ([UIApplication sharedApplication].statusBarFrame.size.height + 44);
+        contentViewHeight -= (kDevice_Is_iPhoneX ? 88:64);
     }
     self.pageContentView = [[SHPageContentView alloc] initWithFrame:CGRectMake(0, 0, self.width, contentViewHeight) parentView:self childViews:tableViews];
     self.pageContentView.delegatePageContentView = self;
