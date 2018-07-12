@@ -1,6 +1,6 @@
 # SHSegmentedControl
 
-[![CocoaPods](https://img.shields.io/badge/pod-v1.1.9-cyan.svg)](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/tree/1.1.9)
+[![CocoaPods](https://img.shields.io/badge/pod-v1.2.0-cyan.svg)](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/tree/1.2.0)
 ![Platforms](https://img.shields.io/badge/platforms-iOS-orange.svg)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/LICENSE)
 [![QQ](https://img.shields.io/badge/QQ-@HatsuneMiku-blue.svg)](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/README.md#qq-479069761)
@@ -11,6 +11,10 @@ Both scroll horizontal and vertical for segment scrollview which have a same hea
 ## 预览↓↓↓
 
 ![](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/snow.gif)
+
+### 2018.07.12新增demo(pod v1.2.0)，修复iPhone X上导致的高度不对问题，暴露SHSegmentedControl的底部线的属性以便自定义↓↓↓
+#### 在这里感谢[@yanglijunwang](https://github.com/yanglijunwang)的指正
+![](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/SHSegmentedControl_fixbug_02.gif)
 
 ### 2018.05.24新增demo(pod v1.1.9)，修复SHSegmentedControl内容超屏，不能自动滑动问题↓↓↓
 #### 在这里感谢[@windkisshao](https://github.com/windkisshao)的指正
@@ -227,6 +231,10 @@ SHSegmentControlTypeWaterSubTitle,
 @property (nonatomic, assign) CGFloat progressWidth;
 /** 指示器颜色 */
 @property (nonatomic, strong) UIColor *progressColor;
+/** 下底线颜色 */
+@property (nonatomic, strong) UIColor *bottomLineColor;
+/** 下底线高度（粗细） 默认1.f) */
+@property (nonatomic, assign) CGFloat bottomLineHeight;
 /** 分栏类型 */
 @property (nonatomic, assign) SHSegmentControlType type;
 ```

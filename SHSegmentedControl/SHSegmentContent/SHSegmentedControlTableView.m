@@ -71,7 +71,7 @@ static NSString *cellIdentifier = @"SHSegTableViewCell";
     CGFloat contentViewHeight = self.height - self.tableView.sectionHeaderHeight - self.tableView.sectionFooterHeight;
     
     if (!self.isNavClear) {
-        contentViewHeight -= 64;
+        contentViewHeight -= ([UIApplication sharedApplication].statusBarFrame.size.height + 44);
     }
     self.pageContentView = [[SHPageContentView alloc] initWithFrame:CGRectMake(0, 0, self.width, contentViewHeight) parentView:self childViews:tableViews];
     self.pageContentView.delegatePageContentView = self;
@@ -192,11 +192,11 @@ static NSString *cellIdentifier = @"SHSegTableViewCell";
 - (instancetype)initWithFrame:(CGRect)frame parentView:(UIView *)parentView childViews:(NSArray *)childViews {
     if (self = [super initWithFrame:frame]) {
         if (parentView == nil) {
-            @throw [NSException exceptionWithName:@"SGPagingView" reason:@"SGPageContentView 所在父视图必须设置" userInfo:nil];
+            @throw [NSException exceptionWithName:@"SHGPagingView" reason:@"SHGPageContentView 所在父视图必须设置" userInfo:nil];
         }
         self.parentView = parentView;
         if (childViews == nil) {
-            @throw [NSException exceptionWithName:@"SGPagingView" reason:@"SGPageContentView 子视图必须设置" userInfo:nil];
+            @throw [NSException exceptionWithName:@"SHGPagingView" reason:@"SHGPageContentView 子视图必须设置" userInfo:nil];
         }
         self.childViews = childViews;
         

@@ -43,7 +43,8 @@
                        @"bar放在头部上，滑动悬停",
                        @"下拉头部放大",
                        @"使用ChildVC的处理方式",
-                       @"分栏内容超屏显示"];
+                       @"分栏内容超屏显示",
+                       @"分栏bar底部线属性暴露可设置"];
     
     self.controllerArray = @[@"OneViewController",
                              @"TwoViewController",
@@ -61,7 +62,8 @@
                              @"TwelveViewController",
                              @"ThirteenViewController",
                              @"FourteenViewController",
-                             @"FifteenViewController"];
+                             @"FifteenViewController",
+                             @"SixteenViewController"];
 
     [self.view addSubview:self.tableView];
 }
