@@ -44,7 +44,8 @@
                        @"下拉头部放大",
                        @"使用ChildVC的处理方式",
                        @"分栏内容超屏显示",
-                       @"分栏bar底部线属性暴露可设置"];
+                       @"分栏bar底部线属性暴露可设置",
+                       @"导航栏透明度切换，并保持bar在导航栏下面"];
     
     self.controllerArray = @[@"OneViewController",
                              @"TwoViewController",
@@ -63,7 +64,8 @@
                              @"ThirteenViewController",
                              @"FourteenViewController",
                              @"FifteenViewController",
-                             @"SixteenViewController"];
+                             @"SixteenViewController",
+                             @"SeventeenViewController"];
 
     [self.view addSubview:self.tableView];
 }

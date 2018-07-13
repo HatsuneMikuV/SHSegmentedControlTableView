@@ -12,6 +12,10 @@ Both scroll horizontal and vertical for segment scrollview which have a same hea
 
 ![](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/snow.gif)
 
+
+### 2018.07.13新增demo(导航栏透明度切换，并保持bar在导航栏下面)↓↓↓
+![](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/navgationbaralpha.gif)
+
 ### 2018.07.12新增demo(pod v1.2.0)，修复iPhone X上导致的高度不对问题，暴露SHSegmentedControl的底部线的属性以便自定义↓↓↓
 #### 在这里感谢[@yanglijunwang](https://github.com/yanglijunwang)的指正
 ![](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/SHSegmentedControl_fixbug_02.gif)
@@ -277,6 +281,8 @@ _segmentControl.curClick = ^(NSInteger index) {
 - 下拉头部放大
 - 使用ChildVC的处理方式
 - 分栏内容超屏显示
+- 分栏bar底部线属性暴露可设置
+- 导航栏透明度切换，并保持bar在导航栏下面
 
 
 
