@@ -1,4 +1,4 @@
-# SHSegmentedControl
+![LOGO](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/logo.png)
 
 [![CocoaPods](https://img.shields.io/badge/pod-v1.2.0-cyan.svg)](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/tree/1.2.0)
 ![Platforms](https://img.shields.io/badge/platforms-iOS-orange.svg)
