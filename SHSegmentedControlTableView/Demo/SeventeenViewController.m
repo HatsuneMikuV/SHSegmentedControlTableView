@@ -42,6 +42,7 @@
     TestOneTableView *tab3 = [[TestOneTableView alloc] init];
     tab3.num = 30;
     tab3.label = @"三";
+
     
     [self.segTableView setTableViews:@[tab1,tab2,tab3]];
     
@@ -74,18 +75,13 @@
     }else {
         [self.navigationController.navigationBar setAlpha:(offsetY/self.autoHeight)];
     }
-    
-    if (offsetY >= self.headerView.height - self.segmentControl.height - self.autoHeight) {
-        self.segmentControl.frame = CGRectMake(0, self.autoHeight, SCREEN_WIDTH, self.segmentControl.height);
-        [self.view addSubview:self.segmentControl];
-    }else {
-        self.segmentControl.frame = CGRectMake(0, self.headerView.height - self.segmentControl.height, SCREEN_WIDTH, self.segmentControl.height);
-        [self.headerView addSubview:self.segmentControl];
-    }
-    
 }
 - (void)segTableViewDidScroll:(UIScrollView *)tableView {
-    
+    if (tableView.contentOffset.y <= self.headerView.height - self.segmentControl.height - self.autoHeight) {
+        tableView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
+    }else {
+        tableView.contentInset = UIEdgeInsetsMake(self.autoHeight, 0, 0, 0);
+    }
 }
 - (void)segTableViewDidScrollSub:(UIScrollView *)subTableView {
     
@@ -101,8 +97,6 @@
     if (!_headerView) {
         _headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 200)];
         _headerView.backgroundColor = [UIColor purpleColor];
-        self.segmentControl.frame = CGRectMake(0, _headerView.height - self.segmentControl.height, SCREEN_WIDTH, self.segmentControl.height);
-        [_headerView addSubview:self.segmentControl];
     }
     return _headerView;
 }
@@ -124,6 +118,7 @@
         _segTableView.delegateCell = self;
         _segTableView.isNavClear = YES;
         [_segTableView setTopView:self.headerView];
+        [_segTableView setBarView:self.segmentControl];
     }
     return _segTableView;
 }

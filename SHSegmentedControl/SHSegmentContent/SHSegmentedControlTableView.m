@@ -127,7 +127,7 @@ static NSString *cellIdentifier = @"SHSegTableViewCell";
         if (offSetY <= self.topView.height && offSetY >= 0) {
             scrollView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
         }else if(offSetY > self.topView.height) {
-            scrollView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
+            scrollView.contentInset = UIEdgeInsetsMake((kDevice_Is_iPhoneX ? 88:64), 0, 0, 0);
         }
     }
     if (offSetY < self.topView.height) {

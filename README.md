@@ -122,7 +122,7 @@ SHSegmentControl.curClick = ^(NSInteger index) {
 
 
 #### `备注`
-当然`topView`、`barView`、`footView`也都是是可以使用自定义视图
+当然`topView`、`barView`、`footView`也都是是可以使用自定义视图，只要是`UIView`的子类即可，同样支持xib的View。
 
 
 ## 刷新
@@ -160,7 +160,7 @@ MJRefreshNormalHeader *refreshAllHeader = [MJRefreshNormalHeader headerWithRefre
 
 ## 混合模式
 
-在`UICollectionView `作为item载体的情况下，可扩展支持`UITableView`、`UICollectionView`、`UIScrollView`等各种视图。或者自定义视图作为item，只要是UIView的子类，可无限制支持。
+在`UICollectionView `作为item载体的情况下，可扩展支持`UITableView`、`UICollectionView`视图。暂时还不支持、`UIScrollView`、或者自定义视图作为item。下个版本将支持`UIScrollView`。后续会支持`UIView`子类，可无限拓展。
 
 
 ## 示例代码
@@ -200,14 +200,14 @@ _segTableView.delegateCell = self;
 
 ```
 typedef enum : NSUInteger {
-/** 默认状态 */
-SHSegmentControlTypeNone,
-/** 涌入放大效果 */
-SHSegmentControlTypeWater,
-/** 右上角小标题 */
-SHSegmentControlTypeSubTitle,
-/** 涌入放大效果+右上角小标题 */
-SHSegmentControlTypeWaterSubTitle,
+    /** 默认状态 */
+    SHSegmentControlTypeNone,
+    /** 涌入放大效果 */
+    SHSegmentControlTypeWater,
+    /** 右上角小标题 */
+    SHSegmentControlTypeSubTitle,
+    /** 涌入放大效果+右上角小标题 */
+    SHSegmentControlTypeWaterSubTitle,
 } SHSegmentControlType;
 
 @interface SHSegmentControl : UIScrollView
