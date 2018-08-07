@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E7C49F721193DC400F2B8F7 /* EighteenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7C49F621193DC400F2B8F7 /* EighteenViewController.m */; };
 		73B19A7D64941D59AD31C24A /* libPods-SHSegmentedControlTableView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E7A70E356D11D091D235CCF0 /* libPods-SHSegmentedControlTableView.a */; };
 		7C3392C620B65DEA00F285D4 /* FifteenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3392C520B65DEA00F285D4 /* FifteenViewController.m */; };
 		7C415A4E207B597D00DD356C /* ThirteenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C415A4D207B597C00DD356C /* ThirteenViewController.m */; };
@@ -40,6 +41,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E7C49F521193DC400F2B8F7 /* EighteenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EighteenViewController.h; sourceTree = "<group>"; };
+		3E7C49F621193DC400F2B8F7 /* EighteenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EighteenViewController.m; sourceTree = "<group>"; };
 		4ED29334A156E897E29FAB22 /* Pods-SHSegmentedControlTableView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHSegmentedControlTableView.release.xcconfig"; path = "Pods/Target Support Files/Pods-SHSegmentedControlTableView/Pods-SHSegmentedControlTableView.release.xcconfig"; sourceTree = "<group>"; };
 		7C3392C420B65DEA00F285D4 /* FifteenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FifteenViewController.h; sourceTree = "<group>"; };
 		7C3392C520B65DEA00F285D4 /* FifteenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FifteenViewController.m; sourceTree = "<group>"; };
@@ -216,6 +219,8 @@
 				7C64733920F77AA1002C6585 /* SixteenViewController.m */,
 				7C64734720F8AD37002C6585 /* SeventeenViewController.h */,
 				7C64734820F8AD37002C6585 /* SeventeenViewController.m */,
+				3E7C49F521193DC400F2B8F7 /* EighteenViewController.h */,
+				3E7C49F621193DC400F2B8F7 /* EighteenViewController.m */,
 			);
 			name = Demo;
 			path = SHSegmentedControlTableView/Demo;
@@ -335,6 +340,7 @@
 			files = (
 				7C48E1EC1F9DE386002E23AA /* NineViewController.m in Sources */,
 				7C48E1E31F9DE36A002E23AA /* SixViewController.m in Sources */,
+				3E7C49F721193DC400F2B8F7 /* EighteenViewController.m in Sources */,
 				7C3392C620B65DEA00F285D4 /* FifteenViewController.m in Sources */,
 				7CD1D26D1F8CAD920097302C /* ViewController.m in Sources */,
 				7CD8C7742015D9830044825F /* ElevenViewController.m in Sources */,
