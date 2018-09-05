@@ -60,6 +60,15 @@
 @end
 
 #pragma mark -
+#pragma mark   ==============SHSegmentedControlRefreshTableView==============
+
+/**
+ 处理需要上拉加载和下拉刷新
+ */
+@interface SHSegmentedControlRefreshTableView : SHSegmentedControlTableView
+
+@end
+#pragma mark -
 #pragma mark   ==============SHPageContentView==============
 
 @protocol SHPageContentViewDelegate <NSObject>

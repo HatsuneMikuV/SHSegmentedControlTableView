@@ -173,6 +173,18 @@ static NSString *cellIdentifier = @"SHSegTableViewCell";
 
 @end
 
+
+#pragma mark -
+#pragma mark   ==============SHSegmentedControlRefreshTableView==============
+@interface SHSegmentedControlRefreshTableView ()
+
+@end
+
+@implementation SHSegmentedControlRefreshTableView
+
+
+@end
+
 #pragma mark -
 #pragma mark   ==============SHPageContentView==============
 
