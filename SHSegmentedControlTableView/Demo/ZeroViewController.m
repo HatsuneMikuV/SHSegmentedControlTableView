@@ -31,21 +31,14 @@
     TestOneTableView *tab1 = [[TestOneTableView alloc] init];
     tab1.num = 15;
     tab1.label = @"一";
-    
-    UIView *colorRed = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 50)];
-    colorRed.backgroundColor = UIColor.redColor;
-    self.colorRed = colorRed;
-    
-    
-    
-    
-//    MJRefreshAutoNormalFooter *mj_footer1 = [[MJRefreshAutoNormalFooter alloc] init];
-//    __weak __typeof(&*mj_footer1)weakMj_footer1 = mj_footer1;
-//    [mj_footer1 setRefreshingBlock:^{
-//        tab1.num += 2;
-//        [weakMj_footer1 endRefreshing];
-//    }];
-//    [tab1 setMj_footer:mj_footer1];
+
+    MJRefreshAutoNormalFooter *mj_footer1 = [[MJRefreshAutoNormalFooter alloc] init];
+    __weak __typeof(&*mj_footer1)weakMj_footer1 = mj_footer1;
+    [mj_footer1 setRefreshingBlock:^{
+        tab1.num += 2;
+        [weakMj_footer1 endRefreshing];
+    }];
+    [tab1 setMj_footer:mj_footer1];
     //-----------------------------------------------------------------
     TestOneTableView *tab2 = [[TestOneTableView alloc] init];
     tab2.num = 5;
@@ -70,9 +63,6 @@
     //-----------------------------------------------------------------
     [self.segTableView setTableViews:@[tab1,tab2,tab3]];
     [self.view addSubview:self.segTableView];
-    
-//    colorRed.frame = CGRectMake(0, 50, self.view.width, 50);
-    [tab1 insertSubview:colorRed atIndex:0];
 }
 #pragma mark -
 #pragma mark   ==============SHSegTableViewDelegate==============
@@ -84,8 +74,6 @@
 }
 - (void)segTableViewDidScrollSub:(UIScrollView *)subTableView {
 
-    NSLog(@"%f--------%f", subTableView.contentOffset.y, subTableView.contentSize.height);
-    CGFloat height = subTableView.contentOffset.y + subTableView.contentSize.height;
     
 }
 - (void)segTableViewDidScrollProgress:(CGFloat)progress originalIndex:(NSInteger)originalIndex targetIndex:(NSInteger)targetIndex {

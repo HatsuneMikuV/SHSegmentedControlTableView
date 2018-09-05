@@ -71,6 +71,8 @@
 
 @interface SHPageContentView : UIView
 
+@property (nonatomic, weak) UIScrollView *mainTableView;
+
 /**
  对象方法创建 SHPageContentView
 

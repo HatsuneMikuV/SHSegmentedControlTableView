@@ -20,6 +20,9 @@
 
 @property (nonatomic, assign) NSInteger index;
 
+@property (nonatomic, assign) CGFloat lastScrollingListViewContentOffsetY;
+
+
 @end
 
 @implementation SHSegmentedControlTableView
@@ -79,6 +82,8 @@ static NSString *cellIdentifier = @"SHSegTableViewCell";
     self.pageContentView = [[SHPageContentView alloc] initWithFrame:CGRectMake(0, 0, self.width, contentViewHeight) parentView:self childViews:tableViews];
     self.pageContentView.delegatePageContentView = self;
     
+    self.childVCScrollView = tableViews.firstObject;
+    
     [self.tableView reloadData];
 }
 #pragma mark -
@@ -118,7 +123,7 @@ static NSString *cellIdentifier = @"SHSegTableViewCell";
     return self.footView;
 }
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    if (self.childVCScrollView && _childVCScrollView.contentOffset.y > 0) {
+    if (self.childVCScrollView && self.childVCScrollView.contentOffset.y > 0) {
         self.tableView.contentOffset = CGPointMake(0, self.topView.height);
     }
     
@@ -154,6 +159,38 @@ static NSString *cellIdentifier = @"SHSegTableViewCell";
         self.tableView.contentOffset = CGPointMake(0, self.topView.height);
         scrollView.showsVerticalScrollIndicator = YES;
     }
+    
+    BOOL shouldProcess = YES;
+    if (self.childVCScrollView.contentOffset.y > self.lastScrollingListViewContentOffsetY) {
+        //往上滚动
+    }else {
+        //往下滚动
+        if (self.tableView.contentOffset.y == 0) {
+            shouldProcess = NO;
+        }else {
+            if (self.tableView.contentOffset.y < self.topView.height) {
+                //mainTableView的header还没有消失，让listScrollView一直为0
+                self.childVCScrollView.contentOffset = CGPointZero;
+                self.childVCScrollView.showsVerticalScrollIndicator = false;
+            }
+        }
+    }
+    if (shouldProcess) {
+        if (self.tableView.contentOffset.y < self.topView.height) {
+            //处于下拉刷新的状态，scrollView.contentOffset.y为负数，就重置为0
+            if (self.childVCScrollView.contentOffset.y > 0) {
+                //mainTableView的header还没有消失，让listScrollView一直为0
+                self.childVCScrollView.contentOffset = CGPointZero;
+                self.childVCScrollView.showsVerticalScrollIndicator = false;
+            }
+        } else {
+            //mainTableView的header刚好消失，固定mainTableView的位置，显示listScrollView的滚动条
+            self.tableView.contentOffset = CGPointMake(0, self.topView.height);
+            self.childVCScrollView.showsVerticalScrollIndicator = true;
+        }
+    }
+    self.lastScrollingListViewContentOffsetY = self.childVCScrollView.contentOffset.y;
+    
     if (self.delegateCell && [self.delegateCell respondsToSelector:@selector(segTableViewDidScrollSub:)]) {
         [self.delegateCell segTableViewDidScrollSub:scrollView];
     }
@@ -266,6 +303,21 @@ static NSString *cellIdentifier = @"SHSegTableViewCell";
 
 #pragma mark -
 #pragma mark   ==============UICollectionViewDelegate==============
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    self.mainTableView.scrollEnabled = YES;
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    self.mainTableView.scrollEnabled = YES;
+}
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
+    self.mainTableView.scrollEnabled = YES;
+}
+
+//- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+//    self.mainTableView.scrollEnabled = NO;
+//}
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
     self.isClickBtn = NO;
     self.startOffsetX = scrollView.contentOffset.x;
@@ -275,6 +327,8 @@ static NSString *cellIdentifier = @"SHSegTableViewCell";
     if (self.isClickBtn == YES) {
         return;
     }
+    self.mainTableView.scrollEnabled = NO;
+
     // 1、定义获取需要的数据
     CGFloat progress = 0;
     NSInteger originalIndex = 0;

@@ -59,9 +59,6 @@
         [self.delegateSHTableView SHTableViewScrollViewDidScroll:scrollView];
     }
 }
-- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset {
-    NSLog(@"%@--%@", NSStringFromCGPoint(velocity), NSStringFromCGPoint(*targetContentOffset));
-}
 - (void)scrollViewDidScroll {
     [self scrollViewDidScroll:self];
 }
