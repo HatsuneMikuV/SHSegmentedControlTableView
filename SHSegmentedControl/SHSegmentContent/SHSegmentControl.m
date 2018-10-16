@@ -23,7 +23,7 @@
 
 @end
 
-static NSInteger tag = 20171010;
+const NSInteger tag = 20171010;
 
 @implementation SHSegmentControl
 

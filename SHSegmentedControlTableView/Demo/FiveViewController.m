@@ -24,7 +24,7 @@
 /**
  *  是否正在手势返回中的标示状态
  */
-static BOOL _isPoping;
+const BOOL _isPoping;
 
 -(BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer{
     if (!_isPoping) {

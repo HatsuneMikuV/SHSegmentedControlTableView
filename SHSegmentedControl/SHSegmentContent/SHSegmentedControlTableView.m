@@ -24,7 +24,7 @@
 
 @implementation SHSegmentedControlTableView
 
-static NSString *cellIdentifier = @"SHSegTableViewCell";
+const NSString *cellIdentifier = @"SHSegTableViewCell";
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
