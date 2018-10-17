@@ -1,24 +1,21 @@
 //
-//  FiveViewController.swift
+//  EighteenViewController.swift
 //  SHSegmentedControlTableView
 //
-//  Created by angle on 2018/1/30.
+//  Created by Joe.l on 2018/10/17.
 //  Copyright © 2018年 angle. All rights reserved.
 //
 
 import UIKit
-
 import SHSegmentedControl
 
-
-class FiveViewController: SHBaseViewController, SHSegTableViewDelegate {
+class EighteenViewController: SHBaseViewController, SHSegTableViewDelegate {
     
     var segTableView:SHSegmentedControlTableView!
     
     var segmentControl:SHSegmentControl!
     
-    var headerView:UIView!
-    
+    var headerView:SHHeaderOneView!
     
     
     override func viewDidLoad() {
@@ -66,12 +63,13 @@ class FiveViewController: SHBaseViewController, SHSegTableViewDelegate {
         }
     }
     
-    func getHeaderView() -> UIView {
+    func getHeaderView() -> SHHeaderOneView {
         if self.headerView != nil {
             return self.headerView
         }
-        let header:UIView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: SCREEN_WIDTH, height: 200))
+        let header:SHHeaderOneView = SHHeaderOneView.init(frame: CGRect.init(x: 0, y: 0, width: SCREEN_WIDTH, height: 200))
         header.backgroundColor = UIColor.purple
+        header.delegate = self
         return header
     }
     func getSegTableView() -> SHSegmentedControlTableView {
@@ -80,7 +78,6 @@ class FiveViewController: SHBaseViewController, SHSegTableViewDelegate {
         }
         let segTable:SHSegmentedControlTableView = SHSegmentedControlTableView.init(frame: self.view.bounds)
         segTable.delegateCell = self
-        segTable.navStyle = SHSegmentedControlNavStyle.hide
         segTable.topView = self.headerView
         segTable.barView = self.segmentControl
         return segTable
@@ -91,9 +88,7 @@ class FiveViewController: SHBaseViewController, SHSegTableViewDelegate {
         }
         let segment:SHSegmentControl = SHSegmentControl.init(frame: CGRect.init(x: 0, y: 0, width: SCREEN_WIDTH, height: 45), items: ["分栏一","分栏二","分栏三"])
         segment.titleSelectColor = UIColor.red
-        segment.type = SHSegmentControlTypeWaterSubTitle
         segment.reloadViews()
-        segment.setItmesSubTitle(["15.5万", "5000", "30万"])
         weak var weakSelf = self
         segment.curClick = {(index: NSInteger) ->Void in
             // 使用?的好处 就是一旦 self 被释放，就什么也不做
@@ -101,5 +96,23 @@ class FiveViewController: SHBaseViewController, SHSegTableViewDelegate {
         }
         return segment
     }
+    
 
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+}
+
+
+extension EighteenViewController:SHHeaderOneViewDelegate {
+    func changeHeightBlock(_ view: SHHeaderOneView) {
+        self.segTableView.topView = view
+    }
 }

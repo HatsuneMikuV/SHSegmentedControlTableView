@@ -12,6 +12,7 @@ Both scroll horizontal and vertical for segment scrollview which have a same hea
 
 ![](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/snow.gif)
 
+### 2018.10.17增加导航栏样式判断，将修改移到内部
 
 ### 2018.07.13新增demo(导航栏透明度切换，并保持bar在导航栏下面)↓↓↓
 ![](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/navgationbaralpha.gif)

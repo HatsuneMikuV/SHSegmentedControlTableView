@@ -31,7 +31,13 @@ class SHBaseViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    public func isX() -> Bool {
+        if UIScreen.main.bounds.height == 812 {
+            return true
+        }
+        
+        return false
+    }
     /*
     // MARK: - Navigation
 
