@@ -52,7 +52,7 @@ typedef enum : NSUInteger {
 @property (nonatomic, strong) UIColor *progressColor;
 /** 下底线颜色 */
 @property (nonatomic, strong) UIColor *bottomLineColor;
-/** 下底线高度（粗细） 默认1.f) */
+/** 下底线高度（粗细） 默认0.5f) */
 @property (nonatomic, assign) CGFloat bottomLineHeight;
 /** 分栏类型 */
 @property (nonatomic, assign) SHSegmentControlType type;

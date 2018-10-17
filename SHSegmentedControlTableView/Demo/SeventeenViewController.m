@@ -77,11 +77,7 @@
     }
 }
 - (void)segTableViewDidScroll:(UIScrollView *)tableView {
-    if (tableView.contentOffset.y <= self.headerView.height - self.segmentControl.height - self.autoHeight) {
-        tableView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
-    }else {
-        tableView.contentInset = UIEdgeInsetsMake(self.autoHeight, 0, 0, 0);
-    }
+
 }
 - (void)segTableViewDidScrollSub:(UIScrollView *)subTableView {
     
@@ -116,7 +112,7 @@
     if (!_segTableView) {
         _segTableView = [[SHSegmentedControlTableView alloc] initWithFrame:self.view.bounds];
         _segTableView.delegateCell = self;
-        _segTableView.isNavClear = YES;
+        _segTableView.navStyle = SHSegmentedControlNavStyleClear;
         [_segTableView setTopView:self.headerView];
         [_segTableView setBarView:self.segmentControl];
     }

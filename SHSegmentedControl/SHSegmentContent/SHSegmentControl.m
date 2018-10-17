@@ -75,7 +75,7 @@ const NSInteger tag = 20171010;
     _progressWidth = 65.f;
     _progressHeight = 3.f;
     _bottomLineColor = [UIColor colorWithHexString:@"#DEDEDE"];
-    _bottomLineHeight = 1.f;
+    _bottomLineHeight = 0.5f;
     _curIndex = 0;
     _type = SHSegmentControlTypeNone;
     

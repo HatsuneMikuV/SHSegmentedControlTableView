@@ -109,7 +109,7 @@
     if (!_segTableView) {
         _segTableView = [[SHSegmentedControlTableView alloc] initWithFrame:self.view.bounds];
         _segTableView.delegateCell = self;
-        _segTableView.isNavClear = YES;
+        _segTableView.navStyle = SHSegmentedControlNavStyleHide;
         [_segTableView setTopView:self.headerView];
         [_segTableView setBarView:self.segmentControl];
     }
