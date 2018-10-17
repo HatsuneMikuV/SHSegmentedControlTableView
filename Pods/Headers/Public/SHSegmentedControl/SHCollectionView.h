@@ -1,1 +1,1 @@
-../../../SHSegmentedControl/SHSegmentedControl/SHSegmentContent/SHCollectionView.h
+../../../../SHSegmentedControl/SHSegmentContent/SHCollectionView.h

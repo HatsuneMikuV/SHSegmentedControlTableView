@@ -1,1 +1,1 @@
-../../../SHSegmentedControl/SHSegmentedControl/SHExtension/UIColor+Hex.h
+../../../../SHSegmentedControl/SHExtension/UIColor+Hex.h
