@@ -53,9 +53,8 @@ Both scroll horizontal and vertical for segment scrollview which have a same hea
   #  profile URL.
   #
 
-  s.author             = { "Icarus" => "15188588180@163.com" }
+  s.author             = { "Icarus" => "anglemiku.v@gmail.com" }
   # Or just: s.author    = "Icarus"
-  # s.authors            = { "Icarus" => "15188588180@163.com" }
   # s.social_media_url   = "https://github.com/HatsuneMikuV"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
