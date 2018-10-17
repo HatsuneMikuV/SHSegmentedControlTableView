@@ -18,17 +18,18 @@
 
 @property (nonatomic, strong) UIView *headerView;
 
-@end
-
-@implementation FiveViewController
 /**
  *  是否正在手势返回中的标示状态
  */
-const BOOL _isPoping;
+@property (nonatomic, assign) BOOL isPoping;
+
+@end
+
+@implementation FiveViewController
 
 -(BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer{
-    if (!_isPoping) {
-        _isPoping = YES;
+    if (!self.isPoping) {
+        self.isPoping = YES;
         return YES;
     }
     return NO;
@@ -43,7 +44,7 @@ const BOOL _isPoping;
 }
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    _isPoping = NO;
+    self.isPoping = NO;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
