@@ -12,7 +12,26 @@ Both scroll horizontal and vertical for segment scrollview which have a same hea
 
 ![](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/snow.gif)
 
-### 2018.10.17增加导航栏样式判断，将修改移到内部
+# 使用 Cocoapods 导入
+SHSegmentedControl is available on [CocoaPods](http://cocoapods.org).  Add the following to your Podfile:
+
+```ruby
+pod 'SHSegmentedControl'
+```
+
+# 目录
+1. [更新内容](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/README.md#更新内容)
+2. [实现原理](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/README.md#实现的原理)
+3. [基本用法](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/README.md#基本用法)
+4. [下拉刷新](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/README.md#刷新)
+5. [混合模式](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/README.md#混合模式)
+6. [示例代码](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/README.md#示例代码)
+7. [Demo介绍](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/README.md#使用的详细用法示例)
+
+
+## 更新内容
+
+### 2018.10.17增加导航栏样式判断，将修改移到内部(pod v1.2.1)
 
 ### 2018.07.13新增demo(导航栏透明度切换，并保持bar在导航栏下面)↓↓↓
 ![](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/navgationbaralpha.gif)
@@ -34,21 +53,6 @@ Both scroll horizontal and vertical for segment scrollview which have a same hea
 ### 2018.04.02新增demo(pod v1.1.5)，bar放在头部上，滑动悬停↓↓↓
 ![](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/header_bar_stop.gif)
 
-
-# 使用 Cocoapods 导入
-SHSegmentedControl is available on [CocoaPods](http://cocoapods.org).  Add the following to your Podfile:
-
-```ruby
-pod 'SHSegmentedControl'
-```
-
-# 目录
-1. [实现原理](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/README.md#实现的原理)
-2. [基本用法](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/README.md#基本用法)
-3. [下拉刷新](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/README.md#刷新)
-4. [混合模式](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/README.md#混合模式)
-5. [示例代码](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/README.md#示例代码)
-6. [Demo介绍](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/README.md#使用的详细用法示例)
 
 ## 实现的原理
 >为了兼容下拉刷新，采用了UITableView作为容器的实现方式
