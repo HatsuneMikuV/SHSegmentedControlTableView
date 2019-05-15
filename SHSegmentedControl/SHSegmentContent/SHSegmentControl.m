@@ -8,8 +8,9 @@
 
 #import "SHSegmentControl.h"
 
+@interface SHSegmentControl ()<UIScrollViewDelegate>
 
-@interface SHSegmentControl ()
+@property (nonatomic, strong) UIScrollView *contentView;
 
 @property (nonatomic, strong) NSMutableArray *titleArray;
 
@@ -29,14 +30,11 @@ const NSInteger tag = 20171010;
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
-        
-        self.pagingEnabled = YES;
-        self.bounces = NO;
-        self.showsVerticalScrollIndicator = NO;
-        self.showsHorizontalScrollIndicator = NO;
-        
+
         [self init_setup];
-        [self addSubview:self.progressView];
+        self.contentView.frame = self.bounds;
+        [self addSubview:self.contentView];
+        [self.contentView addSubview:self.progressView];
         self.lineV.frame = CGRectMake(0, frame.size.height - self.bottomLineHeight, frame.size.width, self.bottomLineHeight);
         [self addSubview:self.lineV];
     }
@@ -45,15 +43,12 @@ const NSInteger tag = 20171010;
 - (instancetype)initWithFrame:(CGRect)frame items:(NSArray<NSString *> *)items {
     if (self = [super initWithFrame:frame]) {
         
-        self.pagingEnabled = YES;
-        self.bounces = NO;
-        self.showsVerticalScrollIndicator = NO;
-        self.showsHorizontalScrollIndicator = NO;
-        
         self.titleArray = items.mutableCopy;
         
         [self init_setup];
-        [self addSubview:self.progressView];
+        self.contentView.frame = self.bounds;
+        [self addSubview:self.contentView];
+        [self.contentView addSubview:self.progressView];
         
         [self addSubview];
         self.lineV.frame = CGRectMake(0, frame.size.height - self.bottomLineHeight, frame.size.width, self.bottomLineHeight);
@@ -78,7 +73,7 @@ const NSInteger tag = 20171010;
     _bottomLineHeight = 0.5f;
     _curIndex = 0;
     _type = SHSegmentControlTypeNone;
-    
+    _style = SHSegmentControlStyleScatter;
     
     self.backgroundColor = [UIColor whiteColor];
 }
@@ -94,7 +89,7 @@ const NSInteger tag = 20171010;
         selectBtn.tapClick = ^(SHTapButtonView *btn) {
             [self btnClick:btn isBlock:YES];
         };
-        [self addSubview:selectBtn];
+        [self.contentView addSubview:selectBtn];
         [self.btnArray addObject:selectBtn];
     }
 }
@@ -117,6 +112,16 @@ const NSInteger tag = 20171010;
 - (NSInteger)selectIndex {
     return self.curIndex;
 }
+- (void)setMenuItemWidth:(CGFloat)menuItemWidth
+{
+    _menuItemWidth = menuItemWidth;
+    
+    NSMutableArray *itemsWidths = [NSMutableArray array];
+    for (NSInteger index = 0; index < self.btnArray.count; index++) {
+        [itemsWidths addObject:@(menuItemWidth)];
+    }
+    self.itemsWidths = [itemsWidths copy];
+}
 #pragma mark -
 #pragma mark   ==============setItmesSubTitle==============
 - (void)setItmesSubTitle:(NSArray<NSString *> *)items {
@@ -128,7 +133,6 @@ const NSInteger tag = 20171010;
         }
     }
 }
-
 #pragma mark -
 #pragma mark   ==============btnClick==============
 - (void)btnClick:(SHTapButtonView *)btn isBlock:(BOOL)isRun{
@@ -169,7 +173,7 @@ const NSInteger tag = 20171010;
     }];
     
     //横向内容超屏后，判断按钮中心位置，改变contentOffset
-    if (self.contentSize.width > self.width) {
+    if (self.contentView.contentSize.width > self.width) {
         //居左
         CGFloat offsetX = btn.centerX- self.width * 0.5;
         if (offsetX < 0) {
@@ -177,11 +181,11 @@ const NSInteger tag = 20171010;
         }
         
         //居右
-        CGFloat maxOffsetX = self.contentSize.width - self.width;
+        CGFloat maxOffsetX = self.contentView.contentSize.width - self.width;
         if (offsetX > maxOffsetX) {
             offsetX = maxOffsetX;
         }
-        [self setContentOffset:CGPointMake(offsetX, 0) animated:YES];
+        [self.contentView setContentOffset:CGPointMake(offsetX, 0) animated:YES];
     }
     
     self.curIndex = btn.tag - tag;
@@ -210,30 +214,69 @@ const NSInteger tag = 20171010;
             NSString *title = self.titleArray[index];
             
             CGFloat btnW = ceilf([title boundingRectWithSize:CGSizeMake(MAXFLOAT, 0) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:btn.titleFont} context:nil].size.width) + 30;
+            if (self.itemsWidths.count == self.titleArray.count) {
+                btnW = [self.itemsWidths[index] floatValue];
+            }
             CGFloat btnH = self.height - self.progressHeight - 10;
             CGFloat btnX = CGRectGetMaxX(lastView.frame) + self.titleMargin;
             CGFloat btnY = 5;
-            
             btn.frame = CGRectMake(btnX, btnY, btnW, btnH);
-            
             btn.selected = (index == 0);
             lastView = btn;
         }
         //总宽小于父视图宽
         if (CGRectGetMaxX(lastView.frame) < self.width) {
-            CGFloat btnW = (self.width - self.titleMargin * (self.btnArray.count + 1)) / self.btnArray.count;
-            CGFloat btnH = self.height - self.progressHeight - 10;
-            CGFloat btnY = 5;
             
-            for (NSInteger index = 0; index < self.btnArray.count; index++) {
-                CGFloat btnX = self.titleMargin + (self.titleMargin + btnW) * index;
-                SHTapButtonView *btn = self.btnArray[index];
-                btn.frame = CGRectMake(btnX, btnY, btnW, btnH);
-                lastView = btn;
+            
+            if (SHSegmentControlStyleLeft == self.style) {
+                
+            } else if (SHSegmentControlStyleCenter == self.style) {
+                if (self.btnArray.count % 2 == 0) {//偶数
+                    CGFloat centerXLeft = self.width * 0.5;
+                    CGFloat centerXRight = self.width * 0.5;
+                    for (NSInteger index = self.btnArray.count / 2; index < self.btnArray.count; index++) {
+                        SHTapButtonView *btnLeft = self.btnArray[self.btnArray.count - 1 - index];
+                        SHTapButtonView *btnRight = self.btnArray[index];
+                        centerXLeft = centerXLeft - (self.titleMargin + btnLeft.width);
+                        btnLeft.x = centerXLeft;
+                        
+                        btnRight.x = centerXRight;
+                        centerXRight = centerXRight + (self.titleMargin + btnRight.width);
+                    }
+                } else {//奇数
+                    SHTapButtonView *btnCenter = self.btnArray[self.btnArray.count / 2];
+                    btnCenter.x = self.width * 0.5 - btnCenter.width * 0.5;
+                    CGFloat centerXLeft = btnCenter.x - self.titleMargin;
+                    CGFloat centerXRight = btnCenter.x + btnCenter.width + self.titleMargin;
+                    for (NSInteger index = self.btnArray.count / 2; index < self.btnArray.count - 1; index++) {
+                        SHTapButtonView *btnLeft = self.btnArray[self.btnArray.count - 2 - index];
+                        SHTapButtonView *btnRight = self.btnArray[index + 1];
+                        centerXLeft = centerXLeft - (self.titleMargin + btnLeft.width);
+                        btnLeft.x = centerXLeft;
+                        btnRight.x = centerXRight;
+                        centerXRight = centerXRight + (self.titleMargin + btnRight.width);
+                    }
+                }
+            } else if (SHSegmentControlStyleRight == self.style) {
+                CGFloat minX = self.width;
+                for (NSInteger index = self.btnArray.count - 1; index >= 0; index--) {
+                    SHTapButtonView *btn = self.btnArray[index];
+                    minX = minX - (self.titleMargin + btn.width);
+                    btn.x = minX;
+                }
+            } else if (SHSegmentControlStyleScatter == self.style) {
+                CGFloat btnW = (self.width - self.titleMargin * (self.btnArray.count + 1)) / self.btnArray.count;
+                CGFloat btnH = self.height - self.progressHeight - 10;
+                CGFloat btnY = 5;
+                for (NSInteger index = 0; index < self.btnArray.count; index++) {
+                    SHTapButtonView *btn = self.btnArray[index];
+                    CGFloat btnX = self.titleMargin + (self.titleMargin + btnW) * index;
+                    btn.frame = CGRectMake(btnX, btnY, btnW, btnH);
+                }
             }
         }
         
-        self.contentSize = CGSizeMake(CGRectGetMaxX(lastView.frame) + self.titleMargin, 0);
+        self.contentView.contentSize = CGSizeMake(CGRectGetMaxX(lastView.frame) + self.titleMargin, 0);
         self.progressView.layer.cornerRadius = self.progressCornerRadius;
         self.progressView.backgroundColor = self.progressColor;
         
@@ -243,11 +286,20 @@ const NSInteger tag = 20171010;
         CGFloat progressX = [self.btnArray firstObject].centerX - self.progressWidth * 0.5;
         self.progressView.frame = CGRectMake(progressX, self.height - self.progressHeight - self.bottomLineHeight, self.progressWidth, self.progressHeight);
     }
-    self.lineV.frame = CGRectMake(0, self.height - self.bottomLineHeight, self.width, self.bottomLineHeight);
     self.lineV.backgroundColor = self.bottomLineColor;
 }
 #pragma mark -
 #pragma mark   ==============lazy==============
+- (UIScrollView *)contentView
+{
+    if (_contentView == nil) {
+        _contentView = [[UIScrollView alloc] init];
+        _contentView.showsVerticalScrollIndicator = NO;
+        _contentView.showsHorizontalScrollIndicator = NO;
+        _contentView.delegate = self;
+    }
+    return _contentView;
+}
 - (UIView *)progressView {
     if (!_progressView) {
         _progressView = [[UIView alloc] init];

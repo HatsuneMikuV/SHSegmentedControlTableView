@@ -78,7 +78,7 @@
 }
 - (SHSegmentControl *)segmentControl {
     if (!_segmentControl) {
-        _segmentControl = [[SHSegmentControl alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH * 2, 45) items:@[@"分栏一",@"分栏二",@"分栏三",@"分栏四",@"分栏五",@"分栏六",@"分栏七"]];
+        _segmentControl = [[SHSegmentControl alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 45) items:@[@"分栏一",@"分栏二",@"分栏三",@"分栏四",@"分栏五",@"分栏六",@"分栏七"]];
         _segmentControl.titleSelectColor = [UIColor redColor];
         [_segmentControl reloadViews];
         __weak __typeof(&*self)weakSelf = self;

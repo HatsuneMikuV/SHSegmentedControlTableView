@@ -25,7 +25,18 @@ typedef enum : NSUInteger {
     SHSegmentControlTypeWaterSubTitle,
 } SHSegmentControlType;
 
-@interface SHSegmentControl : UIScrollView
+typedef enum : NSUInteger {
+    /** 默认状态 平均分布 呈分散状*/
+    SHSegmentControlStyleScatter,
+    /** 紧靠屏幕左侧 */
+    SHSegmentControlStyleLeft,
+    /** 紧挨且居中分布 */
+    SHSegmentControlStyleCenter,
+    /** 紧靠屏幕右侧 */
+    SHSegmentControlStyleRight,
+} SHSegmentControlStyle;
+
+@interface SHSegmentControl : UIView
 /** 间距 */
 @property (nonatomic, assign) CGFloat titleMargin;
 /** 默认字体大小 (默认15) */
@@ -54,9 +65,14 @@ typedef enum : NSUInteger {
 @property (nonatomic, strong) UIColor *bottomLineColor;
 /** 下底线高度（粗细） 默认0.5f) */
 @property (nonatomic, assign) CGFloat bottomLineHeight;
-/** 分栏类型 */
+/** 分栏类型 默认SHSegmentControlTypeNone */
 @property (nonatomic, assign) SHSegmentControlType type;
-
+/** 分栏分布类型 默认SHSegmentControlStyleScatter */
+@property (nonatomic, assign) SHSegmentControlStyle style;
+/** 每个 MenuItem 的宽度 */
+@property (nonatomic, assign) CGFloat menuItemWidth;
+/** 各个 MenuItem 的宽度，可不等，数组内为 NSNumber. */
+@property (nonatomic, nullable, copy) NSArray<NSNumber *> *itemsWidths;
 
 /** 获取当前下标 */
 @property (nonatomic, assign, readonly) NSInteger selectIndex;
