@@ -40,19 +40,19 @@ typedef enum : NSUInteger {
 /** 间距 */
 @property (nonatomic, assign) CGFloat titleMargin;
 /** 默认字体大小 (默认15) */
-@property (nonatomic, assign) UIFont  *titleNormalFont;
+@property (nonatomic, assign) UIFont  * _Nonnull titleNormalFont;
 /** 选中字体大小 (默认15) */
-@property (nonatomic, assign) UIFont  *titleSelectFont;
+@property (nonatomic, assign) UIFont  * _Nonnull titleSelectFont;
 /** 小标题字体大小 */
-@property (nonatomic, assign) UIFont  *subTitleFont;
+@property (nonatomic, assign) UIFont  * _Nonnull subTitleFont;
 /** 字体默认颜色 */
-@property (nonatomic, strong) UIColor *titleNormalColor;
+@property (nonatomic, strong) UIColor * _Nonnull titleNormalColor;
 /** 小标题默认字体颜色 */
-@property (nonatomic, strong) UIColor *subTitleNormalColor;
+@property (nonatomic, strong) UIColor * _Nonnull subTitleNormalColor;
 /** 字体选中颜色 */
-@property (nonatomic, strong) UIColor *titleSelectColor;
+@property (nonatomic, strong) UIColor * _Nonnull titleSelectColor;
 /** 小标题选中字体颜色 */
-@property (nonatomic, strong) UIColor *subTitleSelectColor;
+@property (nonatomic, strong) UIColor * _Nonnull subTitleSelectColor;
 /** 指示器圆角 */
 @property (nonatomic, assign) CGFloat progressCornerRadius;
 /** 指示器高度（粗细） */
@@ -60,9 +60,9 @@ typedef enum : NSUInteger {
 /** 指示器宽度（默认 title宽） */
 @property (nonatomic, assign) CGFloat progressWidth;
 /** 指示器颜色 */
-@property (nonatomic, strong) UIColor *progressColor;
+@property (nonatomic, strong) UIColor * _Nonnull progressColor;
 /** 下底线颜色 */
-@property (nonatomic, strong) UIColor *bottomLineColor;
+@property (nonatomic, strong) UIColor * _Nonnull bottomLineColor;
 /** 下底线高度（粗细） 默认0.5f) */
 @property (nonatomic, assign) CGFloat bottomLineHeight;
 /** 分栏类型 默认SHSegmentControlTypeNone */
@@ -81,7 +81,7 @@ typedef enum : NSUInteger {
 
 
 /** 分栏点击事件回调block */
-@property (nonatomic, copy) void(^curClick)(NSInteger index);
+@property (nonatomic, copy) void(^ _Nonnull curClick)(NSInteger index);
 
 /** 设置下标 */
 - (void)setSegmentSelectedIndex:(NSInteger)index;
@@ -93,15 +93,15 @@ typedef enum : NSUInteger {
  */
 
 /** 默认初始化方式 */
-- (instancetype)initWithFrame:(CGRect)frame;
+- (instancetype _Nonnull )initWithFrame:(CGRect)frame;
 /** 带分栏信息---初始化 */
-- (instancetype)initWithFrame:(CGRect)frame items:(NSArray<NSString *> *)items;
+- (instancetype _Nonnull )initWithFrame:(CGRect)frame items:(NSArray<NSString *> *_Nonnull)items;
 
 
 /** 重新设置分栏 */
-- (void)restItmes:(NSArray<NSString *> *)items;
+- (void)restItmes:(NSArray<NSString *> *_Nonnull)items;
 /** 设置分栏子标题 （个数和分栏数相同，没有给@""） */
-- (void)setItmesSubTitle:(NSArray<NSString *> *)items;
+- (void)setItmesSubTitle:(NSArray<NSString *> *_Nonnull)items;
 /** 属性设置后，手动刷新，提高性能 */
 - (void)reloadViews;
 
@@ -111,28 +111,28 @@ typedef enum : NSUInteger {
 
 @interface SHTapButtonView : UIView
 /** 字体大小 */
-@property (nonatomic, assign) UIFont  *titleFont;
+@property (nonatomic, assign) UIFont  * _Nonnull titleFont;
 /** 小标题字体大小 */
-@property (nonatomic, assign) UIFont  *subTitleFont;
+@property (nonatomic, assign) UIFont  * _Nonnull subTitleFont;
 /** 字体默认颜色 */
-@property (nonatomic, strong) UIColor *titleNormalColor;
+@property (nonatomic, strong) UIColor * _Nonnull titleNormalColor;
 /** 小标题默认字体颜色 */
-@property (nonatomic, strong) UIColor *subTitleNormalColor;
+@property (nonatomic, strong) UIColor * _Nonnull subTitleNormalColor;
 /** 字体选中颜色 */
-@property (nonatomic, strong) UIColor *titleSelectColor;
+@property (nonatomic, strong) UIColor * _Nonnull titleSelectColor;
 /** 小标题选中字体颜色 */
-@property (nonatomic, strong) UIColor *subTitleSelectColor;
+@property (nonatomic, strong) UIColor * _Nonnull subTitleSelectColor;
 /** 选中 */
 @property (nonatomic, assign) BOOL selected;
 /** 隐藏小标题 (默认隐藏 yes) */
 @property (nonatomic, assign) BOOL subHide;
 /** 标题 */
-@property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) NSString * _Nonnull title;
 /** 小标题 */
-@property (nonatomic, copy) NSString *subTitle;
+@property (nonatomic, copy) NSString * _Nonnull subTitle;
 
 /** 点击事件回调block */
-@property (nonatomic, copy) void(^tapClick)(SHTapButtonView *btn);
+@property (nonatomic, copy) void(^ _Nonnull tapClick)(SHTapButtonView * _Nonnull btn);
 
 @end
 
