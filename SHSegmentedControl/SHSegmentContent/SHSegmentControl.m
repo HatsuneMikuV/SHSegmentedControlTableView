@@ -200,6 +200,7 @@ const NSInteger tag = 20171010;
     _type = SHSegmentControlTypeNone;
     _style = SHSegmentControlStyleScatter;
     _itemScale = 1.2;
+    _progressBottom = 0.f;
     
     self.backgroundColor = [UIColor whiteColor];
 }
@@ -403,7 +404,8 @@ const NSInteger tag = 20171010;
         
         self.progressWidth = self.progressWidth > 0 ? self.progressWidth : titleWidth;
         CGFloat progressX = [self.btnArray firstObject].centerX - self.progressWidth * 0.5;
-        self.progressView.frame = CGRectMake(progressX, self.height - self.progressHeight - self.bottomLineHeight, self.progressWidth, self.progressHeight);
+        CGFloat progressY = self.height - self.progressHeight - self.bottomLineHeight - self.progressBottom;
+        self.progressView.frame = CGRectMake(progressX, progressY, self.progressWidth, self.progressHeight);
     }
     self.lineV.backgroundColor = self.bottomLineColor;
 }

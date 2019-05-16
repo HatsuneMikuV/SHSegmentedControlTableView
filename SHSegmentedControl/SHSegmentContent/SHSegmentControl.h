@@ -59,6 +59,8 @@ typedef enum : NSUInteger {
 @property (nonatomic, assign) CGFloat progressHeight;
 /** 指示器宽度（默认 title宽） */
 @property (nonatomic, assign) CGFloat progressWidth;
+/** 指示器底部距离（默认0） */
+@property (nonatomic, assign) CGFloat progressBottom;
 /** 指示器颜色 */
 @property (nonatomic, strong) UIColor * _Nonnull progressColor;
 /** 下底线颜色 */
