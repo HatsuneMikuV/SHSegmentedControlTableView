@@ -69,19 +69,22 @@ const NSInteger tag = 20171010;
 - (void)transformAniamtion:(BOOL)animation reset:(BOOL)isReset scale:(CGFloat)scale
 {
     if (isReset) {
-        self.titleL.transform = CGAffineTransformIdentity;
-        self.subTitleL.transform = CGAffineTransformIdentity;
+        [UIView animateWithDuration:0.25 animations:^{
+            self.titleL.transform = CGAffineTransformIdentity;
+            self.subTitleL.transform = CGAffineTransformIdentity;
+        }];
     } else {
+        [self layoutIfNeeded];
+        CGAffineTransform transform = CGAffineTransformMakeScale(scale, scale);
+        CGFloat x = (scale - 1) * 0.5 * (self.titleL.bounds.size.width + self.subTitleL.bounds.size.width);
         if (animation) {
-            [UIView beginAnimations:nil context:UIGraphicsGetCurrentContext()];
-            [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
-            [UIView setAnimationDuration:0.25];
-            self.titleL.transform = CGAffineTransformMakeScale(scale, scale);
-            self.subTitleL.transform = CGAffineTransformMakeScale(scale, scale);
-            [UIView commitAnimations];
+            [UIView animateWithDuration:0.25 animations:^{
+                self.titleL.transform = CGAffineTransformMakeScale(scale, scale);
+                self.subTitleL.transform = CGAffineTransformTranslate(transform, x, 0);
+            }];
         }else {
             self.titleL.transform = CGAffineTransformMakeScale(scale, scale);
-            self.subTitleL.transform = CGAffineTransformMakeScale(scale, scale);
+            self.subTitleL.transform = CGAffineTransformTranslate(transform, x, 0);
         }
     }
 }
@@ -209,8 +212,9 @@ const NSInteger tag = 20171010;
         SHTapButtonView *selectBtn = [[SHTapButtonView alloc] init];
         selectBtn.title = title;
         selectBtn.tag = tag + index;
+        __weak __typeof(self)weakSelf = self;
         selectBtn.tapClick = ^(SHTapButtonView *btn) {
-            [self btnClick:btn isBlock:YES];
+            [weakSelf btnClick:btn isBlock:YES];
         };
         [self.contentView addSubview:selectBtn];
         [self.btnArray addObject:selectBtn];
