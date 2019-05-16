@@ -26,6 +26,128 @@
 
 const NSInteger tag = 20171010;
 
+#pragma mark -
+#pragma mark   ==============SHTapButtonView==============
+@interface SHTapButtonView ()
+
+@property (nonatomic, strong) UILabel *titleL;
+@property (nonatomic, strong) UILabel *subTitleL;
+
+@end
+
+@implementation SHTapButtonView
+
+- (instancetype)init {
+    if (self = [super init]) {
+        
+        [self addSubview:self.titleL];
+        [self addSubview:self.subTitleL];
+        [self.titleL mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerX.equalTo(self.mas_centerX);
+            make.centerY.equalTo(self.mas_centerY);
+        }];
+        
+        [self.subTitleL mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self.titleL.mas_right);
+            make.top.equalTo(self.titleL.mas_top);
+        }];
+        
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapActionClick:)];
+        [self addGestureRecognizer:tap];
+        
+        self.subHide = YES;
+    }
+    return self;
+}
+- (void)tapActionClick:(UITapGestureRecognizer *)tap {
+    if (self.tapClick) {
+        self.tapClick(self);
+    }
+}
+#pragma mark -
+#pragma mark   ==============Private==============
+- (void)transformAniamtion:(BOOL)animation reset:(BOOL)isReset scale:(CGFloat)scale
+{
+    if (isReset) {
+        self.titleL.transform = CGAffineTransformIdentity;
+        self.subTitleL.transform = CGAffineTransformIdentity;
+    } else {
+        if (animation) {
+            [UIView beginAnimations:nil context:UIGraphicsGetCurrentContext()];
+            [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
+            [UIView setAnimationDuration:0.25];
+            self.titleL.transform = CGAffineTransformMakeScale(scale, scale);
+            self.subTitleL.transform = CGAffineTransformMakeScale(scale, scale);
+            [UIView commitAnimations];
+        }else {
+            self.titleL.transform = CGAffineTransformMakeScale(scale, scale);
+            self.subTitleL.transform = CGAffineTransformMakeScale(scale, scale);
+        }
+    }
+}
+#pragma mark -
+#pragma mark   ==============set==============
+- (void)setTitleFont:(UIFont *)titleFont {
+    _titleFont = titleFont;
+    self.titleL.font = titleFont;
+}
+- (void)setSubTitleFont:(UIFont *)subTitleFont {
+    _subTitleFont = subTitleFont;
+    self.subTitleL.font = subTitleFont;
+}
+- (void)setTitleNormalColor:(UIColor *)titleNormalColor {
+    _titleNormalColor = titleNormalColor;
+    self.titleL.textColor = titleNormalColor;
+}
+- (void)setTitleSelectColor:(UIColor *)titleSelectColor {
+    _titleSelectColor = titleSelectColor;
+    self.titleL.highlightedTextColor = titleSelectColor;
+}
+- (void)setSubTitleNormalColor:(UIColor *)subTitleNormalColor {
+    _subTitleNormalColor = subTitleNormalColor;
+    self.subTitleL.textColor = subTitleNormalColor;
+}
+- (void)setSubTitleSelectColor:(UIColor *)subTitleSelectColor {
+    _subTitleSelectColor = subTitleSelectColor;
+    self.subTitleL.highlightedTextColor = subTitleSelectColor;
+}
+- (void)setTitle:(NSString *)title {
+    _title = title;
+    self.titleL.text = title;
+}
+- (void)setSubTitle:(NSString *)subTitle {
+    _subTitle = subTitle;
+    self.subTitleL.text = subTitle;
+}
+- (void)setSelected:(BOOL)selected {
+    _selected = selected;
+    self.titleL.highlighted = selected;
+    self.subTitleL.highlighted = selected;
+}
+- (void)setSubHide:(BOOL)subHide {
+    _subHide = subHide;
+    self.subTitleL.hidden = subHide;
+}
+#pragma mark -
+#pragma mark   ==============UI-lazy==============
+- (UILabel *)titleL {
+    if (!_titleL) {
+        _titleL = [[UILabel alloc] init];
+        _titleL.textAlignment = NSTextAlignmentCenter;
+    }
+    return _titleL;
+}
+- (UILabel *)subTitleL {
+    if (!_subTitleL) {
+        _subTitleL = [[UILabel alloc] init];
+    }
+    return _subTitleL;
+}
+
+@end
+
+
+
 @implementation SHSegmentControl
 
 - (instancetype)initWithFrame:(CGRect)frame {
@@ -74,6 +196,7 @@ const NSInteger tag = 20171010;
     _curIndex = 0;
     _type = SHSegmentControlTypeNone;
     _style = SHSegmentControlStyleScatter;
+    _itemScale = 1.2;
     
     self.backgroundColor = [UIColor whiteColor];
 }
@@ -142,21 +265,13 @@ const NSInteger tag = 20171010;
         btns.selected = NO;
         btns.titleFont = self.titleNormalFont;
         if (self.type == SHSegmentControlTypeWater || self.type == SHSegmentControlTypeWaterSubTitle) {
-            btns.transform = CGAffineTransformMakeScale(1.0, 1.0);
+            [btns transformAniamtion:NO reset:YES scale:1];
         }
     }
     
     //按钮放大效果
     if (self.type == SHSegmentControlTypeWater || self.type == SHSegmentControlTypeWaterSubTitle) {
-        if (isRun) {
-            [UIView beginAnimations:nil context:UIGraphicsGetCurrentContext()];
-            [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
-            [UIView setAnimationDuration:0.25];
-            btn.transform = CGAffineTransformMakeScale(1.2, 1.2);
-            [UIView commitAnimations];
-        }else {
-            btn.transform = CGAffineTransformMakeScale(1.2, 1.2);
-        }
+        [btn transformAniamtion:isRun reset:NO scale:self.itemScale];
     }
     
     //移动下划线
@@ -321,104 +436,3 @@ const NSInteger tag = 20171010;
     return _btnArray;
 }
 @end
-
-
-#pragma mark -
-#pragma mark   ==============SHTapButtonView==============
-@interface SHTapButtonView ()
-
-@property (nonatomic, strong) UILabel *titleL;
-@property (nonatomic, strong) UILabel *subTitleL;
-
-@end
-
-@implementation SHTapButtonView
-
-- (instancetype)init {
-    if (self = [super init]) {
-        
-        [self addSubview:self.titleL];
-        [self addSubview:self.subTitleL];
-        [self.titleL mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.centerX.equalTo(self.mas_centerX);
-            make.centerY.equalTo(self.mas_centerY);
-        }];
-        
-        [self.subTitleL mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self.titleL.mas_right);
-            make.top.equalTo(self.titleL.mas_top);
-        }];
-        
-        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapActionClick:)];
-        [self addGestureRecognizer:tap];
-        
-        self.subHide = YES;
-    }
-    return self;
-}
-- (void)tapActionClick:(UITapGestureRecognizer *)tap {
-    if (self.tapClick) {
-        self.tapClick(self);
-    }
-}
-#pragma mark -
-#pragma mark   ==============set==============
-- (void)setTitleFont:(UIFont *)titleFont {
-    _titleFont = titleFont;
-    self.titleL.font = titleFont;
-}
-- (void)setSubTitleFont:(UIFont *)subTitleFont {
-    _subTitleFont = subTitleFont;
-    self.subTitleL.font = subTitleFont;
-}
-- (void)setTitleNormalColor:(UIColor *)titleNormalColor {
-    _titleNormalColor = titleNormalColor;
-    self.titleL.textColor = titleNormalColor;
-}
-- (void)setTitleSelectColor:(UIColor *)titleSelectColor {
-    _titleSelectColor = titleSelectColor;
-    self.titleL.highlightedTextColor = titleSelectColor;
-}
-- (void)setSubTitleNormalColor:(UIColor *)subTitleNormalColor {
-    _subTitleNormalColor = subTitleNormalColor;
-    self.subTitleL.textColor = subTitleNormalColor;
-}
-- (void)setSubTitleSelectColor:(UIColor *)subTitleSelectColor {
-    _subTitleSelectColor = subTitleSelectColor;
-    self.subTitleL.highlightedTextColor = subTitleSelectColor;
-}
-- (void)setTitle:(NSString *)title {
-    _title = title;
-    self.titleL.text = title;
-}
-- (void)setSubTitle:(NSString *)subTitle {
-    _subTitle = subTitle;
-    self.subTitleL.text = subTitle;
-}
-- (void)setSelected:(BOOL)selected {
-    _selected = selected;
-    self.titleL.highlighted = selected;
-    self.subTitleL.highlighted = selected;
-}
-- (void)setSubHide:(BOOL)subHide {
-    _subHide = subHide;
-    self.subTitleL.hidden = subHide;
-}
-#pragma mark -
-#pragma mark   ==============UI-lazy==============
-- (UILabel *)titleL {
-    if (!_titleL) {
-        _titleL = [[UILabel alloc] init];
-        _titleL.textAlignment = NSTextAlignmentCenter;
-    }
-    return _titleL;
-}
-- (UILabel *)subTitleL {
-    if (!_subTitleL) {
-        _subTitleL = [[UILabel alloc] init];
-    }
-    return _subTitleL;
-}
-
-@end
-

@@ -73,6 +73,8 @@ typedef enum : NSUInteger {
 @property (nonatomic, assign) CGFloat menuItemWidth;
 /** 各个 MenuItem 的宽度，可不等，数组内为 NSNumber. */
 @property (nonatomic, nullable, copy) NSArray<NSNumber *> *itemsWidths;
+/** 放大效果的比例  默认1.2*/
+@property (nonatomic, assign) CGFloat itemScale;
 
 /** 获取当前下标 */
 @property (nonatomic, assign, readonly) NSInteger selectIndex;
