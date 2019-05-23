@@ -33,7 +33,9 @@ typedef enum : NSUInteger {
 /** 选中字体大小 (默认15) */
 @property (nonatomic, assign) UIFont  *titleSelectFont;
 /** 小标题字体大小 */
-@property (nonatomic, assign) UIFont  *subTitleFont;
+@property (nonatomic, assign) UIFont  * _Nonnull subTitleFont;
+/** 标题偏移量 */
+@property (nonatomic, assign) CGFloat offsetX;
 /** 字体默认颜色 */
 @property (nonatomic, strong) UIColor *titleNormalColor;
 /** 小标题默认字体颜色 */
@@ -63,9 +65,17 @@ typedef enum : NSUInteger {
 /** 分栏总数 */
 @property (nonatomic, assign) NSInteger totalCount;
 
+/** 背景颜色 */
+@property (nonatomic, strong) UIColor * _Nonnull backgroundNormalColor;
+/** 选中状态背景颜色 */
+@property (nonatomic, strong) UIColor * _Nonnull backgroundSelectColor;
+
 
 /** 分栏点击事件回调block */
 @property (nonatomic, copy) void(^curClick)(NSInteger index);
+
+/** 分栏item 刷新回调 用于自定义设置小标题frame的block 仅限SHSegmentControlTypeSubTitle SHSegmentControlTypeWaterSubTitle 可用  设置block，必须在调用setItmesSubTitle方法之前*/
+@property (nonatomic, copy) void(^ _Nonnull reloadSubTitleBlock)(UILabel * _Nullable titleLabel, UILabel * _Nullable subLabel);
 
 /** 设置下标 */
 - (void)setSegmentSelectedIndex:(NSInteger)index;
@@ -90,33 +100,3 @@ typedef enum : NSUInteger {
 - (void)reloadViews;
 
 @end
-
-
-
-@interface SHTapButtonView : UIView
-/** 字体大小 */
-@property (nonatomic, assign) UIFont  *titleFont;
-/** 小标题字体大小 */
-@property (nonatomic, assign) UIFont  *subTitleFont;
-/** 字体默认颜色 */
-@property (nonatomic, strong) UIColor *titleNormalColor;
-/** 小标题默认字体颜色 */
-@property (nonatomic, strong) UIColor *subTitleNormalColor;
-/** 字体选中颜色 */
-@property (nonatomic, strong) UIColor *titleSelectColor;
-/** 小标题选中字体颜色 */
-@property (nonatomic, strong) UIColor *subTitleSelectColor;
-/** 选中 */
-@property (nonatomic, assign) BOOL selected;
-/** 隐藏小标题 (默认隐藏 yes) */
-@property (nonatomic, assign) BOOL subHide;
-/** 标题 */
-@property (nonatomic, copy) NSString *title;
-/** 小标题 */
-@property (nonatomic, copy) NSString *subTitle;
-
-/** 点击事件回调block */
-@property (nonatomic, copy) void(^tapClick)(SHTapButtonView *btn);
-
-@end
-

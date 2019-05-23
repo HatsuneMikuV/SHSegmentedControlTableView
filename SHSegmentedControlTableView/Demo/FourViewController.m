@@ -69,15 +69,26 @@
 }
 - (SHSegmentControl *)segmentControl {
     if (!_segmentControl) {
-        _segmentControl = [[SHSegmentControl alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 45) items:@[@"分栏一",@"分栏二",@"分栏三"]];
+        _segmentControl = [[SHSegmentControl alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 80) items:@[@"分栏一",@"分栏二",@"分栏三"]];
         _segmentControl.type = SHSegmentControlTypeWaterSubTitle;
         [_segmentControl reloadViews];
+        _segmentControl.reloadSubTitleBlock = ^(UILabel * _Nullable titleLabel, UILabel * _Nullable subLabel) {
+            //右侧
+//            subLabel.frame = CGRectMake(titleLabel.x + titleLabel.width, titleLabel.centerY - subLabel.height * 0.5, subLabel.width, subLabel.height);
+            //左侧
+//            subLabel.frame = CGRectMake(titleLabel.x - subLabel.width, titleLabel.centerY - subLabel.height * 0.5, subLabel.width, subLabel.height);
+            //上侧
+//            subLabel.frame = CGRectMake(titleLabel.centerX - subLabel.width * 0.5, titleLabel.y - subLabel.height, subLabel.width, subLabel.height);
+            //下侧
+//            subLabel.frame = CGRectMake(titleLabel.centerX - subLabel.width * 0.5, titleLabel.y + titleLabel.height + subLabel.height, subLabel.width, subLabel.height);
+        };
         [_segmentControl setItmesSubTitle:@[@"15.5万",@"5000",@"30万"]];
         [_segmentControl setSegmentSelectedIndex:0];
         __weak __typeof(&*self)weakSelf = self;
         _segmentControl.curClick = ^(NSInteger index) {
             [weakSelf.segTableView setSegmentSelectIndex:index];
         };
+        
     }
     return _segmentControl;
 }

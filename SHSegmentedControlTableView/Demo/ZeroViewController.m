@@ -35,8 +35,10 @@
     MJRefreshAutoNormalFooter *mj_footer1 = [[MJRefreshAutoNormalFooter alloc] init];
     __weak __typeof(&*mj_footer1)weakMj_footer1 = mj_footer1;
     [mj_footer1 setRefreshingBlock:^{
-        tab1.num += 2;
-        [weakMj_footer1 endRefreshing];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            tab1.num += 2;
+            [weakMj_footer1 endRefreshing];
+        });
     }];
     [tab1 setMj_footer:mj_footer1];
     //-----------------------------------------------------------------
@@ -50,19 +52,39 @@
     MJRefreshAutoNormalFooter *mj_footer3 = [[MJRefreshAutoNormalFooter alloc] init];
     __weak __typeof(&*mj_footer3)weakMj_footer3 = mj_footer3;
     [mj_footer3 setRefreshingBlock:^{
-        if (tab3.num >= 2) {
-            tab3.num -= 2;
-        }
-        if (tab3.num == 0) {
-            [weakMj_footer3 endRefreshingWithNoMoreData];
-        }else {
-            [weakMj_footer3 endRefreshing];
-        }
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            if (tab3.num >= 2) {
+                tab3.num -= 2;
+            }
+            if (tab3.num == 0) {
+                [weakMj_footer3 endRefreshingWithNoMoreData];
+            }else {
+                [weakMj_footer3 endRefreshing];
+            }
+        });
     }];
     [tab3 setMj_footer:mj_footer3];
     //-----------------------------------------------------------------
     [self.segTableView setTableViews:@[tab1,tab2,tab3]];
     [self.view addSubview:self.segTableView];
+    
+    __weak __typeof(&*self)weakSelf = self;
+    MJRefreshNormalHeader *refreshAllHeader = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            if (weakSelf.segTableView.selectedIndex == 0) {
+                tab1.num = 30;
+                weakSelf.headerView.backgroundColor = [UIColor redColor];
+            }else if (weakSelf.segTableView.selectedIndex == 1) {
+                tab2.num = 10;
+                weakSelf.headerView.backgroundColor = [UIColor greenColor];
+            }else if (weakSelf.segTableView.selectedIndex == 2) {
+                tab3.num = 20;
+                weakSelf.headerView.backgroundColor = [UIColor blueColor];
+            }
+            [weakSelf.segTableView.refreshHeader endRefreshing];
+        });
+    }];
+    [self.segTableView setRefreshHeader:refreshAllHeader];
 }
 #pragma mark -
 #pragma mark   ==============SHSegTableViewDelegate==============

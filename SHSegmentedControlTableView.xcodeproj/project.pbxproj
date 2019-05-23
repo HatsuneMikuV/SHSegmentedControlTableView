@@ -488,7 +488,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 48E9K7TPMY;
+				DEVELOPMENT_TEAM = 83SLLMU85B;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SHSegmentedControlTableView/PrefixHeader.pch";
 				INFOPLIST_FILE = SHSegmentedControlTableView/Info.plist;
@@ -506,7 +506,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 48E9K7TPMY;
+				DEVELOPMENT_TEAM = 83SLLMU85B;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SHSegmentedControlTableView/PrefixHeader.pch";
 				INFOPLIST_FILE = SHSegmentedControlTableView/Info.plist;
