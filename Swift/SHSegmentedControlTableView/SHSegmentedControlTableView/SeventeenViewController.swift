@@ -1,30 +1,34 @@
 //
-//  FiveViewController.swift
+//  SeventeenViewController.swift
 //  SHSegmentedControlTableView
 //
-//  Created by angle on 2018/1/30.
+//  Created by Joe.l on 2018/10/17.
 //  Copyright © 2018年 angle. All rights reserved.
 //
 
 import UIKit
-
 import SHSegmentedControl
 
-
-class FiveViewController: SHBaseViewController, SHSegTableViewDelegate {
+class SeventeenViewController: SHBaseViewController, SHSegTableViewDelegate {
     
     var segTableView:SHSegmentedControlTableView!
     
     var segmentControl:SHSegmentControl!
     
     var headerView:UIView!
-    
-    
+    var autoHeight:CGFloat!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        
+        self.edgesForExtendedLayout = UIRectEdge.all
+        self.autoHeight = 64;
+        if self.isX() {
+            self.autoHeight = 88;
+        }
         
         let tab1 = TestOneTableView.init(frame: CGRect.init(), style: UITableViewStyle.plain)
         tab1.num = 15
@@ -48,8 +52,32 @@ class FiveViewController: SHBaseViewController, SHSegTableViewDelegate {
         self.view.addSubview(self.segTableView)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.alpha = 0.0
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.navigationController?.navigationBar.alpha = 0.0
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.navigationBar.alpha = 1.0
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.navigationController?.navigationBar.alpha = 1.0
+    }
+    
     func segTableViewDidScrollY(_ offsetY: CGFloat) {
         
+        if offsetY > self.autoHeight {
+            self.navigationController?.navigationBar.alpha = 1.0
+        } else if offsetY < 0 {
+            self.navigationController?.navigationBar.alpha = 0.0
+        } else {
+            self.navigationController?.navigationBar.alpha = offsetY / self.autoHeight
+        }
     }
     
     func segTableViewDidScroll(_ tableView: UIScrollView!) {
@@ -80,7 +108,7 @@ class FiveViewController: SHBaseViewController, SHSegTableViewDelegate {
         }
         let segTable:SHSegmentedControlTableView = SHSegmentedControlTableView.init(frame: self.view.bounds)
         segTable.delegateCell = self
-        segTable.navStyle = SHSegmentedControlNavStyle.hide
+        segTable.navStyle = SHSegmentedControlNavStyle.clear
         segTable.topView = self.headerView
         segTable.barView = self.segmentControl
         return segTable
@@ -91,9 +119,7 @@ class FiveViewController: SHBaseViewController, SHSegTableViewDelegate {
         }
         let segment:SHSegmentControl = SHSegmentControl.init(frame: CGRect.init(x: 0, y: 0, width: SCREEN_WIDTH, height: 45), items: ["分栏一","分栏二","分栏三"])
         segment.titleSelectColor = UIColor.red
-        segment.type = SHSegmentControlTypeWaterSubTitle
         segment.reloadViews()
-        segment.setItmesSubTitle(["15.5万", "5000", "30万"])
         weak var weakSelf = self
         segment.curClick = {(index: NSInteger) ->Void in
             // 使用?的好处 就是一旦 self 被释放，就什么也不做

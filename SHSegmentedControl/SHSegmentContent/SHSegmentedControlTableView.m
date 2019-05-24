@@ -11,7 +11,9 @@
 
 #define kDevice_Is_iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
 
-
+#pragma mark -
+#pragma mark   =======================================================
+#pragma mark   ==============SHSegmentedControlTableView==============
 @interface SHSegmentedControlTableView()<UITableViewDelegate,UITableViewDataSource,SHTableViewDelegate,SHPageContentViewDelegate>
 
 @property (nonatomic, strong) SHPageContentView *pageContentView;
@@ -24,27 +26,43 @@
 
 @implementation SHSegmentedControlTableView
 
-static NSString *cellIdentifier = @"SHSegTableViewCell";
-
+#pragma mark -
+#pragma mark   ==============Init==============
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
-        self.tableView = [[SHMAINTableView alloc] initWithFrame:self.bounds style:(UITableViewStylePlain)];
-        if (@available(iOS 11.0, *)) {
-            _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-            _tableView.editing = NO;
-        }
-        _tableView.delegate = self;
-        _tableView.dataSource = self;
-        _tableView.sectionHeaderHeight = 0;
-        _tableView.sectionFooterHeight = 0;
-        _tableView.rowHeight = self.height;
-        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellIdentifier];
-        _tableView.showsVerticalScrollIndicator = NO;
-        [self addSubview:_tableView];
-        self.index = 0;
+        
+        [self initialization];
+        [self setupSubviews];
     }
     return self;
+}
+- (void)initialization
+{
+    self.index = 0;
+    self.navStyle = SHSegmentedControlNavStyleNone;
+}
+- (void)setupSubviews
+{
+    self.tableView = [[SHMAINTableView alloc] initWithFrame:self.bounds style:(UITableViewStylePlain)];
+    if (@available(iOS 11.0, *)) {
+        _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        _tableView.editing = NO;
+    }
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+    _tableView.sectionHeaderHeight = 0;
+    _tableView.sectionFooterHeight = 0;
+    _tableView.rowHeight = self.height;
+    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass(UITableViewCell.class)];
+    _tableView.showsVerticalScrollIndicator = NO;
+    [self addSubview:_tableView];
+}
+#pragma mark -
+#pragma mark   ==============Public==============
+- (void)setSegmentSelectIndex:(NSInteger)selectedIndex {
+    self.index = selectedIndex;
+    [self.pageContentView setPageCententViewCurrentIndex:selectedIndex];
 }
 #pragma mark -
 #pragma mark   ==============set==============
@@ -73,7 +91,7 @@ static NSString *cellIdentifier = @"SHSegTableViewCell";
     }
     CGFloat contentViewHeight = self.height - self.tableView.sectionHeaderHeight - self.tableView.sectionFooterHeight;
     
-    if (!self.isNavClear) {
+    if (self.navStyle == SHSegmentedControlNavStyleNone) {
         contentViewHeight -= (kDevice_Is_iPhoneX ? 88:64);
     }
     self.pageContentView = [[SHPageContentView alloc] initWithFrame:CGRectMake(0, 0, self.width, contentViewHeight) parentView:self childViews:tableViews];
@@ -107,7 +125,7 @@ static NSString *cellIdentifier = @"SHSegTableViewCell";
     return 1;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(UITableViewCell.class)];
     [cell.contentView addSubview:self.pageContentView];
     return cell;
 }
@@ -121,13 +139,19 @@ static NSString *cellIdentifier = @"SHSegTableViewCell";
     if (self.childVCScrollView && _childVCScrollView.contentOffset.y > 0) {
         self.tableView.contentOffset = CGPointMake(0, self.topView.height);
     }
-    
     CGFloat offSetY = scrollView.contentOffset.y;
-    if (self.isNavClear) {
+    CGFloat navHeight = (kDevice_Is_iPhoneX ? 88:64);
+    if (self.navStyle == SHSegmentedControlNavStyleClear) {
+        if (offSetY <= self.topView.height - self.barView.height - navHeight) {
+            scrollView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
+        }else  {
+            scrollView.contentInset = UIEdgeInsetsMake(navHeight, 0, 0, 0);
+        }
+    }else if (self.navStyle == SHSegmentedControlNavStyleHide) {
         if (offSetY <= self.topView.height && offSetY >= 0) {
             scrollView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
-        }else if(offSetY > self.topView.height) {
-            scrollView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
+        }else if (offSetY >= self.topView.height) {
+            scrollView.contentInset = UIEdgeInsetsMake(navHeight, 0, 0, 0);
         }
     }
     if (offSetY < self.topView.height) {
@@ -158,10 +182,6 @@ static NSString *cellIdentifier = @"SHSegTableViewCell";
         [self.delegateCell segTableViewDidScrollSub:scrollView];
     }
 }
-- (void)setSegmentSelectIndex:(NSInteger)selectedIndex {
-    self.index = selectedIndex;
-    [self.pageContentView setPageCententViewCurrentIndex:selectedIndex];
-}
 #pragma mark -
 #pragma mark   ==============SHPageContentViewDelegate==============
 - (void)pageContentView:(SHPageContentView *)pageContentView progress:(CGFloat)progress originalIndex:(NSInteger)originalIndex targetIndex:(NSInteger)targetIndex {
@@ -174,7 +194,8 @@ static NSString *cellIdentifier = @"SHSegTableViewCell";
 @end
 
 #pragma mark -
-#pragma mark   ==============SHPageContentView==============
+#pragma mark   =======================================================
+#pragma mark   ===================SHPageContentView===================
 
 @interface SHPageContentView () <UICollectionViewDataSource, UICollectionViewDelegate>
 /// 外界父视图
@@ -192,6 +213,8 @@ static NSString *cellIdentifier = @"SHSegTableViewCell";
 
 @implementation SHPageContentView
 
+#pragma mark -
+#pragma mark   ==============Init==============
 - (instancetype)initWithFrame:(CGRect)frame parentView:(UIView *)parentView childViews:(NSArray *)childViews {
     if (self = [super initWithFrame:frame]) {
         if (parentView == nil) {

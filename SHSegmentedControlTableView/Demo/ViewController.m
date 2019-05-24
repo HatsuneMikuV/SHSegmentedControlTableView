@@ -31,7 +31,7 @@
                        @"涌入放大",
                        @"右上角小标题",
                        @"涌入放大+右上角小标题",
-                       @"导航栏透明",
+                       @"导航栏隐藏",
                        @"无头部",
                        @"无bar",
                        @"CollectionView",
@@ -44,7 +44,9 @@
                        @"下拉头部放大",
                        @"使用ChildVC的处理方式",
                        @"分栏内容超屏显示",
-                       @"分栏bar底部线属性暴露可设置"];
+                       @"分栏bar底部线属性暴露可设置",
+                       @"导航栏透明度切换，并保持bar在导航栏下面",
+                       @"头部高度更改"];
     
     self.controllerArray = @[@"OneViewController",
                              @"TwoViewController",
@@ -63,7 +65,9 @@
                              @"ThirteenViewController",
                              @"FourteenViewController",
                              @"FifteenViewController",
-                             @"SixteenViewController"];
+                             @"SixteenViewController",
+                             @"SeventeenViewController",
+                             @"EighteenViewController"];
 
     [self.view addSubview:self.tableView];
 }

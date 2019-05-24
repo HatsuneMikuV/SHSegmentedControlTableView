@@ -19,10 +19,10 @@
     if (self = [super initWithFrame:frame style:style]) {
         if (@available(iOS 11.0, *)) {
             self.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-            self.estimatedSectionFooterHeight = 0;
-            self.estimatedSectionHeaderHeight = 0;
-            self.estimatedRowHeight = 0;
         }
+        self.estimatedSectionFooterHeight = 0;
+        self.estimatedSectionHeaderHeight = 0;
+        self.estimatedRowHeight = 0;
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pageTitleViewToTop) name:@"pageTitleViewToTop" object:nil];
     }
     return self;
@@ -31,10 +31,10 @@
     if (self = [super initWithFrame:frame]) {
         if (@available(iOS 11.0, *)) {
             self.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-            self.estimatedSectionFooterHeight = 0;
-            self.estimatedSectionHeaderHeight = 0;
-            self.estimatedRowHeight = 0;
         }
+        self.estimatedSectionFooterHeight = 0;
+        self.estimatedSectionHeaderHeight = 0;
+        self.estimatedRowHeight = 0;
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pageTitleViewToTop) name:@"pageTitleViewToTop" object:nil];
     }
     return self;
@@ -43,10 +43,10 @@
     if (self = [super init]) {
         if (@available(iOS 11.0, *)) {
             self.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-            self.estimatedSectionFooterHeight = 0;
-            self.estimatedSectionHeaderHeight = 0;
-            self.estimatedRowHeight = 0;
         }
+        self.estimatedSectionFooterHeight = 0;
+        self.estimatedSectionHeaderHeight = 0;
+        self.estimatedRowHeight = 0;
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pageTitleViewToTop) name:@"pageTitleViewToTop" object:nil];
     }
     return self;
@@ -72,10 +72,10 @@
     if (self = [super initWithFrame:frame style:style]) {
         if (@available(iOS 11.0, *)) {
             self.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-            self.estimatedSectionFooterHeight = 0;
-            self.estimatedSectionHeaderHeight = 0;
-            self.estimatedRowHeight = 0;
         }
+        self.estimatedSectionFooterHeight = 0;
+        self.estimatedSectionHeaderHeight = 0;
+        self.estimatedRowHeight = 0;
     }
     return self;
 }
@@ -83,10 +83,10 @@
     if (self = [super initWithFrame:frame]) {
         if (@available(iOS 11.0, *)) {
             self.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-            self.estimatedSectionFooterHeight = 0;
-            self.estimatedSectionHeaderHeight = 0;
-            self.estimatedRowHeight = 0;
         }
+        self.estimatedSectionFooterHeight = 0;
+        self.estimatedSectionHeaderHeight = 0;
+        self.estimatedRowHeight = 0;
     }
     return self;
 }
@@ -94,10 +94,10 @@
     if (self = [super init]) {
         if (@available(iOS 11.0, *)) {
             self.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-            self.estimatedSectionFooterHeight = 0;
-            self.estimatedSectionHeaderHeight = 0;
-            self.estimatedRowHeight = 0;
         }
+        self.estimatedSectionFooterHeight = 0;
+        self.estimatedSectionHeaderHeight = 0;
+        self.estimatedRowHeight = 0;
     }
     return self;
 }

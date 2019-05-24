@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E7C49F721193DC400F2B8F7 /* EighteenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7C49F621193DC400F2B8F7 /* EighteenViewController.m */; };
 		73B19A7D64941D59AD31C24A /* libPods-SHSegmentedControlTableView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E7A70E356D11D091D235CCF0 /* libPods-SHSegmentedControlTableView.a */; };
 		7C3392C620B65DEA00F285D4 /* FifteenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3392C520B65DEA00F285D4 /* FifteenViewController.m */; };
 		7C415A4E207B597D00DD356C /* ThirteenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C415A4D207B597C00DD356C /* ThirteenViewController.m */; };
@@ -20,6 +21,8 @@
 		7C48E1F21F9DE397002E23AA /* ZeroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C48E1F11F9DE397002E23AA /* ZeroViewController.m */; };
 		7C48E1F51F9DE9BB002E23AA /* TestCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C48E1F41F9DE9BB002E23AA /* TestCollectionView.m */; };
 		7C64733A20F77AA1002C6585 /* SixteenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C64733920F77AA1002C6585 /* SixteenViewController.m */; };
+		7C64734620F8A745002C6585 /* OneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C64734520F8A744002C6585 /* OneViewController.m */; };
+		7C64734920F8AD37002C6585 /* SeventeenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C64734820F8AD37002C6585 /* SeventeenViewController.m */; };
 		7C84705520B40BAD00D5EAD9 /* FourteenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C84705420B40BAD00D5EAD9 /* FourteenViewController.m */; };
 		7C84705820B40BC900D5EAD9 /* FourteenSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C84705720B40BC900D5EAD9 /* FourteenSubViewController.m */; };
 		7CBCA1D21F98B19F00349014 /* TestOneTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CBCA1D11F98B19F00349014 /* TestOneTableView.m */; };
@@ -31,7 +34,6 @@
 		7CD1D2721F8CAD920097302C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CD1D2711F8CAD920097302C /* Assets.xcassets */; };
 		7CD1D2751F8CAD920097302C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CD1D2731F8CAD920097302C /* LaunchScreen.storyboard */; };
 		7CD1D2781F8CAD920097302C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD1D2771F8CAD920097302C /* main.m */; };
-		7CD1D2821F8CB1E20097302C /* OneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD1D2811F8CB1E20097302C /* OneViewController.m */; };
 		7CD6B7CF20720D5B00ECEAE0 /* TwelveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD6B7CE20720D5B00ECEAE0 /* TwelveViewController.m */; };
 		7CD8C7742015D9830044825F /* ElevenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD8C7732015D9830044825F /* ElevenViewController.m */; };
 		7CF3FFC41F99F0E800758917 /* ThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF3FFC31F99F0E800758917 /* ThreeViewController.m */; };
@@ -39,6 +41,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E7C49F521193DC400F2B8F7 /* EighteenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EighteenViewController.h; sourceTree = "<group>"; };
+		3E7C49F621193DC400F2B8F7 /* EighteenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EighteenViewController.m; sourceTree = "<group>"; };
 		4ED29334A156E897E29FAB22 /* Pods-SHSegmentedControlTableView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHSegmentedControlTableView.release.xcconfig"; path = "Pods/Target Support Files/Pods-SHSegmentedControlTableView/Pods-SHSegmentedControlTableView.release.xcconfig"; sourceTree = "<group>"; };
 		7C3392C420B65DEA00F285D4 /* FifteenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FifteenViewController.h; sourceTree = "<group>"; };
 		7C3392C520B65DEA00F285D4 /* FifteenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FifteenViewController.m; sourceTree = "<group>"; };
@@ -64,6 +68,9 @@
 		7C48E1F41F9DE9BB002E23AA /* TestCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCollectionView.m; sourceTree = "<group>"; };
 		7C64733820F77AA1002C6585 /* SixteenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SixteenViewController.h; sourceTree = "<group>"; };
 		7C64733920F77AA1002C6585 /* SixteenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SixteenViewController.m; sourceTree = "<group>"; };
+		7C64734520F8A744002C6585 /* OneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneViewController.m; sourceTree = "<group>"; };
+		7C64734720F8AD37002C6585 /* SeventeenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SeventeenViewController.h; sourceTree = "<group>"; };
+		7C64734820F8AD37002C6585 /* SeventeenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SeventeenViewController.m; sourceTree = "<group>"; };
 		7C84705320B40BAD00D5EAD9 /* FourteenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FourteenViewController.h; sourceTree = "<group>"; };
 		7C84705420B40BAD00D5EAD9 /* FourteenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FourteenViewController.m; sourceTree = "<group>"; };
 		7C84705620B40BC900D5EAD9 /* FourteenSubViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FourteenSubViewController.h; sourceTree = "<group>"; };
@@ -86,7 +93,6 @@
 		7CD1D2761F8CAD920097302C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7CD1D2771F8CAD920097302C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7CD1D2801F8CB1E20097302C /* OneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneViewController.h; sourceTree = "<group>"; };
-		7CD1D2811F8CB1E20097302C /* OneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneViewController.m; sourceTree = "<group>"; };
 		7CD6B7CD20720D5B00ECEAE0 /* TwelveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwelveViewController.h; sourceTree = "<group>"; };
 		7CD6B7CE20720D5B00ECEAE0 /* TwelveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwelveViewController.m; sourceTree = "<group>"; };
 		7CD8C7722015D9830044825F /* ElevenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ElevenViewController.h; sourceTree = "<group>"; };
@@ -176,7 +182,7 @@
 				7CD1D26B1F8CAD920097302C /* ViewController.h */,
 				7CD1D26C1F8CAD920097302C /* ViewController.m */,
 				7CD1D2801F8CB1E20097302C /* OneViewController.h */,
-				7CD1D2811F8CB1E20097302C /* OneViewController.m */,
+				7C64734520F8A744002C6585 /* OneViewController.m */,
 				7CBCA1D71F99D78D00349014 /* TwoViewController.h */,
 				7CBCA1D81F99D78D00349014 /* TwoViewController.m */,
 				7CF3FFC21F99F0E800758917 /* ThreeViewController.h */,
@@ -211,6 +217,10 @@
 				7C3392C520B65DEA00F285D4 /* FifteenViewController.m */,
 				7C64733820F77AA1002C6585 /* SixteenViewController.h */,
 				7C64733920F77AA1002C6585 /* SixteenViewController.m */,
+				7C64734720F8AD37002C6585 /* SeventeenViewController.h */,
+				7C64734820F8AD37002C6585 /* SeventeenViewController.m */,
+				3E7C49F521193DC400F2B8F7 /* EighteenViewController.h */,
+				3E7C49F621193DC400F2B8F7 /* EighteenViewController.m */,
 			);
 			name = Demo;
 			path = SHSegmentedControlTableView/Demo;
@@ -244,7 +254,7 @@
 		7CD1D25D1F8CAD920097302C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = angle;
 				TargetAttributes = {
 					7CD1D2641F8CAD920097302C = {
@@ -330,6 +340,7 @@
 			files = (
 				7C48E1EC1F9DE386002E23AA /* NineViewController.m in Sources */,
 				7C48E1E31F9DE36A002E23AA /* SixViewController.m in Sources */,
+				3E7C49F721193DC400F2B8F7 /* EighteenViewController.m in Sources */,
 				7C3392C620B65DEA00F285D4 /* FifteenViewController.m in Sources */,
 				7CD1D26D1F8CAD920097302C /* ViewController.m in Sources */,
 				7CD8C7742015D9830044825F /* ElevenViewController.m in Sources */,
@@ -344,6 +355,7 @@
 				7C48E1F21F9DE397002E23AA /* ZeroViewController.m in Sources */,
 				7CF3FFC71F99F16200758917 /* FourViewController.m in Sources */,
 				7C84705520B40BAD00D5EAD9 /* FourteenViewController.m in Sources */,
+				7C64734620F8A745002C6585 /* OneViewController.m in Sources */,
 				7CBCA1D61F99D3B700349014 /* SHBaseViewController.m in Sources */,
 				7CD6B7CF20720D5B00ECEAE0 /* TwelveViewController.m in Sources */,
 				7C48E1E01F9DE35D002E23AA /* FiveViewController.m in Sources */,
@@ -351,8 +363,8 @@
 				7C84705820B40BC900D5EAD9 /* FourteenSubViewController.m in Sources */,
 				7C64733A20F77AA1002C6585 /* SixteenViewController.m in Sources */,
 				7C48E1EF1F9DE38F002E23AA /* TenViewController.m in Sources */,
+				7C64734920F8AD37002C6585 /* SeventeenViewController.m in Sources */,
 				7C48E1F51F9DE9BB002E23AA /* TestCollectionView.m in Sources */,
-				7CD1D2821F8CB1E20097302C /* OneViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +404,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -399,6 +412,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -447,6 +461,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -454,6 +469,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

@@ -1,17 +1,15 @@
 //
-//  FiveViewController.swift
+//  SixteenViewController.swift
 //  SHSegmentedControlTableView
 //
-//  Created by angle on 2018/1/30.
+//  Created by Joe.l on 2018/10/17.
 //  Copyright © 2018年 angle. All rights reserved.
 //
 
 import UIKit
-
 import SHSegmentedControl
 
-
-class FiveViewController: SHBaseViewController, SHSegTableViewDelegate {
+class SixteenViewController: SHBaseViewController, SHSegTableViewDelegate {
     
     var segTableView:SHSegmentedControlTableView!
     
@@ -19,12 +17,11 @@ class FiveViewController: SHBaseViewController, SHSegTableViewDelegate {
     
     var headerView:UIView!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        
         
         let tab1 = TestOneTableView.init(frame: CGRect.init(), style: UITableViewStyle.plain)
         tab1.num = 15
@@ -38,12 +35,27 @@ class FiveViewController: SHBaseViewController, SHSegTableViewDelegate {
         tab3.num = 30
         tab3.label = "三"
         
+        let tab4 = TestOneTableView.init(frame: CGRect.init(), style: UITableViewStyle.plain)
+        tab4.num = 30
+        tab4.label = "四"
+        
+        let tab5 = TestOneTableView.init(frame: CGRect.init(), style: UITableViewStyle.plain)
+        tab5.num = 30
+        tab5.label = "五"
+        
+        let tab6 = TestOneTableView.init(frame: CGRect.init(), style: UITableViewStyle.plain)
+        tab6.num = 30
+        tab6.label = "六"
+        
+        let tab7 = TestOneTableView.init(frame: CGRect.init(), style: UITableViewStyle.plain)
+        tab7.num = 30
+        tab7.label = "七"
         
         self.headerView = self.getHeaderView()
         self.segmentControl = self.getSegmentControl()
         self.segTableView = self.getSegTableView()
         
-        self.segTableView.tableViews = [tab1, tab2, tab3]
+        self.segTableView.tableViews = [tab1, tab2, tab3, tab4, tab5, tab6, tab7]
         
         self.view.addSubview(self.segTableView)
     }
@@ -80,7 +92,6 @@ class FiveViewController: SHBaseViewController, SHSegTableViewDelegate {
         }
         let segTable:SHSegmentedControlTableView = SHSegmentedControlTableView.init(frame: self.view.bounds)
         segTable.delegateCell = self
-        segTable.navStyle = SHSegmentedControlNavStyle.hide
         segTable.topView = self.headerView
         segTable.barView = self.segmentControl
         return segTable
@@ -89,11 +100,11 @@ class FiveViewController: SHBaseViewController, SHSegTableViewDelegate {
         if self.segmentControl != nil {
             return self.segmentControl
         }
-        let segment:SHSegmentControl = SHSegmentControl.init(frame: CGRect.init(x: 0, y: 0, width: SCREEN_WIDTH, height: 45), items: ["分栏一","分栏二","分栏三"])
+        let segment:SHSegmentControl = SHSegmentControl.init(frame: CGRect.init(x: 0, y: 0, width: SCREEN_WIDTH * 2, height: 45), items: ["分栏一","分栏二","分栏三","分栏四","分栏五","分栏六","分栏七"])
         segment.titleSelectColor = UIColor.red
-        segment.type = SHSegmentControlTypeWaterSubTitle
+        segment.bottomLineColor = UIColor.orange
+        segment.bottomLineHeight = 5
         segment.reloadViews()
-        segment.setItmesSubTitle(["15.5万", "5000", "30万"])
         weak var weakSelf = self
         segment.curClick = {(index: NSInteger) ->Void in
             // 使用?的好处 就是一旦 self 被释放，就什么也不做

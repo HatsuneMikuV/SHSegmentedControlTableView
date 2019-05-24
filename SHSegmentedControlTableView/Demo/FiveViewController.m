@@ -18,17 +18,18 @@
 
 @property (nonatomic, strong) UIView *headerView;
 
-@end
-
-@implementation FiveViewController
 /**
  *  是否正在手势返回中的标示状态
  */
-static BOOL _isPoping;
+@property (nonatomic, assign) BOOL isPoping;
+
+@end
+
+@implementation FiveViewController
 
 -(BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer{
-    if (!_isPoping) {
-        _isPoping = YES;
+    if (!self.isPoping) {
+        self.isPoping = YES;
         return YES;
     }
     return NO;
@@ -43,7 +44,7 @@ static BOOL _isPoping;
 }
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    _isPoping = NO;
+    self.isPoping = NO;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -108,7 +109,7 @@ static BOOL _isPoping;
     if (!_segTableView) {
         _segTableView = [[SHSegmentedControlTableView alloc] initWithFrame:self.view.bounds];
         _segTableView.delegateCell = self;
-        _segTableView.isNavClear = YES;
+        _segTableView.navStyle = SHSegmentedControlNavStyleHide;
         [_segTableView setTopView:self.headerView];
         [_segTableView setBarView:self.segmentControl];
     }

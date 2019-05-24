@@ -25,7 +25,6 @@
 		7C755E2F20204E02007C28B5 /* TenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C755E2E20204E02007C28B5 /* TenViewController.swift */; };
 		7C755E3120204E0C007C28B5 /* ZeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C755E3020204E0C007C28B5 /* ZeroViewController.swift */; };
 		7C755E3320204E18007C28B5 /* ElevViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C755E3220204E18007C28B5 /* ElevViewController.swift */; };
-		7C755E352020509D007C28B5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C755E342020509D007C28B5 /* Info.plist */; };
 		7C755E372020525A007C28B5 /* TestOneTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C755E362020525A007C28B5 /* TestOneTableView.swift */; };
 		7C755E3B202052A8007C28B5 /* TestCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C755E3A202052A8007C28B5 /* TestCollectionView.swift */; };
 		7C84705B20B43DF200D5EAD9 /* ThirteenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C84705A20B43DF200D5EAD9 /* ThirteenViewController.swift */; };
@@ -35,6 +34,9 @@
 		7C84706320B448D800D5EAD9 /* TwelveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C84706220B448D800D5EAD9 /* TwelveViewController.swift */; };
 		7C9CB54E202030D800998BEB /* OneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9CB54D202030D800998BEB /* OneViewController.swift */; };
 		7C9CB5502020462400998BEB /* SHBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9CB54F2020462400998BEB /* SHBaseViewController.swift */; };
+		E752CB352176F0EF00A348A1 /* SixteenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E752CB342176F0EF00A348A1 /* SixteenViewController.swift */; };
+		E752CB372176F10100A348A1 /* SeventeenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E752CB362176F10100A348A1 /* SeventeenViewController.swift */; };
+		E752CB392176F11F00A348A1 /* EighteenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E752CB382176F11F00A348A1 /* EighteenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +71,9 @@
 		7C9CB54F2020462400998BEB /* SHBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHBaseViewController.swift; sourceTree = "<group>"; };
 		AC2E0DBB795F8B59AC721706 /* Pods-SHSegmentedControlTableView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHSegmentedControlTableView.release.xcconfig"; path = "Pods/Target Support Files/Pods-SHSegmentedControlTableView/Pods-SHSegmentedControlTableView.release.xcconfig"; sourceTree = "<group>"; };
 		B34C79B3B6252B2D4149267E /* Pods_SHSegmentedControlTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SHSegmentedControlTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E752CB342176F0EF00A348A1 /* SixteenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixteenViewController.swift; sourceTree = "<group>"; };
+		E752CB362176F10100A348A1 /* SeventeenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeventeenViewController.swift; sourceTree = "<group>"; };
+		E752CB382176F11F00A348A1 /* EighteenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EighteenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +144,9 @@
 				7C84705C20B43E0300D5EAD9 /* FourteenViewController.swift */,
 				7C84705E20B43E1000D5EAD9 /* FourteenSubViewController.swift */,
 				7C3392C720B65FEF00F285D4 /* FifteenViewController.swift */,
+				E752CB342176F0EF00A348A1 /* SixteenViewController.swift */,
+				E752CB362176F10100A348A1 /* SeventeenViewController.swift */,
+				E752CB382176F11F00A348A1 /* EighteenViewController.swift */,
 				7C755E362020525A007C28B5 /* TestOneTableView.swift */,
 				7C755E3A202052A8007C28B5 /* TestCollectionView.swift */,
 				7C84706020B43EC600D5EAD9 /* SHHeaderView.swift */,
@@ -189,7 +197,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0910;
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = angle;
 				TargetAttributes = {
 					7C28D6111FD8F00E00BD8A00 = {
@@ -221,7 +229,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C755E352020509D007C28B5 /* Info.plist in Resources */,
 				7C28D6201FD8F00E00BD8A00 /* LaunchScreen.storyboard in Resources */,
 				7C28D61D1FD8F00E00BD8A00 /* Assets.xcassets in Resources */,
 				7C28D61B1FD8F00E00BD8A00 /* Main.storyboard in Resources */,
@@ -280,6 +287,8 @@
 			files = (
 				7C755E2720204DDF007C28B5 /* SixViewController.swift in Sources */,
 				7C84705B20B43DF200D5EAD9 /* ThirteenViewController.swift in Sources */,
+				E752CB372176F10100A348A1 /* SeventeenViewController.swift in Sources */,
+				E752CB392176F11F00A348A1 /* EighteenViewController.swift in Sources */,
 				7C3392C820B65FEF00F285D4 /* FifteenViewController.swift in Sources */,
 				7C755E1F20204BBB007C28B5 /* TwoViewController.swift in Sources */,
 				7C84706320B448D800D5EAD9 /* TwelveViewController.swift in Sources */,
@@ -299,6 +308,7 @@
 				7C84705F20B43E1000D5EAD9 /* FourteenSubViewController.swift in Sources */,
 				7C28D6161FD8F00E00BD8A00 /* AppDelegate.swift in Sources */,
 				7C755E2920204DE8007C28B5 /* SevViewController.swift in Sources */,
+				E752CB352176F0EF00A348A1 /* SixteenViewController.swift in Sources */,
 				7C755E2B20204DF4007C28B5 /* EigViewController.swift in Sources */,
 				7C755E3320204E18007C28B5 /* ElevViewController.swift in Sources */,
 			);
@@ -340,6 +350,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -347,6 +358,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -397,6 +409,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -404,6 +417,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -439,7 +453,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 48E9K7TPMY;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SHSegmentedControlTableView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.angle.SHSegmentedControlTableView;
@@ -455,7 +469,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 48E9K7TPMY;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SHSegmentedControlTableView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.angle.SHSegmentedControlTableView;

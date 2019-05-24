@@ -192,9 +192,10 @@ const NSInteger tag = 20171010;
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
-        
         [self init_setup];
-        [self addSubview:self.progressView];
+        self.contentView.frame = self.bounds;
+        [self addSubview:self.contentView];
+        [self.contentView addSubview:self.progressView];
         self.lineV.frame = CGRectMake(0, frame.size.height - self.bottomLineHeight, frame.size.width, self.bottomLineHeight);
         [self addSubview:self.lineV];
     }
@@ -203,15 +204,12 @@ const NSInteger tag = 20171010;
 - (instancetype)initWithFrame:(CGRect)frame items:(NSArray<NSString *> *)items {
     if (self = [super initWithFrame:frame]) {
         
-        self.pagingEnabled = YES;
-        self.bounces = NO;
-        self.showsVerticalScrollIndicator = NO;
-        self.showsHorizontalScrollIndicator = NO;
-        
         self.titleArray = items.mutableCopy;
         
         [self init_setup];
-        [self addSubview:self.progressView];
+        self.contentView.frame = self.bounds;
+        [self addSubview:self.contentView];
+        [self.contentView addSubview:self.progressView];
         
         [self addSubview];
         self.lineV.frame = CGRectMake(0, frame.size.height - self.bottomLineHeight, frame.size.width, self.bottomLineHeight);
@@ -233,10 +231,12 @@ const NSInteger tag = 20171010;
     _progressWidth = 65.f;
     _progressHeight = 3.f;
     _bottomLineColor = [UIColor colorWithHexString:@"#DEDEDE"];
-    _bottomLineHeight = 1.f;
+    _bottomLineHeight = 0.5f;
     _curIndex = 0;
     _type = SHSegmentControlTypeNone;
-    
+    _style = SHSegmentControlStyleScatter;
+    _itemScale = 1.2;
+    _progressBottom = 0.f;
     
     self.backgroundColor = [UIColor whiteColor];
 }
@@ -249,10 +249,11 @@ const NSInteger tag = 20171010;
         SHTapButtonView *selectBtn = [[SHTapButtonView alloc] init];
         selectBtn.title = title;
         selectBtn.tag = tag + index;
+        __weak __typeof(self)weakSelf = self;
         selectBtn.tapClick = ^(SHTapButtonView *btn) {
-            [self btnClick:btn isBlock:YES];
+            [weakSelf btnClick:btn isBlock:YES];
         };
-        [self addSubview:selectBtn];
+        [self.contentView addSubview:selectBtn];
         [self.btnArray addObject:selectBtn];
     }
 }
@@ -275,6 +276,16 @@ const NSInteger tag = 20171010;
 - (NSInteger)selectIndex {
     return self.curIndex;
 }
+- (void)setMenuItemWidth:(CGFloat)menuItemWidth
+{
+    _menuItemWidth = menuItemWidth;
+    
+    NSMutableArray *itemsWidths = [NSMutableArray array];
+    for (NSInteger index = 0; index < self.btnArray.count; index++) {
+        [itemsWidths addObject:@(menuItemWidth)];
+    }
+    self.itemsWidths = [itemsWidths copy];
+}
 #pragma mark -
 #pragma mark   ==============setItmesSubTitle==============
 - (void)setItmesSubTitle:(NSArray<NSString *> *)items {
@@ -287,7 +298,6 @@ const NSInteger tag = 20171010;
         }
     }
 }
-
 #pragma mark -
 #pragma mark   ==============btnClick==============
 - (void)btnClick:(SHTapButtonView *)btn isBlock:(BOOL)isRun{
@@ -297,21 +307,13 @@ const NSInteger tag = 20171010;
         btns.selected = NO;
         btns.titleFont = self.titleNormalFont;
         if (self.type == SHSegmentControlTypeWater || self.type == SHSegmentControlTypeWaterSubTitle) {
-            btns.transform = CGAffineTransformMakeScale(1.0, 1.0);
+            [btns transformAniamtion:NO reset:YES scale:1];
         }
     }
     
     //按钮放大效果
     if (self.type == SHSegmentControlTypeWater || self.type == SHSegmentControlTypeWaterSubTitle) {
-        if (isRun) {
-            [UIView beginAnimations:nil context:UIGraphicsGetCurrentContext()];
-            [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
-            [UIView setAnimationDuration:0.25];
-            btn.transform = CGAffineTransformMakeScale(1.2, 1.2);
-            [UIView commitAnimations];
-        }else {
-            btn.transform = CGAffineTransformMakeScale(1.2, 1.2);
-        }
+        [btn transformAniamtion:isRun reset:NO scale:self.itemScale];
     }
     
     //移动下划线
@@ -328,7 +330,7 @@ const NSInteger tag = 20171010;
     }];
     
     //横向内容超屏后，判断按钮中心位置，改变contentOffset
-    if (self.contentSize.width > self.width) {
+    if (self.contentView.contentSize.width > self.width) {
         //居左
         CGFloat offsetX = btn.centerX- self.width * 0.5;
         if (offsetX < 0) {
@@ -336,11 +338,11 @@ const NSInteger tag = 20171010;
         }
         
         //居右
-        CGFloat maxOffsetX = self.contentSize.width - self.width;
+        CGFloat maxOffsetX = self.contentView.contentSize.width - self.width;
         if (offsetX > maxOffsetX) {
             offsetX = maxOffsetX;
         }
-        [self setContentOffset:CGPointMake(offsetX, 0) animated:YES];
+        [self.contentView setContentOffset:CGPointMake(offsetX, 0) animated:YES];
     }
     
     self.curIndex = btn.tag - tag;
@@ -393,15 +395,11 @@ const NSInteger tag = 20171010;
             CGFloat btnH = self.height - self.progressHeight - btnY;
             CGFloat btnX = CGRectGetMaxX(lastView.frame) + self.titleMargin;
             btn.frame = CGRectMake(btnX, btnY, btnW, btnH);
-            
             btn.selected = (index == 0);
             lastView = btn;
         }
         //总宽小于父视图宽
         if (CGRectGetMaxX(lastView.frame) < self.width) {
-            CGFloat btnW = (self.width - self.titleMargin * (self.btnArray.count + 1)) / self.btnArray.count;
-            CGFloat btnY = 5;
-            CGFloat btnH = self.height - self.progressHeight - btnY;
             if (SHSegmentControlStyleLeft == self.style) {
                 
             } else if (SHSegmentControlStyleCenter == self.style) {
@@ -450,7 +448,7 @@ const NSInteger tag = 20171010;
             }
         }
         
-        self.contentSize = CGSizeMake(CGRectGetMaxX(lastView.frame) + self.titleMargin, 0);
+        self.contentView.contentSize = CGSizeMake(CGRectGetMaxX(lastView.frame) + self.titleMargin, 0);
         self.progressView.layer.cornerRadius = self.progressCornerRadius;
         self.progressView.backgroundColor = self.progressColor;
         
@@ -458,13 +456,23 @@ const NSInteger tag = 20171010;
         
         self.progressWidth = self.progressWidth > 0 ? self.progressWidth : titleWidth;
         CGFloat progressX = [self.btnArray firstObject].centerX - self.progressWidth * 0.5;
-        self.progressView.frame = CGRectMake(progressX, self.height - self.progressHeight - self.bottomLineHeight, self.progressWidth, self.progressHeight);
+        CGFloat progressY = self.height - self.progressHeight - self.bottomLineHeight - self.progressBottom;
+        self.progressView.frame = CGRectMake(progressX, progressY, self.progressWidth, self.progressHeight);
     }
-    self.lineV.frame = CGRectMake(0, self.height - self.bottomLineHeight, self.width, self.bottomLineHeight);
     self.lineV.backgroundColor = self.bottomLineColor;
 }
 #pragma mark -
 #pragma mark   ==============lazy==============
+- (UIScrollView *)contentView
+{
+    if (_contentView == nil) {
+        _contentView = [[UIScrollView alloc] init];
+        _contentView.showsVerticalScrollIndicator = NO;
+        _contentView.showsHorizontalScrollIndicator = NO;
+        _contentView.delegate = self;
+    }
+    return _contentView;
+}
 - (UIView *)progressView {
     if (!_progressView) {
         _progressView = [[UIView alloc] init];
@@ -486,104 +494,3 @@ const NSInteger tag = 20171010;
     return _btnArray;
 }
 @end
-
-
-#pragma mark -
-#pragma mark   ==============SHTapButtonView==============
-@interface SHTapButtonView ()
-
-@property (nonatomic, strong) UILabel *titleL;
-@property (nonatomic, strong) UILabel *subTitleL;
-
-@end
-
-@implementation SHTapButtonView
-
-- (instancetype)init {
-    if (self = [super init]) {
-        
-        [self addSubview:self.titleL];
-        [self addSubview:self.subTitleL];
-        [self.titleL mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.centerX.equalTo(self.mas_centerX);
-            make.centerY.equalTo(self.mas_centerY);
-        }];
-        
-        [self.subTitleL mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self.titleL.mas_right);
-            make.top.equalTo(self.titleL.mas_top);
-        }];
-        
-        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapActionClick:)];
-        [self addGestureRecognizer:tap];
-        
-        self.subHide = YES;
-    }
-    return self;
-}
-- (void)tapActionClick:(UITapGestureRecognizer *)tap {
-    if (self.tapClick) {
-        self.tapClick(self);
-    }
-}
-#pragma mark -
-#pragma mark   ==============set==============
-- (void)setTitleFont:(UIFont *)titleFont {
-    _titleFont = titleFont;
-    self.titleL.font = titleFont;
-}
-- (void)setSubTitleFont:(UIFont *)subTitleFont {
-    _subTitleFont = subTitleFont;
-    self.subTitleL.font = subTitleFont;
-}
-- (void)setTitleNormalColor:(UIColor *)titleNormalColor {
-    _titleNormalColor = titleNormalColor;
-    self.titleL.textColor = titleNormalColor;
-}
-- (void)setTitleSelectColor:(UIColor *)titleSelectColor {
-    _titleSelectColor = titleSelectColor;
-    self.titleL.highlightedTextColor = titleSelectColor;
-}
-- (void)setSubTitleNormalColor:(UIColor *)subTitleNormalColor {
-    _subTitleNormalColor = subTitleNormalColor;
-    self.subTitleL.textColor = subTitleNormalColor;
-}
-- (void)setSubTitleSelectColor:(UIColor *)subTitleSelectColor {
-    _subTitleSelectColor = subTitleSelectColor;
-    self.subTitleL.highlightedTextColor = subTitleSelectColor;
-}
-- (void)setTitle:(NSString *)title {
-    _title = title;
-    self.titleL.text = title;
-}
-- (void)setSubTitle:(NSString *)subTitle {
-    _subTitle = subTitle;
-    self.subTitleL.text = subTitle;
-}
-- (void)setSelected:(BOOL)selected {
-    _selected = selected;
-    self.titleL.highlighted = selected;
-    self.subTitleL.highlighted = selected;
-}
-- (void)setSubHide:(BOOL)subHide {
-    _subHide = subHide;
-    self.subTitleL.hidden = subHide;
-}
-#pragma mark -
-#pragma mark   ==============UI-lazy==============
-- (UILabel *)titleL {
-    if (!_titleL) {
-        _titleL = [[UILabel alloc] init];
-        _titleL.textAlignment = NSTextAlignmentCenter;
-    }
-    return _titleL;
-}
-- (UILabel *)subTitleL {
-    if (!_subTitleL) {
-        _subTitleL = [[UILabel alloc] init];
-    }
-    return _subTitleL;
-}
-
-@end
-

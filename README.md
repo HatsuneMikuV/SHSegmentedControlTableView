@@ -1,4 +1,4 @@
-# SHSegmentedControl
+![LOGO](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/logo.png)
 
 [![CocoaPods](https://img.shields.io/badge/pod-v1.2.0-cyan.svg)](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/tree/1.2.0)
 ![Platforms](https://img.shields.io/badge/platforms-iOS-orange.svg)
@@ -11,6 +11,39 @@ Both scroll horizontal and vertical for segment scrollview which have a same hea
 ## 预览↓↓↓
 
 ![](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/snow.gif)
+
+# 使用 Cocoapods 导入
+SHSegmentedControl is available on [CocoaPods](http://cocoapods.org).  Add the following to your Podfile:
+
+```ruby
+pod 'SHSegmentedControl'
+```
+
+# 目录
+1. [更新内容](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/README.md#更新内容)
+2. [实现原理](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/README.md#实现的原理)
+3. [基本用法](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/README.md#基本用法)
+4. [下拉刷新](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/README.md#刷新)
+5. [混合模式](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/README.md#混合模式)
+6. [示例代码](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/README.md#示例代码)
+7. [Demo介绍](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/README.md#使用的详细用法示例)
+
+
+## 更新内容
+
+### 2019.05.16 更新分栏(pod v1.3.0)
+>1.增加分栏样式枚举
+
+>2.开放分栏item宽度自定义
+
+>3.修改分栏图层关系，允许左右回弹效果
+
+>4.新增分栏放大比例属性
+
+### 2018.10.17增加导航栏样式判断，将修改移到内部(pod v1.2.1)
+
+### 2018.07.13新增demo(导航栏透明度切换，并保持bar在导航栏下面)↓↓↓
+![](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/navgationbaralpha.gif)
 
 ### 2018.07.12新增demo(pod v1.2.0)，修复iPhone X上导致的高度不对问题，暴露SHSegmentedControl的底部线的属性以便自定义↓↓↓
 #### 在这里感谢[@yanglijunwang](https://github.com/yanglijunwang)的指正
@@ -29,21 +62,6 @@ Both scroll horizontal and vertical for segment scrollview which have a same hea
 ### 2018.04.02新增demo(pod v1.1.5)，bar放在头部上，滑动悬停↓↓↓
 ![](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/header_bar_stop.gif)
 
-
-# 使用 Cocoapods 导入
-SHSegmentedControl is available on [CocoaPods](http://cocoapods.org).  Add the following to your Podfile:
-
-```ruby
-pod 'SHSegmentedControl'
-```
-
-# 目录
-1. [实现原理](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/README.md#实现的原理)
-2. [基本用法](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/README.md#基本用法)
-3. [下拉刷新](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/README.md#刷新)
-4. [混合模式](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/README.md#混合模式)
-5. [示例代码](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/README.md#示例代码)
-6. [Demo介绍](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/README.md#使用的详细用法示例)
 
 ## 实现的原理
 >为了兼容下拉刷新，采用了UITableView作为容器的实现方式
@@ -118,7 +136,7 @@ SHSegmentControl.curClick = ^(NSInteger index) {
 
 
 #### `备注`
-当然`topView`、`barView`、`footView`也都是是可以使用自定义视图
+当然`topView`、`barView`、`footView`也都是是可以使用自定义视图，只要是`UIView`的子类即可，同样支持xib的View。
 
 
 ## 刷新
@@ -156,7 +174,7 @@ MJRefreshNormalHeader *refreshAllHeader = [MJRefreshNormalHeader headerWithRefre
 
 ## 混合模式
 
-在`UICollectionView `作为item载体的情况下，可扩展支持`UITableView`、`UICollectionView`、`UIScrollView`等各种视图。或者自定义视图作为item，只要是UIView的子类，可无限制支持。
+在`UICollectionView `作为item载体的情况下，可扩展支持`UITableView`、`UICollectionView`视图。暂时还不支持、`UIScrollView`、或者自定义视图作为item。下个版本将支持`UIScrollView`。后续会支持`UIView`子类，可无限拓展。
 
 
 ## 示例代码
@@ -196,14 +214,14 @@ _segTableView.delegateCell = self;
 
 ```
 typedef enum : NSUInteger {
-/** 默认状态 */
-SHSegmentControlTypeNone,
-/** 涌入放大效果 */
-SHSegmentControlTypeWater,
-/** 右上角小标题 */
-SHSegmentControlTypeSubTitle,
-/** 涌入放大效果+右上角小标题 */
-SHSegmentControlTypeWaterSubTitle,
+    /** 默认状态 */
+    SHSegmentControlTypeNone,
+    /** 涌入放大效果 */
+    SHSegmentControlTypeWater,
+    /** 右上角小标题 */
+    SHSegmentControlTypeSubTitle,
+    /** 涌入放大效果+右上角小标题 */
+    SHSegmentControlTypeWaterSubTitle,
 } SHSegmentControlType;
 
 @interface SHSegmentControl : UIScrollView
@@ -277,6 +295,8 @@ _segmentControl.curClick = ^(NSInteger index) {
 - 下拉头部放大
 - 使用ChildVC的处理方式
 - 分栏内容超屏显示
+- 分栏bar底部线属性暴露可设置
+- 导航栏透明度切换，并保持bar在导航栏下面
 
 
 

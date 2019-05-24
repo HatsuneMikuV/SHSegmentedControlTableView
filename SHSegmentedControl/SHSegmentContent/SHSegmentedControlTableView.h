@@ -12,6 +12,12 @@
 #import "SHSegmentControl.h"
 #import "SHCollectionView.h"
 
+typedef NS_ENUM(NSInteger, SHSegmentedControlNavStyle) {
+    SHSegmentedControlNavStyleNone,             // 导航栏显示
+    SHSegmentedControlNavStyleHide,             // 导航栏隐藏
+    SHSegmentedControlNavStyleClear,            // 导航栏透明可渐变
+    SHSegmentedControlNavStyleMore,
+};
 
 @class SHPageContentView, SHSegmentedControlTableView;
 
@@ -29,8 +35,8 @@
 /** 主容器 */
 @property (nonatomic, strong) SHMAINTableView *tableView;
 
-/** 导航栏透明 (默认no) */
-@property (nonatomic, assign) BOOL isNavClear;
+/** 导航栏样式 (默认SHSegmentedControlNavStyleNone) */
+@property (nonatomic, assign) SHSegmentedControlNavStyle navStyle;
 
 /** 顶部视图 */
 @property (nonatomic, strong) UIView *topView;
