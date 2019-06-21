@@ -46,8 +46,9 @@
                        @"分栏内容超屏显示",
                        @"分栏bar底部线属性暴露可设置",
                        @"导航栏透明度切换，并保持bar在导航栏下面",
-                       @"头部高度更改"];
-    
+                       @"头部高度更改",
+                       @"增加toolBar，处理高度"];
+
     self.controllerArray = @[@"OneViewController",
                              @"TwoViewController",
                              @"ThreeViewController",
@@ -67,7 +68,8 @@
                              @"FifteenViewController",
                              @"SixteenViewController",
                              @"SeventeenViewController",
-                             @"EighteenViewController"];
+                             @"EighteenViewController",
+                             @"NineteenViewController"];
 
     [self.view addSubview:self.tableView];
 }

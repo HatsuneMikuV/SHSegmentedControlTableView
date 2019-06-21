@@ -17,6 +17,20 @@
 
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 
+#define KiPhoneX ((SCREEN_WIDTH == 375.f && SCREEN_HEIGHT == 812.f) || (SCREEN_WIDTH == 812.f && SCREEN_HEIGHT == 375.f))
+#define KiPhoneXR ((SCREEN_WIDTH == 414.f && SCREEN_HEIGHT == 896.f) || (SCREEN_WIDTH == 896.f && SCREEN_HEIGHT == 414.f))
+#define KiPhoneXAll (KiPhoneX || KiPhoneXR)
+
+#define IS_IPHONE_5 (kAPPHeight == 568)
+#define IS_IPHONE_6 (kAPPWidth == 375)
+#define IS_IPHONE_6PLUS (kAPPWidth == 414)
+
+#define KIPhoneXTopMargin ((KiPhoneX || KiPhoneXR) ? 24 : 0)
+#define KIPhoneXBottomMargin ((KiPhoneX || KiPhoneXR) ? 34 : 0)
+#define KIPhoneXBottom ((KiPhoneX || KiPhoneXR) ? 83 : 49)
+#define KIPhoneTabBar (49)
+#define KIphoneXTop ((KiPhoneX || KiPhoneXR) ? 88.0 : 64.0)
+#define KIphoneXTopStatus ((KiPhoneX || KiPhoneXR) ? 44.0 : 20.0)
 
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.

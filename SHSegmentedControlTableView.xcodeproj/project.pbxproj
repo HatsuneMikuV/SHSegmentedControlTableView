@@ -38,6 +38,8 @@
 		7CD8C7742015D9830044825F /* ElevenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD8C7732015D9830044825F /* ElevenViewController.m */; };
 		7CF3FFC41F99F0E800758917 /* ThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF3FFC31F99F0E800758917 /* ThreeViewController.m */; };
 		7CF3FFC71F99F16200758917 /* FourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF3FFC61F99F16200758917 /* FourViewController.m */; };
+		D8CE4E0022BC709000EB5961 /* NineteenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8CE4DFF22BC709000EB5961 /* NineteenViewController.m */; };
+		D8CE4E0222BCF16D00EB5961 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D8CE4E0122BCF16C00EB5961 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +104,9 @@
 		7CF3FFC51F99F16200758917 /* FourViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FourViewController.h; sourceTree = "<group>"; };
 		7CF3FFC61F99F16200758917 /* FourViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FourViewController.m; sourceTree = "<group>"; };
 		9DE6F1068877755528F041C8 /* Pods-SHSegmentedControlTableView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHSegmentedControlTableView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SHSegmentedControlTableView/Pods-SHSegmentedControlTableView.debug.xcconfig"; sourceTree = "<group>"; };
+		D8CE4DFE22BC709000EB5961 /* NineteenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NineteenViewController.h; sourceTree = "<group>"; };
+		D8CE4DFF22BC709000EB5961 /* NineteenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NineteenViewController.m; sourceTree = "<group>"; };
+		D8CE4E0122BCF16C00EB5961 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		E7A70E356D11D091D235CCF0 /* libPods-SHSegmentedControlTableView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SHSegmentedControlTableView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -166,6 +171,7 @@
 				7CD1D2731F8CAD920097302C /* LaunchScreen.storyboard */,
 				7CD1D2761F8CAD920097302C /* Info.plist */,
 				7CD1D2771F8CAD920097302C /* main.m */,
+				D8CE4E0122BCF16C00EB5961 /* README.md */,
 			);
 			path = SHSegmentedControlTableView;
 			sourceTree = "<group>";
@@ -221,6 +227,8 @@
 				7C64734820F8AD37002C6585 /* SeventeenViewController.m */,
 				3E7C49F521193DC400F2B8F7 /* EighteenViewController.h */,
 				3E7C49F621193DC400F2B8F7 /* EighteenViewController.m */,
+				D8CE4DFE22BC709000EB5961 /* NineteenViewController.h */,
+				D8CE4DFF22BC709000EB5961 /* NineteenViewController.m */,
 			);
 			name = Demo;
 			path = SHSegmentedControlTableView/Demo;
@@ -288,6 +296,7 @@
 			files = (
 				7CD1D2751F8CAD920097302C /* LaunchScreen.storyboard in Resources */,
 				7CD1D2721F8CAD920097302C /* Assets.xcassets in Resources */,
+				D8CE4E0222BCF16D00EB5961 /* README.md in Resources */,
 				7CD1D2701F8CAD920097302C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,7 +328,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SHSegmentedControlTableView/Pods-SHSegmentedControlTableView-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-SHSegmentedControlTableView/Pods-SHSegmentedControlTableView-resources.sh",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -328,7 +337,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SHSegmentedControlTableView/Pods-SHSegmentedControlTableView-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SHSegmentedControlTableView/Pods-SHSegmentedControlTableView-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -350,6 +359,7 @@
 				7CD1D26A1F8CAD920097302C /* AppDelegate.m in Sources */,
 				7C48E1E61F9DE373002E23AA /* SevenViewController.m in Sources */,
 				7C48E1E91F9DE37B002E23AA /* EightViewController.m in Sources */,
+				D8CE4E0022BC709000EB5961 /* NineteenViewController.m in Sources */,
 				7CBCA1D91F99D78D00349014 /* TwoViewController.m in Sources */,
 				7CF3FFC41F99F0E800758917 /* ThreeViewController.m in Sources */,
 				7C48E1F21F9DE397002E23AA /* ZeroViewController.m in Sources */,

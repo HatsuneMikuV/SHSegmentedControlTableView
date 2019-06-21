@@ -31,6 +31,9 @@ pod 'SHSegmentedControl'
 
 ## 更新内容
 
+### 2019.06.21新增demo(应[@DongfengWang123](https://github.com/DongfengWang123)的要求，增加带toolbar效果)↓↓↓
+![](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/toolsbar.gif)
+
 ### 2019.05.16 更新分栏(pod v1.3.0)
 >1.增加分栏样式枚举
 
