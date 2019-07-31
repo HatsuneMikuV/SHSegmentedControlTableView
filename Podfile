@@ -6,7 +6,7 @@ target 'SHSegmentedControlTableView' do
 #  use_frameworks!
 
 #  pod 'SHSegmentedControl'
-  pod 'SHSegmentedControl', :path => '../SHSegmentedControlTableView'
+  pod 'SHSegmentedControl', :path => 'SHSegmentedControl.podspec'
 
   # Pods for SHSegmentedControlTableView
 
