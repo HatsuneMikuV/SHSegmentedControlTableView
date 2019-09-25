@@ -16,6 +16,7 @@
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
+        self.alwaysBounceVertical = YES;
         if (@available(iOS 11.0, *)) {
             self.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
         }
@@ -25,6 +26,7 @@
 }
 - (instancetype)init {
     if (self = [super init]) {
+        self.alwaysBounceVertical = YES;
         if (@available(iOS 11.0, *)) {
             self.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
         }
@@ -34,6 +36,7 @@
 }
 - (instancetype)initWithFrame:(CGRect)frame collectionViewLayout:(UICollectionViewLayout *)layout {
     if (self = [super initWithFrame:frame collectionViewLayout:layout]) {
+        self.alwaysBounceVertical = YES;
         if (@available(iOS 11.0, *)) {
             self.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
         }
@@ -51,6 +54,9 @@
     if (self.delegateSHTableView && [self.delegateSHTableView respondsToSelector:@selector(SHTableViewScrollViewDidScroll:)]) {
         [self.delegateSHTableView SHTableViewScrollViewDidScroll:scrollView];
     }
+}
+- (void)scrollViewDidScroll {
+    [self scrollViewDidScroll:self];
 }
 @end
 

@@ -30,6 +30,9 @@ pod 'SHSegmentedControl'
 
 
 ## 更新内容
+### 2019.09.25 新增demo(pod v1.3.1), 修复CollectionView作为item，内容小于bounds而不能滑动问题
+#### 在这里感谢[@fangdafei](https://github.com/fangdafei)的指正
+
 
 ### 2019.06.21新增demo(应[@DongfengWang123](https://github.com/DongfengWang123)的要求，增加带toolbar效果)↓↓↓
 ![](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/toolsbar.gif)
@@ -227,37 +230,71 @@ typedef enum : NSUInteger {
     SHSegmentControlTypeWaterSubTitle,
 } SHSegmentControlType;
 
+typedef enum : NSUInteger {
+    /** 默认状态 平均分布 呈分散状*/
+    SHSegmentControlStyleScatter,
+    /** 紧靠屏幕左侧 */
+    SHSegmentControlStyleLeft,
+    /** 紧挨且居中分布 */
+    SHSegmentControlStyleCenter,
+    /** 紧靠屏幕右侧 */
+    SHSegmentControlStyleRight,
+} SHSegmentControlStyle;
+
+
 @interface SHSegmentControl : UIScrollView
 /** 间距 */
 @property (nonatomic, assign) CGFloat titleMargin;
 /** 默认字体大小 (默认15) */
-@property (nonatomic, assign) UIFont  *titleNormalFont;
+@property (nonatomic, assign) UIFont  * _Nonnull titleNormalFont;
 /** 选中字体大小 (默认15) */
-@property (nonatomic, assign) UIFont  *titleSelectFont;
+@property (nonatomic, assign) UIFont  * _Nonnull titleSelectFont;
 /** 小标题字体大小 */
-@property (nonatomic, assign) UIFont  *subTitleFont;
+@property (nonatomic, assign) UIFont  * _Nonnull subTitleFont;
+/** 标题偏移量 */
+@property (nonatomic, assign) CGFloat offsetX;
 /** 字体默认颜色 */
-@property (nonatomic, strong) UIColor *titleNormalColor;
+@property (nonatomic, strong) UIColor * _Nonnull titleNormalColor;
 /** 小标题默认字体颜色 */
-@property (nonatomic, strong) UIColor *subTitleNormalColor;
+@property (nonatomic, strong) UIColor * _Nonnull subTitleNormalColor;
 /** 字体选中颜色 */
-@property (nonatomic, strong) UIColor *titleSelectColor;
+@property (nonatomic, strong) UIColor * _Nonnull titleSelectColor;
 /** 小标题选中字体颜色 */
-@property (nonatomic, strong) UIColor *subTitleSelectColor;
+@property (nonatomic, strong) UIColor * _Nonnull subTitleSelectColor;
 /** 指示器圆角 */
 @property (nonatomic, assign) CGFloat progressCornerRadius;
-/** 指示器高度 */
+/** 指示器高度（粗细） */
 @property (nonatomic, assign) CGFloat progressHeight;
 /** 指示器宽度（默认 title宽） */
 @property (nonatomic, assign) CGFloat progressWidth;
+/** 指示器底部距离（默认0） */
+@property (nonatomic, assign) CGFloat progressBottom;
 /** 指示器颜色 */
-@property (nonatomic, strong) UIColor *progressColor;
+@property (nonatomic, strong) UIColor * _Nonnull progressColor;
 /** 下底线颜色 */
-@property (nonatomic, strong) UIColor *bottomLineColor;
-/** 下底线高度（粗细） 默认1.f) */
+@property (nonatomic, strong) UIColor * _Nonnull bottomLineColor;
+/** 下底线高度（粗细） 默认0.5f) */
 @property (nonatomic, assign) CGFloat bottomLineHeight;
-/** 分栏类型 */
+/** 分栏类型 默认SHSegmentControlTypeNone */
 @property (nonatomic, assign) SHSegmentControlType type;
+/** 分栏分布类型 默认SHSegmentControlStyleScatter */
+@property (nonatomic, assign) SHSegmentControlStyle style;
+/** 每个 MenuItem 的宽度 */
+@property (nonatomic, assign) CGFloat menuItemWidth;
+/** 各个 MenuItem 的宽度，可不等，数组内为 NSNumber. */
+@property (nonatomic, nullable, copy) NSArray<NSNumber *> *itemsWidths;
+/** 放大效果的比例  默认1.2*/
+@property (nonatomic, assign) CGFloat itemScale;
+
+/** 获取当前下标 */
+@property (nonatomic, assign, readonly) NSInteger selectIndex;
+/** 分栏总数 */
+@property (nonatomic, assign) NSInteger totalCount;
+
+/** 背景颜色 */
+@property (nonatomic, strong) UIColor * _Nonnull backgroundNormalColor;
+/** 选中状态背景颜色 */
+@property (nonatomic, strong) UIColor * _Nonnull backgroundSelectColor;
 ```
 
 **初始化**

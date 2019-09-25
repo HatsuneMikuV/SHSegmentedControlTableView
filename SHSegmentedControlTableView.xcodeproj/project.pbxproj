@@ -40,6 +40,7 @@
 		7CF3FFC71F99F16200758917 /* FourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF3FFC61F99F16200758917 /* FourViewController.m */; };
 		D8CE4E0022BC709000EB5961 /* NineteenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8CE4DFF22BC709000EB5961 /* NineteenViewController.m */; };
 		D8CE4E0222BCF16D00EB5961 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D8CE4E0122BCF16C00EB5961 /* README.md */; };
+		D8FB755D233B3D9C007A7759 /* SHSegmentedControl.podspec in Resources */ = {isa = PBXBuildFile; fileRef = D8FB755C233B3D9C007A7759 /* SHSegmentedControl.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,6 +108,7 @@
 		D8CE4DFE22BC709000EB5961 /* NineteenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NineteenViewController.h; sourceTree = "<group>"; };
 		D8CE4DFF22BC709000EB5961 /* NineteenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NineteenViewController.m; sourceTree = "<group>"; };
 		D8CE4E0122BCF16C00EB5961 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		D8FB755C233B3D9C007A7759 /* SHSegmentedControl.podspec */ = {isa = PBXFileReference; lastKnownFileType = file; path = SHSegmentedControl.podspec; sourceTree = SOURCE_ROOT; };
 		E7A70E356D11D091D235CCF0 /* libPods-SHSegmentedControlTableView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SHSegmentedControlTableView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -170,6 +172,7 @@
 				7CD1D2711F8CAD920097302C /* Assets.xcassets */,
 				7CD1D2731F8CAD920097302C /* LaunchScreen.storyboard */,
 				7CD1D2761F8CAD920097302C /* Info.plist */,
+				D8FB755C233B3D9C007A7759 /* SHSegmentedControl.podspec */,
 				7CD1D2771F8CAD920097302C /* main.m */,
 				D8CE4E0122BCF16C00EB5961 /* README.md */,
 			);
@@ -294,6 +297,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8FB755D233B3D9C007A7759 /* SHSegmentedControl.podspec in Resources */,
 				7CD1D2751F8CAD920097302C /* LaunchScreen.storyboard in Resources */,
 				7CD1D2721F8CAD920097302C /* Assets.xcassets in Resources */,
 				D8CE4E0222BCF16D00EB5961 /* README.md in Resources */,

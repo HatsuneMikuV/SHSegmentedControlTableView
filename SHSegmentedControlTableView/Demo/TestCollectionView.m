@@ -44,7 +44,6 @@
         self.dataSource = self;
         self.delegate = self;
         [self registerClass:UICollectionViewCell.class forCellWithReuseIdentifier:@"cell"];
-        self.allowsSelection = NO;
     }
     return self;
 }
@@ -57,5 +56,10 @@
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
     cell.backgroundColor = [self.colors objectAtIndex:(arc4random()%self.colors.count)];
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"%ld-%ld",indexPath.section,indexPath.item);
 }
 @end

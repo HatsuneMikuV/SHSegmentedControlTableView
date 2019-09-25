@@ -37,7 +37,6 @@
         self.rowHeight = 45;
         self.tableFooterView = [[UIView alloc] init];
         [self registerClass:UITableViewCell.class forCellReuseIdentifier:@"cell"];
-        self.allowsSelection = NO;
     }
     return self;
 }
@@ -50,5 +49,10 @@
     cell.textLabel.text = [NSString stringWithFormat:@"%@-%ld-%ld",self.label,indexPath.section,indexPath.row];
     return cell;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+    {
+        NSLog(@"%ld-%ld",indexPath.section,indexPath.row);
+    }
 
 @end

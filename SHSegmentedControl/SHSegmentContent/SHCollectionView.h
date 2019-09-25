@@ -17,6 +17,12 @@
 
 @property (nonatomic, weak) id<SHTableViewDelegate> delegateSHTableView;
 
+/**
+ 用于重设delegate后，必须实现scrollViewDidScroll:代理事件
+ 并回调给自身处理滑动手势
+ */
+- (void)scrollViewDidScroll;
+
 @end
 
 /**
