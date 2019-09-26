@@ -1,5 +1,5 @@
 //
-//  UIView+Extension.h
+//  UIView+Extension_sh.h
 //  SHSegmentedControlTableView
 //
 //  Created by angle on 2017/10/10.
@@ -8,15 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIView (Extension)
+@interface UIView (Extension_sh)
 
-@property (nonatomic, assign) CGFloat x;
-@property (nonatomic, assign) CGFloat y;
-@property (nonatomic, assign) CGFloat centerX;
-@property (nonatomic, assign) CGFloat centerY;
-@property (nonatomic, assign) CGFloat width;
-@property (nonatomic, assign) CGFloat height;
-@property (nonatomic, assign) CGSize size;
-@property (nonatomic, assign) CGPoint origin;
+@property (nonatomic, assign) CGFloat sh_x;
+@property (nonatomic, assign) CGFloat sh_y;
+@property (nonatomic, assign) CGFloat sh_centerX;
+@property (nonatomic, assign) CGFloat sh_centerY;
+@property (nonatomic, assign) CGFloat sh_width;
+@property (nonatomic, assign) CGFloat sh_height;
+@property (nonatomic, assign) CGSize sh_size;
+@property (nonatomic, assign) CGPoint sh_origin;
 
 @end

@@ -8,18 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIColor (Hex)
+@interface UIColor (Hex_sh)
 
 //随机色
-+ (UIColor *)colorArc4random;
++ (UIColor *)sh_colorArc4random;
 
 //从十六进制字符串获取颜色，
-+ (UIColor *)colorWithHexString:(NSString *)color;
++ (UIColor *)sh_colorWithHexString:(NSString *)color;
 
 //color:支持@“#123456”、 @“0X123456”、 @“123456”三种格式
-+ (UIColor *)colorWithHexString:(NSString *)color alpha:(CGFloat)alpha;
++ (UIColor *)sh_colorWithHexString:(NSString *)color alpha:(CGFloat)alpha;
 
 //渐变色
-+ (UIColor *)alw_getColorOfPercent:(CGFloat)percent between:(UIColor *)color1 and:(UIColor *)color2;
++ (UIColor *)sh_getColorOfPercent:(CGFloat)percent between:(UIColor *)color1 and:(UIColor *)color2;
 
 @end

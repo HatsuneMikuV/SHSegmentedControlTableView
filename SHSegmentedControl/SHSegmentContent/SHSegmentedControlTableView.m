@@ -52,7 +52,7 @@
     _tableView.dataSource = self;
     _tableView.sectionHeaderHeight = 0;
     _tableView.sectionFooterHeight = 0;
-    _tableView.rowHeight = self.height;
+    _tableView.rowHeight = self.sh_height;
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass(UITableViewCell.class)];
     _tableView.showsVerticalScrollIndicator = NO;
@@ -72,14 +72,14 @@
 }
 - (void)setBarView:(UIView *)barView {
     _barView = barView;
-    self.tableView.sectionHeaderHeight = barView.height;
-    self.tableView.rowHeight = self.height - self.tableView.sectionHeaderHeight - self.tableView.sectionFooterHeight;
+    self.tableView.sectionHeaderHeight = barView.sh_height;
+    self.tableView.rowHeight = self.sh_height - self.tableView.sectionHeaderHeight - self.tableView.sectionFooterHeight;
     [self.tableView reloadData];
 }
 - (void)setFootView:(UIView *)footView {
     _footView = footView;
-    self.tableView.sectionFooterHeight = footView.height;
-    self.tableView.rowHeight = self.height - self.tableView.sectionHeaderHeight - self.tableView.sectionFooterHeight;
+    self.tableView.sectionFooterHeight = footView.sh_height;
+    self.tableView.rowHeight = self.sh_height - self.tableView.sectionHeaderHeight - self.tableView.sectionFooterHeight;
     [self.tableView reloadData];
 }
 - (void)setTableViews:(NSArray *)tableViews {
@@ -89,12 +89,12 @@
         tabView.delegateSHTableView = self;
         [tabView reloadData];
     }
-    CGFloat contentViewHeight = self.height - self.tableView.sectionHeaderHeight - self.tableView.sectionFooterHeight;
+    CGFloat contentViewHeight = self.sh_height - self.tableView.sectionHeaderHeight - self.tableView.sectionFooterHeight;
     
     if (self.navStyle == SHSegmentedControlNavStyleNone) {
         contentViewHeight -= (kDevice_Is_iPhoneX ? 88:64);
     }
-    self.pageContentView = [[SHPageContentView alloc] initWithFrame:CGRectMake(0, 0, self.width, contentViewHeight) parentView:self childViews:tableViews];
+    self.pageContentView = [[SHPageContentView alloc] initWithFrame:CGRectMake(0, 0, self.sh_width, contentViewHeight) parentView:self childViews:tableViews];
     self.pageContentView.delegatePageContentView = self;
     
     [self.tableView reloadData];
@@ -137,28 +137,28 @@
 }
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     if (self.childVCScrollView && _childVCScrollView.contentOffset.y > 0) {
-        self.tableView.contentOffset = CGPointMake(0, self.topView.height);
+        self.tableView.contentOffset = CGPointMake(0, self.topView.sh_height);
     }
     CGFloat offSetY = scrollView.contentOffset.y;
     CGFloat navHeight = (kDevice_Is_iPhoneX ? 88:64);
     if (self.navStyle == SHSegmentedControlNavStyleClear) {
-        if (offSetY <= self.topView.height - self.barView.height - navHeight) {
+        if (offSetY <= self.topView.sh_height - self.barView.sh_height - navHeight) {
             scrollView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
         }else  {
             scrollView.contentInset = UIEdgeInsetsMake(navHeight, 0, 0, 0);
         }
     }else if (self.navStyle == SHSegmentedControlNavStyleHide) {
-        if (offSetY <= self.topView.height && offSetY >= 0) {
+        if (offSetY <= self.topView.sh_height && offSetY >= 0) {
             scrollView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
-        }else if (offSetY >= self.topView.height) {
+        }else if (offSetY >= self.topView.sh_height) {
             scrollView.contentInset = UIEdgeInsetsMake(navHeight, 0, 0, 0);
         }
     }
-    if (offSetY < self.topView.height) {
+    if (offSetY < self.topView.sh_height) {
         [[NSNotificationCenter defaultCenter] postNotificationName:@"pageTitleViewToTop" object:nil];
     }
     if (self.delegateCell && [self.delegateCell respondsToSelector:@selector(segTableViewDidScrollY:)]) {
-        if (offSetY >= self.topView.height) {
+        if (offSetY >= self.topView.sh_height) {
             offSetY += self.childVCScrollView.contentOffset.y;
         }
         [self.delegateCell segTableViewDidScrollY:offSetY];
@@ -171,11 +171,11 @@
 #pragma mark   ==============SHTableViewDelegate==============
 - (void)SHTableViewScrollViewDidScroll:(UIScrollView *)scrollView {
     self.childVCScrollView = scrollView;
-    if (self.tableView.contentOffset.y < self.topView.height) {
+    if (self.tableView.contentOffset.y < self.topView.sh_height) {
         scrollView.contentOffset = CGPointZero;
         scrollView.showsVerticalScrollIndicator = NO;
     } else {
-        self.tableView.contentOffset = CGPointMake(0, self.topView.height);
+        self.tableView.contentOffset = CGPointMake(0, self.topView.sh_height);
         scrollView.showsVerticalScrollIndicator = YES;
     }
     if (self.delegateCell && [self.delegateCell respondsToSelector:@selector(segTableViewDidScrollSub:)]) {
@@ -258,8 +258,8 @@
         flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
         CGFloat collectionViewX = 0;
         CGFloat collectionViewY = 0;
-        CGFloat collectionViewW = self.width;
-        CGFloat collectionViewH = self.height;
+        CGFloat collectionViewW = self.sh_width;
+        CGFloat collectionViewH = self.sh_height;
         _collectionView = [[SHTapCollectionView alloc] initWithFrame:CGRectMake(collectionViewX, collectionViewY, collectionViewW, collectionViewH) collectionViewLayout:flowLayout];
         _collectionView.showsHorizontalScrollIndicator = NO;
         _collectionView.pagingEnabled = YES;
@@ -342,7 +342,7 @@
 #pragma mark   ==============给外界提供的方法，获取 SHPageTitleView 选中按钮的下标==============
 - (void)setPageCententViewCurrentIndex:(NSInteger)currentIndex {
     self.isClickBtn = YES;
-    CGFloat offsetX = currentIndex * self.collectionView.width;
+    CGFloat offsetX = currentIndex * self.collectionView.sh_width;
     [self.collectionView setContentOffset:CGPointMake(offsetX, 0) animated:YES];
 }
 

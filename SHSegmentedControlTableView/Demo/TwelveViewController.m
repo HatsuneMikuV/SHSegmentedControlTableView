@@ -43,11 +43,11 @@
 #pragma mark   ==============SHSegTableViewDelegate==============
 - (void)segTableViewDidScrollY:(CGFloat)offsetY {
     
-    if (offsetY >= self.headerView.height - self.segmentControl.height) {
-        self.segmentControl.frame = CGRectMake(0, 0, SCREEN_WIDTH, self.segmentControl.height);
+    if (offsetY >= self.headerView.sh_height - self.segmentControl.sh_height) {
+        self.segmentControl.frame = CGRectMake(0, 0, SCREEN_WIDTH, self.segmentControl.sh_height);
         [self.view addSubview:self.segmentControl];
     }else {
-        self.segmentControl.frame = CGRectMake(0, self.headerView.height - self.segmentControl.height, SCREEN_WIDTH, self.segmentControl.height);
+        self.segmentControl.frame = CGRectMake(0, self.headerView.sh_height - self.segmentControl.sh_height, SCREEN_WIDTH, self.segmentControl.sh_height);
         [self.headerView addSubview:self.segmentControl];
     }
     
@@ -69,7 +69,7 @@
     if (!_headerView) {
         _headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 200)];
         _headerView.backgroundColor = [UIColor purpleColor];
-        self.segmentControl.frame = CGRectMake(0, _headerView.height - self.segmentControl.height, SCREEN_WIDTH, self.segmentControl.height);
+        self.segmentControl.frame = CGRectMake(0, _headerView.sh_height - self.segmentControl.sh_height, SCREEN_WIDTH, self.segmentControl.sh_height);
         [_headerView addSubview:self.segmentControl];
     }
     return _headerView;

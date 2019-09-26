@@ -8,9 +8,9 @@
 
 #import "UIColor+Hex.h"
 
-@implementation UIColor (Hex)
+@implementation UIColor (Hex_sh)
 
-+ (UIColor *)colorWithHexString:(NSString *)color alpha:(CGFloat)alpha {
++ (UIColor *)sh_colorWithHexString:(NSString *)color alpha:(CGFloat)alpha {
     //删除字符串中的空格
     NSString *cString = [[color stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
     // String should be 6 or 8 characters
@@ -56,11 +56,11 @@
 }
 
 //默认alpha值为1
-+ (UIColor *)colorWithHexString:(NSString *)color {
-    return [self colorWithHexString:color alpha:1.0f];
++ (UIColor *)sh_colorWithHexString:(NSString *)color {
+    return [self sh_colorWithHexString:color alpha:1.0f];
 }
 
-+ (UIColor *)colorArc4random {
++ (UIColor *)sh_colorArc4random {
     
     float red = arc4random()%256 / 255.0;
     float bule = arc4random()%256 / 255.0;
@@ -78,7 +78,7 @@
  *  @param color2  颜色2（普通状态颜色）
  *
  */
-+ (UIColor *)alw_getColorOfPercent:(CGFloat)percent between:(UIColor *)color1 and:(UIColor *)color2{
++ (UIColor *)sh_getColorOfPercent:(CGFloat)percent between:(UIColor *)color1 and:(UIColor *)color2{
     CGFloat red1, green1, blue1, alpha1;
     [color1 getRed:&red1 green:&green1 blue:&blue1 alpha:&alpha1];
     

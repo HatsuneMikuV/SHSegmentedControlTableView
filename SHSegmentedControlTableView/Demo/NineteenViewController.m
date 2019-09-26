@@ -70,11 +70,11 @@
 {
     if (isShow) {
         [UIView animateWithDuration:0.25 animations:^{
-            self.toolView.frame = CGRectMake(0, self.view.height - KIPhoneXBottom, SCREEN_WIDTH, KIPhoneXBottom);
+            self.toolView.frame = CGRectMake(0, self.view.sh_height - KIPhoneXBottom, SCREEN_WIDTH, KIPhoneXBottom);
         }];
     } else {
         [UIView animateWithDuration:0.25 animations:^{
-            self.toolView.frame = CGRectMake(0, self.view.height, SCREEN_WIDTH, KIPhoneXBottom);
+            self.toolView.frame = CGRectMake(0, self.view.sh_height, SCREEN_WIDTH, KIPhoneXBottom);
         }];
     }
 }
@@ -83,7 +83,7 @@
 - (UIView *)toolView
 {
     if (_toolView == nil) {
-        _toolView = [[UIView alloc] initWithFrame:CGRectMake(0, self.view.height, SCREEN_WIDTH, KIPhoneXBottom)];
+        _toolView = [[UIView alloc] initWithFrame:CGRectMake(0, self.view.sh_height, SCREEN_WIDTH, KIPhoneXBottom)];
         _toolView.backgroundColor = UIColor.orangeColor;
         UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(12, 8, SCREEN_WIDTH - 24, KIPhoneTabBar - 16)];
         textField.borderStyle = UITextBorderStyleRoundedRect;

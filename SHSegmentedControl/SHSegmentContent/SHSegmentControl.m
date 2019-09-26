@@ -95,8 +95,8 @@ const NSInteger tag = 20171010;
     } else {
         [self layoutIfNeeded];
         CGAffineTransform transform = CGAffineTransformMakeScale(scale, scale);
-        CGFloat x = (scale - 1) * (self.subTitleL.centerX - self.titleL.centerX);
-        CGFloat y = (scale - 1) * (self.subTitleL.centerY - self.titleL.centerY);
+        CGFloat x = (scale - 1) * (self.subTitleL.sh_centerX - self.titleL.sh_centerX);
+        CGFloat y = (scale - 1) * (self.subTitleL.sh_centerY - self.titleL.sh_centerY);
         if (animation) {
             [UIView animateWithDuration:0.25 animations:^{
                 self.titleL.transform = CGAffineTransformMakeScale(scale, scale);
@@ -220,17 +220,17 @@ const NSInteger tag = 20171010;
 - (void)init_setup {
     
     _titleMargin = 0;
-    _titleNormalFont  = [UIFont pingFangSCFontOfSize:15];
-    _titleSelectFont  = [UIFont pingFangSCFontOfSize:15];
+    _titleNormalFont  = [UIFont sh_pingFangSCFontOfSize:15];
+    _titleSelectFont  = [UIFont sh_pingFangSCFontOfSize:15];
     _titleNormalColor = [[UIColor blackColor] colorWithAlphaComponent:0.7];
     _titleSelectColor = [UIColor blackColor];
-    _subTitleFont     = [UIFont pingFangSCFontOfSize:10];
+    _subTitleFont     = [UIFont sh_pingFangSCFontOfSize:10];
     
     _progressColor = [UIColor lightGrayColor];
     _progressCornerRadius = 1.5f;
     _progressWidth = 65.f;
     _progressHeight = 3.f;
-    _bottomLineColor = [UIColor colorWithHexString:@"#DEDEDE"];
+    _bottomLineColor = [UIColor sh_colorWithHexString:@"#DEDEDE"];
     _bottomLineHeight = 0.5f;
     _curIndex = 0;
     _type = SHSegmentControlTypeNone;
@@ -320,7 +320,7 @@ const NSInteger tag = 20171010;
     CGRect frame = self.progressView.frame;
     CGFloat titleWidth = ceilf([btn.title boundingRectWithSize:CGSizeMake(MAXFLOAT, 0) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:self.titleSelectFont} context:nil].size.width) + 30;
     frame.size.width = self.progressWidth > 0 ? self.progressWidth : titleWidth;
-    frame.origin.x = btn.centerX - frame.size.width * 0.5;
+    frame.origin.x = btn.sh_centerX - frame.size.width * 0.5;
     
     [UIView animateWithDuration:0.25 animations:^{
         self.progressView.frame = frame;
@@ -330,15 +330,15 @@ const NSInteger tag = 20171010;
     }];
     
     //横向内容超屏后，判断按钮中心位置，改变contentOffset
-    if (self.contentView.contentSize.width > self.width) {
+    if (self.contentView.contentSize.width > self.sh_width) {
         //居左
-        CGFloat offsetX = btn.centerX- self.width * 0.5;
+        CGFloat offsetX = btn.sh_centerX- self.sh_width * 0.5;
         if (offsetX < 0) {
             offsetX = 0;
         }
         
         //居右
-        CGFloat maxOffsetX = self.contentView.contentSize.width - self.width;
+        CGFloat maxOffsetX = self.contentView.contentSize.width - self.sh_width;
         if (offsetX > maxOffsetX) {
             offsetX = maxOffsetX;
         }
@@ -392,54 +392,54 @@ const NSInteger tag = 20171010;
                 btnW = [self.itemsWidths[index] floatValue];
             }
             CGFloat btnY = 5;
-            CGFloat btnH = self.height - self.progressHeight - btnY;
+            CGFloat btnH = self.sh_height - self.progressHeight - btnY;
             CGFloat btnX = CGRectGetMaxX(lastView.frame) + self.titleMargin;
             btn.frame = CGRectMake(btnX, btnY, btnW, btnH);
             btn.selected = (index == 0);
             lastView = btn;
         }
         //总宽小于父视图宽
-        if (CGRectGetMaxX(lastView.frame) < self.width) {
+        if (CGRectGetMaxX(lastView.frame) < self.sh_width) {
             if (SHSegmentControlStyleLeft == self.style) {
                 
             } else if (SHSegmentControlStyleCenter == self.style) {
                 if (self.btnArray.count % 2 == 0) {//偶数
-                    CGFloat centerXLeft = self.width * 0.5;
-                    CGFloat centerXRight = self.width * 0.5;
+                    CGFloat centerXLeft = self.sh_width * 0.5;
+                    CGFloat centerXRight = self.sh_width * 0.5;
                     for (NSInteger index = self.btnArray.count / 2; index < self.btnArray.count; index++) {
                         SHTapButtonView *btnLeft = self.btnArray[self.btnArray.count - 1 - index];
                         SHTapButtonView *btnRight = self.btnArray[index];
-                        centerXLeft = centerXLeft - (self.titleMargin + btnLeft.width);
-                        btnLeft.x = centerXLeft;
+                        centerXLeft = centerXLeft - (self.titleMargin + btnLeft.sh_width);
+                        btnLeft.sh_x = centerXLeft;
                         
-                        btnRight.x = centerXRight;
-                        centerXRight = centerXRight + (self.titleMargin + btnRight.width);
+                        btnRight.sh_x = centerXRight;
+                        centerXRight = centerXRight + (self.titleMargin + btnRight.sh_width);
                     }
                 } else {//奇数
                     SHTapButtonView *btnCenter = self.btnArray[self.btnArray.count / 2];
-                    btnCenter.x = self.width * 0.5 - btnCenter.width * 0.5;
-                    CGFloat centerXLeft = btnCenter.x - self.titleMargin;
-                    CGFloat centerXRight = btnCenter.x + btnCenter.width + self.titleMargin;
+                    btnCenter.sh_x = self.sh_width * 0.5 - btnCenter.sh_width * 0.5;
+                    CGFloat centerXLeft = btnCenter.sh_x - self.titleMargin;
+                    CGFloat centerXRight = btnCenter.sh_x + btnCenter.sh_width + self.titleMargin;
                     for (NSInteger index = self.btnArray.count / 2; index < self.btnArray.count - 1; index++) {
                         SHTapButtonView *btnLeft = self.btnArray[self.btnArray.count - 2 - index];
                         SHTapButtonView *btnRight = self.btnArray[index + 1];
-                        centerXLeft = centerXLeft - (self.titleMargin + btnLeft.width);
-                        btnLeft.x = centerXLeft;
-                        btnRight.x = centerXRight;
-                        centerXRight = centerXRight + (self.titleMargin + btnRight.width);
+                        centerXLeft = centerXLeft - (self.titleMargin + btnLeft.sh_width);
+                        btnLeft.sh_x = centerXLeft;
+                        btnRight.sh_x = centerXRight;
+                        centerXRight = centerXRight + (self.titleMargin + btnRight.sh_width);
                     }
                 }
             } else if (SHSegmentControlStyleRight == self.style) {
-                CGFloat minX = self.width;
+                CGFloat minX = self.sh_width;
                 for (NSInteger index = self.btnArray.count - 1; index >= 0; index--) {
                     SHTapButtonView *btn = self.btnArray[index];
-                    minX = minX - (self.titleMargin + btn.width);
-                    btn.x = minX;
+                    minX = minX - (self.titleMargin + btn.sh_width);
+                    btn.sh_x = minX;
                 }
             } else if (SHSegmentControlStyleScatter == self.style) {
-                CGFloat btnW = (self.width - self.titleMargin * (self.btnArray.count + 1)) / self.btnArray.count;
+                CGFloat btnW = (self.sh_width - self.titleMargin * (self.btnArray.count + 1)) / self.btnArray.count;
                 CGFloat btnY = 5;
-                CGFloat btnH = self.height - self.progressHeight - btnY;
+                CGFloat btnH = self.sh_height - self.progressHeight - btnY;
                 for (NSInteger index = 0; index < self.btnArray.count; index++) {
                     SHTapButtonView *btn = self.btnArray[index];
                     CGFloat btnX = self.titleMargin + (self.titleMargin + btnW) * index;
@@ -455,8 +455,8 @@ const NSInteger tag = 20171010;
         CGFloat titleWidth = ceilf([[self.titleArray firstObject] boundingRectWithSize:CGSizeMake(MAXFLOAT, 0) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:self.titleSelectFont} context:nil].size.width) + 30;
         
         self.progressWidth = self.progressWidth > 0 ? self.progressWidth : titleWidth;
-        CGFloat progressX = [self.btnArray firstObject].centerX - self.progressWidth * 0.5;
-        CGFloat progressY = self.height - self.progressHeight - self.bottomLineHeight - self.progressBottom;
+        CGFloat progressX = [self.btnArray firstObject].sh_centerX - self.progressWidth * 0.5;
+        CGFloat progressY = self.sh_height - self.progressHeight - self.bottomLineHeight - self.progressBottom;
         self.progressView.frame = CGRectMake(progressX, progressY, self.progressWidth, self.progressHeight);
     }
     self.lineV.backgroundColor = self.bottomLineColor;

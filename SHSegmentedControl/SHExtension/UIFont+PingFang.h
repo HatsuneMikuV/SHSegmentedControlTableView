@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIFont (PingFang)
+@interface UIFont (PingFang_sh)
 
-+ (UIFont *)pingFangSCFontOfSize:(CGFloat)fontSize;
++ (UIFont *)sh_pingFangSCFontOfSize:(CGFloat)fontSize;
 
-+ (UIFont *)boldPingFangSCFontOfSize:(CGFloat)fontSize;
++ (UIFont *)sh_boldPingFangSCFontOfSize:(CGFloat)fontSize;
 
 @end

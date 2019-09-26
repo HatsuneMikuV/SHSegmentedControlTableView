@@ -9,16 +9,16 @@
 #import "UIFont+PingFang.h"
 #define iOS9           [[[UIDevice currentDevice] systemVersion] floatValue] >= 9.0
 
-@implementation UIFont (PingFang)
+@implementation UIFont (PingFang_sh)
 
-+ (UIFont *)pingFangSCFontOfSize:(CGFloat)fontSize {
++ (UIFont *)sh_pingFangSCFontOfSize:(CGFloat)fontSize {
     if (iOS9) {
         return [UIFont fontWithName:@".PingFangSC-Regular" size:fontSize];
     }
     return [UIFont systemFontOfSize:fontSize];
 }
 
-+ (UIFont *)boldPingFangSCFontOfSize:(CGFloat)fontSize {
++ (UIFont *)sh_boldPingFangSCFontOfSize:(CGFloat)fontSize {
     if (iOS9) {
         return [UIFont fontWithName:@".PingFangSC-Medium" size:fontSize];
     }

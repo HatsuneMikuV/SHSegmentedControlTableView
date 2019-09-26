@@ -50,18 +50,18 @@
     }
     _topView = topView;
     if (_topView) {
-        _topView.frame = CGRectMake(0, 0, self.width, _topView.height);
+        _topView.frame = CGRectMake(0, 0, self.sh_width, _topView.sh_height);
         [self addSubview:_topView];
         if (self.barView != nil) {
-            self.barView.frame = CGRectMake(0, _topView.height, self.width, self.barView.height);
-            self.scrollView.frame = CGRectMake(0, _topView.height + self.barView.height, self.width, self.height - _topView.height - self.barView.height);
+            self.barView.frame = CGRectMake(0, _topView.sh_height, self.sh_width, self.barView.sh_height);
+            self.scrollView.frame = CGRectMake(0, _topView.sh_height + self.barView.sh_height, self.sh_width, self.sh_height - _topView.sh_height - self.barView.sh_height);
         }else {
-            self.scrollView.frame = CGRectMake(0, _topView.height, self.width, self.height - _topView.height);
+            self.scrollView.frame = CGRectMake(0, _topView.sh_height, self.sh_width, self.sh_height - _topView.sh_height);
         }
     }else {
         if (self.barView != nil) {
-            self.barView.frame = CGRectMake(0, 0, self.width, self.barView.height);
-            self.scrollView.frame = CGRectMake(0, self.barView.height, self.width, self.height - self.barView.height);
+            self.barView.frame = CGRectMake(0, 0, self.sh_width, self.barView.sh_height);
+            self.scrollView.frame = CGRectMake(0, self.barView.sh_height, self.sh_width, self.sh_height - self.barView.sh_height);
         }else {
             self.scrollView.frame = self.bounds;
         }
@@ -76,15 +76,15 @@
     if (_barView) {
         [self addSubview:_barView];
         if (self.topView != nil) {
-            _barView.frame = CGRectMake(0, self.topView.height, self.width, _barView.height);
-            self.scrollView.frame = CGRectMake(0, self.topView.height + _barView.height, self.width, self.height - self.topView.height - _barView.height);
+            _barView.frame = CGRectMake(0, self.topView.sh_height, self.sh_width, _barView.sh_height);
+            self.scrollView.frame = CGRectMake(0, self.topView.sh_height + _barView.sh_height, self.sh_width, self.sh_height - self.topView.sh_height - _barView.sh_height);
         }else {
-            _barView.frame = CGRectMake(0, 0, self.width, _barView.height);
-            self.scrollView.frame = CGRectMake(0, _barView.height, self.width, self.height - _barView.height);
+            _barView.frame = CGRectMake(0, 0, self.sh_width, _barView.sh_height);
+            self.scrollView.frame = CGRectMake(0, _barView.sh_height, self.sh_width, self.sh_height - _barView.sh_height);
         }
     }else {
         if (self.topView != nil) {
-            self.scrollView.frame = CGRectMake(0, self.topView.height, self.width, self.height - self.topView.height);
+            self.scrollView.frame = CGRectMake(0, self.topView.sh_height, self.sh_width, self.sh_height - self.topView.sh_height);
         }else {
             self.scrollView.frame = self.bounds;
         }
@@ -98,13 +98,13 @@
     _footView = footView;
     if (_footView) {
         [self addSubview:_footView];
-        _footView.frame = CGRectMake(0, self.height - _footView.height, self.width, _footView.height);
+        _footView.frame = CGRectMake(0, self.sh_height - _footView.sh_height, self.sh_width, _footView.sh_height);
         CGRect scrolFrame = self.scrollView.frame;
-        scrolFrame.size.height -= _footView.height;
+        scrolFrame.size.height -= _footView.sh_height;
         self.scrollView.frame = scrolFrame;
     }else {
         CGRect scrolFrame = self.scrollView.frame;
-        scrolFrame.size.height = self.height - scrolFrame.origin.y;
+        scrolFrame.size.height = self.sh_height - scrolFrame.origin.y;
         self.scrollView.frame = scrolFrame;
     }
 }
@@ -114,10 +114,10 @@
         if (self.scrollView.subviews.count > 0) {
             [self.scrollView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
         }
-        self.scrollView.contentSize = CGSizeMake(self.width * _tableViews.count, 0);
+        self.scrollView.contentSize = CGSizeMake(self.sh_width * _tableViews.count, 0);
         for (NSInteger index = 0; index < tableViews.count; index++) {
             UIView *view = tableViews[index];
-            view.frame = CGRectMake(self.width * index, 0, self.width, self.scrollView.height);
+            view.frame = CGRectMake(self.sh_width * index, 0, self.sh_width, self.scrollView.sh_height);
             if ([view isKindOfClass:[UITableView class]] || [view isKindOfClass:[UICollectionView class]]) {
                 [(UITableView *)view reloadData];
             }
@@ -127,7 +127,7 @@
 }
 - (void)setSegmentSelectIndex:(NSInteger)selectedIndex {
     if (selectedIndex != self.index && selectedIndex >= 0 && selectedIndex < self.tableViews.count) {
-        CGPoint point = CGPointMake(selectedIndex * self.width, 0);
+        CGPoint point = CGPointMake(selectedIndex * self.sh_width, 0);
         self.index = selectedIndex;
         self.scroll = NO;
         [self.scrollView setContentOffset:point animated:YES];
@@ -148,7 +148,7 @@
     if (!self.scroll) return;
     
     if (self.delegateCell && [self.delegateCell respondsToSelector:@selector(scrollViewDidScrollIndex:)]) {
-        NSInteger index = (NSInteger)((scrollView.contentOffset.x + self.width * 0.5) / self.width);
+        NSInteger index = (NSInteger)((scrollView.contentOffset.x + self.sh_width * 0.5) / self.sh_width);
         if (index != self.index) {
             self.index = index;
             [self.delegateCell scrollViewDidScrollIndex:index];

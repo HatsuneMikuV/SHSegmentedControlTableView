@@ -43,7 +43,7 @@
             tab1.num = 30;
             tab2.num = 10;
             tab3.num = 20;
-            weakSelf.headerView.backgroundColor = [UIColor colorArc4random];
+            weakSelf.headerView.backgroundColor = [UIColor sh_colorArc4random];
             [weakSelf.segTableView.refreshHeader endRefreshing];
         }else {
             if (weakSelf.segTableView.selectedIndex == 0) {

@@ -1,5 +1,5 @@
 //
-//  UIView+Extension.m
+//  UIView+Extension_sh.m
 //  SHSegmentedControlTableView
 //
 //  Created by angle on 2017/10/10.
@@ -8,99 +8,96 @@
 
 #import "UIView+Extension.h"
 
-@implementation UIView (Extension)
-- (void)setX:(CGFloat)x
+@implementation UIView (Extension_sh)
+- (void)setSh_x:(CGFloat)sh_x
 {
     CGRect frame = self.frame;
-    frame.origin.x = x;
+    frame.origin.x = sh_x;
+    self.frame = frame;
+}
+- (void)setSh_y:(CGFloat)sh_y
+{
+    CGRect frame = self.frame;
+    frame.origin.y = sh_y;
     self.frame = frame;
 }
 
-- (void)setY:(CGFloat)y
-{
-    CGRect frame = self.frame;
-    frame.origin.y = y;
-    self.frame = frame;
-}
-
-- (CGFloat)x
+- (CGFloat)sh_x
 {
     return self.frame.origin.x;
 }
 
-- (CGFloat)y
+- (CGFloat)sh_y
 {
     return self.frame.origin.y;
 }
-
-- (void)setCenterX:(CGFloat)centerX
+- (void)setSh_centerX:(CGFloat)sh_centerX
 {
     CGPoint center = self.center;
-    center.x = centerX;
+    center.x = sh_centerX;
     self.center = center;
 }
 
-- (CGFloat)centerX
+- (CGFloat)sh_centerX
 {
     return self.center.x;
 }
-
-- (void)setCenterY:(CGFloat)centerY
+- (void)setSh_centerY:(CGFloat)sh_centerY
 {
     CGPoint center = self.center;
-    center.y = centerY;
+    center.y = sh_centerY;
     self.center = center;
 }
 
-- (CGFloat)centerY
+- (CGFloat)sh_centerY
 {
     return self.center.y;
 }
 
-- (void)setWidth:(CGFloat)width
+- (void)setSh_width:(CGFloat)sh_width
 {
     CGRect frame = self.frame;
-    frame.size.width = width;
+    frame.size.width = sh_width;
     self.frame = frame;
 }
 
-- (void)setHeight:(CGFloat)height
+- (void)setSh_height:(CGFloat)sh_height
 {
     CGRect frame = self.frame;
-    frame.size.height = height;
+    frame.size.height = sh_height;
     self.frame = frame;
 }
 
-- (CGFloat)height
+- (CGFloat)sh_height
 {
     return self.frame.size.height;
 }
 
-- (CGFloat)width
+- (CGFloat)sh_width
 {
     return self.frame.size.width;
 }
 
-- (void)setSize:(CGSize)size
+- (void)setSh_size:(CGSize)sh_size
 {
     CGRect frame = self.frame;
-    frame.size = size;
+    frame.size = sh_size;
     self.frame = frame;
 }
 
-- (CGSize)size
+- (CGSize)sh_size
 {
     return self.frame.size;
 }
 
-- (void)setOrigin:(CGPoint)origin
+- (void)setSh_origin:(CGPoint)sh_origin
 {
     CGRect frame = self.frame;
-    frame.origin = origin;
+    frame.origin = sh_origin;
     self.frame = frame;
 }
 
-- (CGPoint)origin
+- (CGPoint)sh_origin
 {
     return self.frame.origin;
 }

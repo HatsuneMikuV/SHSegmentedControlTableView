@@ -86,9 +86,9 @@
      因此建议值必须是0.5的整数倍，或者可以使用向上取整函数ceilf();
      */
     if (btn.selected) {
-        self.height += ceilf(50.5);
+        self.sh_height += ceilf(50.5);
     }else {
-        self.height -= ceilf(50.5);
+        self.sh_height -= ceilf(50.5);
     }
     if (self.changeHeightBlock) {
         self.changeHeightBlock();
