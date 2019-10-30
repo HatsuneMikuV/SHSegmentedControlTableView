@@ -40,11 +40,11 @@ typedef enum : NSUInteger {
 /** 间距 */
 @property (nonatomic, assign) CGFloat titleMargin;
 /** 默认字体大小 (默认15) */
-@property (nonatomic, assign) UIFont  * _Nonnull titleNormalFont;
+@property (nonatomic, strong) UIFont  * _Nonnull titleNormalFont;
 /** 选中字体大小 (默认15) */
-@property (nonatomic, assign) UIFont  * _Nonnull titleSelectFont;
+@property (nonatomic, strong) UIFont  * _Nonnull titleSelectFont;
 /** 小标题字体大小 */
-@property (nonatomic, assign) UIFont  * _Nonnull subTitleFont;
+@property (nonatomic, strong) UIFont  * _Nonnull subTitleFont;
 /** 标题偏移量 */
 @property (nonatomic, assign) CGFloat offsetX;
 /** 字体默认颜色 */
