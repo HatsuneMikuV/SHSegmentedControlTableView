@@ -30,7 +30,7 @@ pod 'SHSegmentedControl'
 
 
 ## 更新内容
-### 2019.10.30 pod v1.3.2  修复属性问题， 拓展修改防止重复冲突
+### 2019.10.30 pod v1.3.3  修复属性问题， 拓展修改防止重复冲突
 #### 在这里感谢[@200895045](https://github.com/200895045)的指正
 
 ### 2019.09.25 新增demo(pod v1.3.2), 修复CollectionView作为item，内容小于bounds而不能滑动问题
