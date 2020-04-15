@@ -31,6 +31,7 @@ pod 'SHSegmentedControl'
 
 ## 更新内容
 ### 2020.04.15 pod v1.3.4  修复不同尺寸手机动态获取
+#### 在这里感谢[@welljobs](https://github.com/welljobs)的指正
 
 ### 2019.10.30 pod v1.3.3  修复属性问题， 拓展修改防止重复冲突
 #### 在这里感谢[@200895045](https://github.com/200895045)的指正
