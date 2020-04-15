@@ -8,9 +8,6 @@
 
 #import "SHSegmentedControlTableView.h"
 
-
-#define kDevice_Is_iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
-
 #pragma mark -
 #pragma mark   =======================================================
 #pragma mark   ==============SHSegmentedControlTableView==============
@@ -91,8 +88,14 @@
     }
     CGFloat contentViewHeight = self.sh_height - self.tableView.sectionHeaderHeight - self.tableView.sectionFooterHeight;
     
+    CGFloat navHeight = 0;
+    if (@available(iOS 11.0, *)) {
+        navHeight = [UIApplication sharedApplication].keyWindow.safeAreaInsets.top + 44;
+    } else {
+        navHeight = [UIApplication sharedApplication].statusBarFrame.size.height + 44;
+    }
     if (self.navStyle == SHSegmentedControlNavStyleNone) {
-        contentViewHeight -= (kDevice_Is_iPhoneX ? 88:64);
+        contentViewHeight -= navHeight;
     }
     self.pageContentView = [[SHPageContentView alloc] initWithFrame:CGRectMake(0, 0, self.sh_width, contentViewHeight) parentView:self childViews:tableViews];
     self.pageContentView.delegatePageContentView = self;
@@ -140,7 +143,12 @@
         self.tableView.contentOffset = CGPointMake(0, self.topView.sh_height);
     }
     CGFloat offSetY = scrollView.contentOffset.y;
-    CGFloat navHeight = (kDevice_Is_iPhoneX ? 88:64);
+    CGFloat navHeight = 0;
+    if (@available(iOS 11.0, *)) {
+        navHeight = [UIApplication sharedApplication].keyWindow.safeAreaInsets.top + 44;
+    } else {
+        navHeight = [UIApplication sharedApplication].statusBarFrame.size.height + 44;
+    }
     if (self.navStyle == SHSegmentedControlNavStyleClear) {
         if (offSetY <= self.topView.sh_height - self.barView.sh_height - navHeight) {
             scrollView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
