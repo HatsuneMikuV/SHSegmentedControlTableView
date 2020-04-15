@@ -30,12 +30,13 @@ pod 'SHSegmentedControl'
 
 
 ## 更新内容
+### 2020.04.15 pod v1.3.4  修复不同尺寸手机动态获取
+
 ### 2019.10.30 pod v1.3.3  修复属性问题， 拓展修改防止重复冲突
 #### 在这里感谢[@200895045](https://github.com/200895045)的指正
 
 ### 2019.09.25 新增demo(pod v1.3.2), 修复CollectionView作为item，内容小于bounds而不能滑动问题
 #### 在这里感谢[@fangdafei](https://github.com/fangdafei)的指正
-
 
 ### 2019.06.21新增demo(应[@DongfengWang123](https://github.com/DongfengWang123)的要求，增加带toolbar效果)↓↓↓
 ![](https://github.com/HatsuneMikuV/SHSegmentedControlTableView/blob/master/toolsbar.gif)
